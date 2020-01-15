@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        25
+Release:        26
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL and GPL+ and GPLv2 and GPLv3 and Knuth and LGPLv2+ and LGPLv3+ and LPPL and OFL and Public Domain
@@ -387,9 +387,9 @@ Patch0010:      texlive-base-CVE-2018-17407.patch
 Patch0011:      texlive-base-20180414-disable-omegafonts-check-test.patch
 
 BuildRequires:  xz libXaw-devel libXi-devel ncurses-devel bison flex file perl(Digest::MD5) texinfo gcc-c++
-BuildRequires:  gd-devel teckit-devel >= 2.5.7 freetype-devel libpng-devel t1lib-devel zlib-devel poppler-devel t1utils
+BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel poppler-devel
 BuildRequires:  zziplib-devel libicu-devel cairo-devel harfbuzz-devel perl-generators pixman-devel graphite2-devel
-BuildRequires:  libpaper-devel potrace-devel autoconf automake libtool libgs-devel
+BuildRequires:  libpaper-devel autoconf automake libtool libgs-devel
 BuildRequires:  gmp-devel mpfr-devel python3-devel
 Provides:       texlive-cjk-gs-integrate = %{epoch}:20180414-%{release}
 Obsoletes:      texlive-cjk-gs-integrate <= 7:20170520
@@ -5748,7 +5748,6 @@ License:        MIT
 Summary:        Unicode and OpenType-enabled TeX engine
 Requires:       texlive-base texlive-kpathsea
 Requires:       texlive-tetex texlive-xetexconfig
-Requires:       teckit
 Requires(post,postun): coreutils
 Requires:       tex(xetex.def)
 Provides:       tex(qx-unicode.map) = %{epoch}:20180414-%{release}
@@ -5866,9 +5865,9 @@ cd work
 %configure \
 --prefix=$PREF --datadir=$PREF --libdir=$PREF/lib --includedir=$PREF/include --datarootdir=$PREF/share --mandir=$PREF/share/man \
 --infodir=$PREF/share/info --exec_prefix=$PREF --bindir=$PREF/bin --with-system-zlib --with-system-libpng --with-system-xpdf \
---with-system-gd --with-system-t1lib --with-system-teckit --with-system-freetype2 --with-system-poppler --with-system-zziplib \
+--with-system-gd --without-system-t1lib --without-system-teckit --with-system-freetype2 --with-system-poppler --with-system-zziplib \
 --with-system-cairo --with-system-icu --with-system-harfbuzz --with-system-graphite2 --with-system-libgs --with-system-pixman \
---with-system-libpaper --with-system-potrace --with-pic --with-xdvi-x-toolkit=xaw --with-system-mpfr --with-system-gmp \
+--with-system-libpaper --without-system-potrace --with-pic --with-xdvi-x-toolkit=xaw --with-system-mpfr --with-system-gmp \
 --enable-shared --enable-compiler-warnings=max --without-cxx-runtime-hack \
 --disable-native-texlive-build --disable-t1utils --disable-psutils --disable-biber --disable-ptexenc --disable-largefile \
 --disable-xindy --disable-xindy-docs --disable-xindy-make-rules \
@@ -6017,6 +6016,8 @@ cd %{buildroot}%{_bindir}
 rm -f latexmk
 rm -rf %{buildroot}%{_datadir}/texlive/texmf-dist/scripts/latexmk
 rm -f %{buildroot}%{_datadir}/texlive/texmf-dist/doc/man/man1/latexmk.*
+
+rm -rf %{buildroot}%{_bindir}/teckit_compile
 
 rm -f bibexport.sh
 ln -s /usr/share/texlive/texmf-dist/scripts/bibexport/bibexport.sh bibexport.sh
@@ -8099,6 +8100,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Wed Jan 15 2020 openEuler Buildteam <buildteam@openeuler.org> - 20180414-26
+- remove useless BuildRequires.
+
 * Thu Dec 12 2019 daiqianwen <daiqianwen@huawei.com> - 20180414-25
 - Package init
 
