@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        27
+Release:        28
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL and GPL+ and GPLv2 and GPLv3 and Knuth and LGPLv2+ and LGPLv3+ and LPPL and OFL and Public Domain
@@ -374,11 +374,12 @@ Source361:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/t
 Source362:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xmltex.tar.xz
 Source363:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/yplan.doc.tar.xz
 Source364:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/yplan.tar.xz
-Patch0001:      tl-format.patch
-Patch0002:      texlive-20180414-new-poppler.patch
-Patch0003:      texlive-20180414-poppler-0.64.patch
-Patch0004:      texlive-20180414-synctex-version.patch
-Patch0005:      texlive-base-CVE-2018-17407.patch
+Patch0001:      tl-kpfix.patch
+Patch0002:      tl-format.patch
+Patch0003:      texlive-20180414-new-poppler.patch
+Patch0004:      texlive-20180414-poppler-0.64.patch
+Patch0005:      texlive-20180414-synctex-version.patch
+Patch0006:      texlive-base-CVE-2018-17407.patch
 
 BuildRequires:  xz libXaw-devel libXi-devel ncurses-devel bison flex file perl(Digest::MD5) texinfo gcc-c++
 BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel poppler-devel
@@ -8094,6 +8095,12 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Mon Jan 20 2020 wutao <wutao@huawei.com> - 20180414-28
+- Type:bugfix
+- ID:NA
+- SUG:NA
+- DESC: modify spec
+
 * Sun Jan 19 2020 wutao <wutao@huawei.com> - 20180414-27
 - Type:bugfix
 - ID:NA
