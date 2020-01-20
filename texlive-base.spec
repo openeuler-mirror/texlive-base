@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        27
+Release:        28
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL and GPL+ and GPLv2 and GPLv3 and Knuth and LGPLv2+ and LGPLv3+ and LPPL and OFL and Public Domain
@@ -8095,6 +8095,12 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Mon Jan 20 2020 wutao <wutao@huawei.com> - 20180414-28
+- Type:bugfix
+- ID:NA
+- SUG:NA
+- DESC: modify spec
+
 * Sun Jan 19 2020 wutao <wutao@huawei.com> - 20180414-27
 - Type:bugfix
 - ID:NA
