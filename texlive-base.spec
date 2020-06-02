@@ -2378,7 +2378,7 @@ Obsoletes:      texlive-kpathsea-bin < 7:20170520
 Provides:       tex-kpathsea-doc = %{epoch}:20180414-%{release}
 Provides:       texlive-kpathsea-doc = %{epoch}:20180414-%{release}
 Obsoletes:      texlive-kpathsea-doc < 7:20170520
-Requires:       coreutils, grep texlive-base
+Requires:       coreutils grep texlive-base texlive-tetex
 Provides:       tex(fmtutil.cnf) = %{epoch}:20180414-%{release}
 Provides:       tex(mktex.cnf) = %{epoch}:20180414-%{release}
 Provides:       tex(texmf.cnf) = %{epoch}:20180414-%{release}
