@@ -4,12 +4,12 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        29
+Release:        30
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL and GPL+ and GPLv2 and GPLv3 and Knuth and LGPLv2+ and LGPLv3+ and LPPL and OFL and Public Domain
 URL:            http://tug.org/texlive/
-Source0:        http://ctan.math.illinois.edu/systems/texlive/Source/texlive-20180414-source.tar.xz
+Source0:        https://sourceforge.net/projects/mylfs/files/sources/texlive-20180414-source.tar.xz
 Source1:        macros.texlive
 Source2:        texlive.tlpdb
 Source3:        texlive-licenses.tar.xz
@@ -8095,6 +8095,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Thu Sep 10 2020 baizhonggui <baizhonggui@huawei.com> - 20180414-30
+- modify source0
+
 * Fri Aug 21 2020 yuboyun <yuboyun@huawei.com> - 20180414-29
 - Type: bugfix
 - ID: NA
