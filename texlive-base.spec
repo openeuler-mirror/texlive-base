@@ -4,10 +4,10 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        29
+Release:        30
 Epoch:          7
 Summary:        TeX formatting system
-License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL and GPL+ and GPLv2 and GPLv3 and Knuth and LGPLv2+ and LGPLv3+ and LPPL and OFL and Public Domain
+License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
 URL:            http://tug.org/texlive/
 Source0:	https://sourceforge.net/projects/mylfs/files/sources/texlive-20180414-source.tar.xz
 Source1:        macros.texlive
@@ -380,6 +380,7 @@ Patch0003:      texlive-20180414-new-poppler.patch
 Patch0004:      texlive-20180414-poppler-0.64.patch
 Patch0005:      texlive-20180414-synctex-version.patch
 Patch0006:      texlive-base-CVE-2018-17407.patch
+Patch0007:      fix-build-error-when-srctopdf-is-ok.patch
 
 BuildRequires:  xz libXaw-devel libXi-devel ncurses-devel bison flex file perl(Digest::MD5) texinfo gcc-c++
 BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel poppler-devel
@@ -8095,6 +8096,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Wed 30 Jun 2021 sunguoshuai <sunguoshuai@huawei.com> - 20180414-30
+- Fix build error when srctopdf is ok
+
 * Thu Sep 10 2020 baizhonggui <baizhonggui@huawei.com> - 20180414-29
 - modify source0
 
