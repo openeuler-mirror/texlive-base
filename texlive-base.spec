@@ -5850,8 +5850,8 @@ done
 %global mysources %{lua: for index,value in ipairs(sources) do if index >= 16 then print(value.." ") end end}
 
 %build
-export CFLAGS="$RPM_OPT_FLAGS -fno-strict-aliasing -Werror=format-security"
-export CXXFLAGS="$RPM_OPT_FLAGS -std=c++11 -fno-strict-aliasing -Werror=format-security"
+export CFLAGS="$RPM_OPT_FLAGS -fno-strict-aliasing -Werror=format-security -fcommon"
+export CXXFLAGS="$RPM_OPT_FLAGS -std=c++11 -fno-strict-aliasing -Werror=format-security -fcommon"
 export LDFLAGS="%{build_ldflags}"
 cd source
 PREF=`pwd`/inst
