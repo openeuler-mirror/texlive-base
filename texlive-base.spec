@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        30
+Release:        31
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -8096,6 +8096,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Sat Jul 31 2021 Haiwei Li <lihaiwei8@huawei.com> - 20180414-31
+- Fix compilation failed due to multiple definition
+
 * Wed 30 Jun 2021 sunguoshuai <sunguoshuai@huawei.com> - 20180414-30
 - Fix build error when srctopdf is ok
 
