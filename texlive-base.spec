@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        31
+Release:        32
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -386,7 +386,7 @@ BuildRequires:  xz libXaw-devel libXi-devel ncurses-devel bison flex file perl(D
 BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel poppler-devel
 BuildRequires:  zziplib-devel libicu-devel cairo-devel harfbuzz-devel perl-generators pixman-devel graphite2-devel
 BuildRequires:  libpaper-devel autoconf automake libtool libgs-devel
-BuildRequires:  gmp-devel mpfr-devel python3-devel
+BuildRequires:  gmp-devel mpfr-devel python3-devel chrpath
 Provides:       texlive-cjk-gs-integrate = %{epoch}:20180414-%{release}
 Obsoletes:      texlive-cjk-gs-integrate <= 7:20170520
 Provides:       tex-cjk-gs-integrate = %{epoch}:20180414-%{release}
@@ -6046,6 +6046,18 @@ find -type f -exec sed -i '1s|^#!/usr/bin/env python$|#!%{__python3}|' {} +
 sed -i '1s|^#!/usr/bin/python |#!%{__python3} |' ./%{_datadir}/texlive/texmf-dist/scripts/de-macro/de-macro
 cd -
 
+file `find %{buildroot}/%{_bindir} -type f` | grep -w ELF | awk -F: '{print $1}' | xargs chrpath -d
+file `find %{buildroot}/%{_libdir} -type f` | grep -w ELF | awk -F: '{print $1}' | xargs chrpath -d
+
+mkdir -p %{buildroot}/etc/ld.so.conf.d
+echo "/home/abuild/rpmbuild/BUILD/texlive-20180414-source/source/inst/lib" > %{buildroot}/etc/ld.so.conf.d/%{name}-%{_arch}.conf
+
+%post
+/sbin/ldconfig
+
+%postun
+/sbin/ldconfig
+
 %pretrans -p <lua>
 path = "/usr/share/texmf"
 st = posix.stat(path)
@@ -6157,6 +6169,7 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-var
 %{_datadir}/texlive/texmf-local/
 %{_datadir}/texmf
+%config(noreplace) /etc/ld.so.conf.d/*
 %ghost %{_datadir}/texmf.rpmmoved
 %exclude %{_datadir}/texlive/install-tl
 %exclude %{_datadir}/texlive/tlpkg/gpg/
@@ -8096,6 +8109,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Wed Sep 10 2021 caodongxia <caodongxia@huawei.com> - 20180414-32
+- Remove rpath
+
 * Sat Jul 31 2021 Haiwei Li <lihaiwei8@huawei.com> - 20180414-31
 - Fix compilation failed due to multiple definition
 
