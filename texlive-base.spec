@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        32
+Release:        33
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -376,14 +376,13 @@ Source363:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/t
 Source364:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/yplan.tar.xz
 Patch0001:      tl-kpfix.patch
 Patch0002:      tl-format.patch
-Patch0003:      texlive-20180414-new-poppler.patch
-Patch0004:      texlive-20180414-poppler-0.64.patch
 Patch0005:      texlive-20180414-synctex-version.patch
 Patch0006:      texlive-base-CVE-2018-17407.patch
 Patch0007:      fix-build-error-when-srctopdf-is-ok.patch
+Patch0008:      remove-support-of-poppler.patch
 
 BuildRequires:  xz libXaw-devel libXi-devel ncurses-devel bison flex file perl(Digest::MD5) texinfo gcc-c++
-BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel poppler-devel
+BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel
 BuildRequires:  zziplib-devel libicu-devel cairo-devel harfbuzz-devel perl-generators pixman-devel graphite2-devel
 BuildRequires:  libpaper-devel autoconf automake libtool libgs-devel
 BuildRequires:  gmp-devel mpfr-devel python3-devel chrpath
@@ -5860,8 +5859,8 @@ install -d work
 cd work
 %configure \
 --prefix=$PREF --datadir=$PREF --libdir=$PREF/lib --includedir=$PREF/include --datarootdir=$PREF/share --mandir=$PREF/share/man \
---infodir=$PREF/share/info --exec_prefix=$PREF --bindir=$PREF/bin --with-system-zlib --with-system-libpng --with-system-xpdf \
---with-system-gd --without-system-t1lib --without-system-teckit --with-system-freetype2 --with-system-poppler --with-system-zziplib \
+--infodir=$PREF/share/info --exec_prefix=$PREF --bindir=$PREF/bin --with-system-zlib --with-system-libpng \
+--with-system-gd --without-system-t1lib --without-system-teckit --with-system-freetype2 --with-system-zziplib \
 --with-system-cairo --with-system-icu --with-system-harfbuzz --with-system-graphite2 --with-system-libgs --with-system-pixman \
 --with-system-libpaper --without-system-potrace --with-pic --with-xdvi-x-toolkit=xaw --with-system-mpfr --with-system-gmp \
 --enable-shared --enable-compiler-warnings=max --without-cxx-runtime-hack \
@@ -8109,6 +8108,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Wed Jan 19 2022 xu_ping <xuping33@huawei.com> - 20180414-33
+- remove useless BuildRequires poppler
+
 * Wed Sep 10 2021 caodongxia <caodongxia@huawei.com> - 20180414-32
 - Remove rpath
 
