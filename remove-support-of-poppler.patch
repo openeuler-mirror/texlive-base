@@ -1,0 +1,157 @@
+From 5cc2db7d41d50988edda4656379a39953ca0bd6c Mon Sep 17 00:00:00 2001
+From: Akira Kakuto <kakuto@fuk.kindai.ac.jp>
+Date: Thu, 14 May 2020 21:45:48 +0000
+Subject: [PATCH] remove support of poppler
+
+git-svn-id: svn://tug.org/texlive/trunk/Build/source@55144 c570f23f-e606-0410-a88d-b1316a301751
+---
+ .../texk/web2c/pdftexdir/ChangeLog            |  4 +++
+ .../texk/web2c/pdftexdir/NEWS                 |  6 +---
+ .../texk/web2c/pdftexdir/pdftoepdf.cc         | 34 -------------------
+ .../texk/web2c/pdftexdir/pdftosrc.cc          | 11 +-----
+ 4 files changed, 6 insertions(+), 49 deletions(-)
+
+diff --git a/texlive-20180414-source/texk/web2c/pdftexdir/ChangeLog b/texlive-20180414-source/texk/web2c/pdftexdir/ChangeLog
+index c022bc25..b161f3e7 100644
+--- a/texlive-20180414-source/texk/web2c/pdftexdir/ChangeLog
++++ b/texlive-20180414-source/texk/web2c/pdftexdir/ChangeLog
+@@ -1,3 +1,7 @@
++2020-05-15  Akira Kakuto  <kakuto@w32tex.org>
++
++        * pdftoepdf.cc, pdftosrc.cc, NEWS: remove support of poppler.
++
+ 2018-04-14  Karl Berry  <karl@tug.org>
+ 
+ 	* TeX Live 2018 release, pdftex 1.40.19.
+diff --git a/texlive-20180414-source/texk/web2c/pdftexdir/NEWS b/texlive-20180414-source/texk/web2c/pdftexdir/NEWS
+index 9f9a08cd..17167854 100644
+--- a/texlive-20180414-source/texk/web2c/pdftexdir/NEWS
++++ b/texlive-20180414-source/texk/web2c/pdftexdir/NEWS
+@@ -12,11 +12,7 @@ pdfTeX 3.14159265-2.6-1.40.19 (TeX Live 2018)  (April 14, 2018)
+   - \pdfprimitive does not swallow a following control sequence (pdftex r784).
+   - \ifpdfprimitive now correctly returns true for "\ " (TL r45394).
+ 
+-- source: support xpdf-4 by default, or xpdf-3.04, or poppler-0.57.0
+-  and older, via #defines. Provide new files, pdftoepdf-newpoppler.cc
+-  and pdftosrc-newpoppler.cc, to support poppler-0.59.0 and newer:
+-  they should be renamed as pdftoepdf.cc and pdftosrc.cc, respectively,
+-  before compilation.
++- source: support xpdf-4 by default, or xpdf-3.04, via #defines.
+ 
+ ---------------------------------------------------------------
+ pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)  (April 27, 2017)
+diff --git a/texlive-20180414-source/texk/web2c/pdftexdir/pdftoepdf.cc b/texlive-20180414-source/texk/web2c/pdftexdir/pdftoepdf.cc
+index 4db0c90a..04fc5a67 100644
+--- a/texlive-20180414-source/texk/web2c/pdftexdir/pdftoepdf.cc
++++ b/texlive-20180414-source/texk/web2c/pdftexdir/pdftoepdf.cc
+@@ -31,19 +31,10 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #include <string.h>
+ #include <ctype.h>
+ 
+-#ifdef POPPLER_VERSION
+-#include <dirent.h>
+-#include <poppler-config.h>
+-#include <goo/GooString.h>
+-#include <goo/gmem.h>
+-#include <goo/gfile.h>
+-#define GString GooString
+-#else
+ #include <aconf.h>
+ #include <GString.h>
+ #include <gmem.h>
+ #include <gfile.h>
+-#endif
+ #include <assert.h>
+ 
+ #include "Object.h"
+@@ -682,11 +673,7 @@ static void writeEncodings()
+     }
+     for (r = encodingList; r != 0; r = n) {
+         n = r->next;
+-#ifdef POPPLER_VERSION
+-        r->font->decRefCnt();
+-#else
+         delete r->font;
+-#endif
+         delete r;
+     }
+ }
+@@ -725,11 +712,7 @@ read_pdf_info(char *image_name, char *page_name, int page_num,
+     PdfDocument *pdf_doc;
+     Page *page;
+     PDFRectangle *pagebox;
+-#ifdef POPPLER_VERSION
+-    int pdf_major_version_found, pdf_minor_version_found;
+-#else
+     float pdf_version_found, pdf_version_wanted;
+-#endif
+     // initialize
+     if (!isInit) {
+         globalParams = new GlobalParams();
+@@ -744,22 +727,6 @@ read_pdf_info(char *image_name, char *page_name, int page_num,
+     // this works only for PDF 1.x -- but since any versions of PDF newer
+     // than 1.x will not be backwards compatible to PDF 1.x, pdfTeX will
+     // then have to changed drastically anyway.
+-#ifdef POPPLER_VERSION
+-    pdf_major_version_found = pdf_doc->doc->getPDFMajorVersion();
+-    pdf_minor_version_found = pdf_doc->doc->getPDFMinorVersion();
+-    if ((pdf_major_version_found > 1)
+-     || (pdf_minor_version_found > minor_pdf_version_wanted)) {
+-        const char *msg =
+-            "PDF inclusion: found PDF version <%d.%d>, but at most version <1.%d> allowed";
+-        if (pdf_inclusion_errorlevel > 0) {
+-            pdftex_fail(msg, pdf_major_version_found, pdf_minor_version_found, minor_pdf_version_wanted);
+-        } else if (pdf_inclusion_errorlevel < 0) {
+-            ; /* do nothing */
+-        } else { /* = 0, give warning */
+-            pdftex_warn(msg, pdf_major_version_found, pdf_minor_version_found, minor_pdf_version_wanted);
+-        }
+-    }
+-#else
+     pdf_version_found = pdf_doc->doc->getPDFVersion();
+     pdf_version_wanted = 1 + (minor_pdf_version_wanted * 0.1);
+     if (pdf_version_found > pdf_version_wanted + 0.01) {
+@@ -773,7 +740,6 @@ read_pdf_info(char *image_name, char *page_name, int page_num,
+             pdftex_warn(msg, pdf_version_found, pdf_version_wanted);
+         }
+     }
+-#endif
+     epdf_num_pages = pdf_doc->doc->getCatalog()->getNumPages();
+     if (page_name) {
+         // get page by name
+diff --git a/texlive-20180414-source/texk/web2c/pdftexdir/pdftosrc.cc b/texlive-20180414-source/texk/web2c/pdftexdir/pdftosrc.cc
+index 67be229e..2fd9d5f9 100644
+--- a/texlive-20180414-source/texk/web2c/pdftexdir/pdftosrc.cc
++++ b/texlive-20180414-source/texk/web2c/pdftexdir/pdftosrc.cc
+@@ -24,19 +24,10 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #include <string.h>
+ #include <ctype.h>
+ 
+-#ifdef POPPLER_VERSION
+-#define GString GooString
+-#define xpdfVersion POPPLER_VERSION
+-#include <dirent.h>
+-#include <goo/GooString.h>
+-#include <goo/gmem.h>
+-#include <goo/gfile.h>
+-#else
+ #include <aconf.h>
+ #include <GString.h>
+ #include <gmem.h>
+ #include <gfile.h>
+-#endif
+ #include <assert.h>
+ 
+ #include "Object.h"
+@@ -181,7 +172,7 @@ int main(int argc, char *argv[])
+                     obj1.free();
+                     obj2.free();
+                 }
+-#if defined(POPPLER_VERSION) || defined(XPDF304)
++#if defined(XPDF304)
+                 while (str->getChar() != EOF) ;
+ #else /* xpdf 4.00 */
+                 lexer->skipToEOF();
+-- 
+2.30.0
+
