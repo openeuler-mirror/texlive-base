@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        33
+Release:        34
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -5866,7 +5866,7 @@ cd work
 --enable-shared --enable-compiler-warnings=max --without-cxx-runtime-hack \
 --disable-native-texlive-build --disable-t1utils --disable-psutils --disable-biber --disable-ptexenc --disable-largefile \
 --disable-xindy --disable-xindy-docs --disable-xindy-make-rules \
-%ifarch aarch64
+%ifarch aarch64 riscv64
 --disable-luajittex --disable-mfluajit \
 %endif
 --disable-rpath
@@ -7077,7 +7077,7 @@ done <<< "$list"
 %{_includedir}/synctex/
 %{_includedir}/texlua52/
 %{_includedir}/texlua53/
-%ifnarch aarch64
+%ifnarch aarch64 riscv64
 %{_includedir}/texluajit/
 %endif
 %{_libdir}/*.so
@@ -7146,7 +7146,7 @@ done <<< "$list"
 %files -n texlive-luatex
 %license gpl2.txt
 %{_bindir}/dviluatex
-%ifnarch aarch64
+%ifnarch aarch64 riscv64
 %{_bindir}/luajittex
 %{_bindir}/texluajit
 %{_bindir}/texluajitc
@@ -7253,7 +7253,7 @@ done <<< "$list"
 %license gpl2.txt
 %{_bindir}/mflua
 %{_bindir}/mflua-nowin
-%ifnarch aarch64
+%ifnarch aarch64 riscv64
 %{_bindir}/mfluajit
 %{_bindir}/mfluajit-nowin
 %endif
@@ -8108,6 +8108,10 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Sat Mar 26 2022 wujie <wujie@nj.iscas.ac.cn> - 20180414-34
+- Add riscv64 support from http://fedora.riscv.rocks/koji/buildinfo?buildID=72478
+  Author is David Abdurachmanov <david.abdurachmanov@gmail.com>
+
 * Wed Jan 19 2022 xu_ping <xuping33@huawei.com> - 20180414-33
 - remove useless BuildRequires poppler
 
