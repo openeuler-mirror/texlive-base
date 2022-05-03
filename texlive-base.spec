@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        34
+Release:        35
 Epoch:          7
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -5842,6 +5842,10 @@ LaTeX file remains on the archive.)
 %autosetup -c -n texlive-20180414-source -p1
 [ -e texlive-20180414-source ] && mv texlive-20180414-source source
 
+%ifarch riscv64
+rm -r source/libs/luajit
+%endif
+
 for l in `unxz -c %{SOURCE3} | tar t`; do
 ln -s %{_datadir}/texlive/licenses/$l $l
 done
@@ -8108,6 +8112,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Mon May 02 2022 wangyangdahai <admin@you2.top> - 20180414-35
+- remove libs/lujit to skip configure fail for riscv64
+
 * Sat Mar 26 2022 wujie <wujie@nj.iscas.ac.cn> - 20180414-34
 - Add riscv64 support from http://fedora.riscv.rocks/koji/buildinfo?buildID=72478
   Author is David Abdurachmanov <david.abdurachmanov@gmail.com>
