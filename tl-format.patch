@@ -1,7 +1,7 @@
-diff -up a/texlive-20180414-source/texk/dvi2tty/dvi2tty-src/DVI.format a/texlive-20180414-source/texk/dvi2tty/dvi2tty-src/DVI
-diff -up a/texlive-20180414-source/texk/dvidvi/dvidvi.c.format a/texlive-20180414-source/texk/dvidvi/dvidvi.c
---- a/texlive-20180414-source/texk/dvidvi/dvidvi.c.format	2017-06-23 10:55:46.000000000 -0400
-+++ a/texlive-20180414-source/texk/dvidvi/dvidvi.c	2018-04-30 13:07:17.910020544 -0400
+diff -up texlive-20210325-source/texk/dvi2tty/dvi2tty-src/DVI.format texlive-20210325-source/texk/dvi2tty/dvi2tty-src/DVI
+diff -up texlive-20210325-source/texk/dvidvi/dvidvi.c.format texlive-20210325-source/texk/dvidvi/dvidvi.c
+--- a/texlive-20210325-source/texk/dvidvi/dvidvi.c.format	2017-06-23 10:55:46.000000000 -0400
++++ a/texlive-20210325-source/texk/dvidvi/dvidvi.c	2018-04-30 13:07:17.910020544 -0400
 @@ -349,7 +349,7 @@ static void stringdvibuf(integer p, inte
   *   Print a usage error messsage, and quit.
   */
@@ -29,9 +29,9 @@ diff -up a/texlive-20180414-source/texk/dvidvi/dvidvi.c.format a/texlive-2018041
         (void)fprintf(stderr, "%s -> %s\n",iname,oname);
         temp = nextstring ;
     }
-diff -up a/texlive-20180414-source/texk/web2c/tiedir/tie.c.format a/texlive-20180414-source/texk/web2c/tiedir/tie.c
---- a/texlive-20180414-source/texk/web2c/tiedir/tie.c.format	2016-11-25 13:24:38.000000000 -0500
-+++ a/texlive-20180414-source/texk/web2c/tiedir/tie.c	2018-04-30 13:07:27.792787747 -0400
+diff -up texlive-20210325-source/texk/web2c/tiedir/tie.c.format texlive-20210325-source/texk/web2c/tiedir/tie.c
+--- a/texlive-20210325-source/texk/web2c/tiedir/tie.c.format	2016-11-25 13:24:38.000000000 -0500
++++ a/texlive-20210325-source/texk/web2c/tiedir/tie.c	2018-04-30 13:07:27.792787747 -0400
 @@ -27,14 +27,14 @@
   \
  

@@ -3,399 +3,450 @@
 %global __brp_mangle_shebangs_exclude ^$
 
 Name:           texlive-base
-Version:        20180414
-Release:        33
-Epoch:          7
+Version:        20210325
+Release:        1
+Epoch:          9
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
 URL:            http://tug.org/texlive/
-Source0:	https://sourceforge.net/projects/mylfs/files/sources/texlive-20180414-source.tar.xz
+Source0:	http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/texlive-20210325-source.tar.xz
 Source1:        macros.texlive
 Source2:        texlive.tlpdb
 Source3:        texlive-licenses.tar.xz
 Source4:        generate-fmtutilcnf
-Source5:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cyrillic.tar.xz
-Source6:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cyrillic.doc.tar.xz
-Source7:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/glyphlist.tar.xz
-Source8:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex.tar.xz
-Source9:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex.doc.tar.xz
-Source10:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lyluatex.tar.xz
-Source11:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lyluatex.doc.tar.xz
-Source12:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/oberdiek.tar.xz
-Source13:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/oberdiek.doc.tar.xz
-Source14:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texlive-en.doc.tar.xz
-Source15:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/a2ping.doc.tar.xz
-Source16:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/a2ping.tar.xz
-Source17:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/accfonts.doc.tar.xz
-Source18:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/accfonts.tar.xz
-Source19:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/adhocfilelist.doc.tar.xz
-Source20:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/adhocfilelist.tar.xz
-Source21:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/afm2pl.tar.xz
-Source22:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/aleph.doc.tar.xz
-Source23:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/aleph.tar.xz
-Source24:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/amstex.doc.tar.xz
-Source25:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/amstex.tar.xz
-Source26:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/arara.doc.tar.xz
-Source27:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/arara.tar.xz
-Source28:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/authorindex.doc.tar.xz
-Source29:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/authorindex.tar.xz
-Source30:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/autosp.doc.tar.xz
-Source31:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/axodraw2.doc.tar.xz
-Source32:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/axodraw2.tar.xz
-Source33:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bib2gls.doc.tar.xz
-Source34:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bib2gls.tar.xz
-Source35:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibexport.doc.tar.xz
-Source36:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibexport.tar.xz
-Source37:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibtex8.doc.tar.xz
-Source38:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibtex8.tar.xz
-Source39:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibtex.doc.tar.xz
-Source40:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibtex.tar.xz
-Source41:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bibtexu.doc.tar.xz
-Source42:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bundledoc.doc.tar.xz
-Source43:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/bundledoc.tar.xz
-Source44:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cachepic.doc.tar.xz
-Source45:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cachepic.tar.xz
-Source46:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/checkcites.doc.tar.xz
-Source47:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/checkcites.tar.xz
-Source48:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/checklistings.doc.tar.xz
-Source49:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/checklistings.tar.xz
-Source50:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/chktex.doc.tar.xz
-Source51:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/chktex.tar.xz
-Source52:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cjk-gs-integrate.doc.tar.xz
-Source53:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cjk-gs-integrate.tar.xz
-Source54:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cjkutils.tar.xz
-Source55:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/context.doc.tar.xz
-Source56:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/context.tar.xz
-Source57:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/convbkmk.doc.tar.xz
-Source58:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/convbkmk.tar.xz
-Source59:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/crossrefware.doc.tar.xz
-Source60:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/crossrefware.tar.xz
-Source61:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cslatex.tar.xz
-Source62:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/csplain.tar.xz
-Source63:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctanify.doc.tar.xz
-Source64:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctanify.tar.xz
-Source65:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctan-o-mat.doc.tar.xz
-Source66:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctan-o-mat.tar.xz
-Source67:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctanupload.doc.tar.xz
-Source68:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctanupload.tar.xz
-Source69:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ctie.doc.tar.xz
-Source70:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cweb.doc.tar.xz
-Source71:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cweb.tar.xz
-Source72:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cyrillic-bin.doc.tar.xz
-Source73:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/cyrillic-bin.tar.xz
-Source74:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/de-macro.doc.tar.xz
-Source75:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/de-macro.tar.xz
-Source76:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/detex.doc.tar.xz
-Source77:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/detex.tar.xz
-Source78:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/diadia.doc.tar.xz
-Source79:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/diadia.tar.xz
-Source80:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dosepsbin.doc.tar.xz
-Source81:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dosepsbin.tar.xz
-Source82:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dtl.doc.tar.xz
-Source83:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dtl.tar.xz
-Source84:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dtxgen.doc.tar.xz
-Source85:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dtxgen.tar.xz
-Source86:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvi2tty.doc.tar.xz
-Source87:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvi2tty.tar.xz
-Source88:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dviasm.doc.tar.xz
-Source89:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dviasm.tar.xz
-Source90:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvicopy.doc.tar.xz
-Source91:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvicopy.tar.xz
-Source92:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvidvi.doc.tar.xz
-Source93:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvidvi.tar.xz
-Source94:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dviinfox.doc.tar.xz
-Source95:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dviinfox.tar.xz
-Source96:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dviljk.doc.tar.xz
-Source97:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dviljk.tar.xz
-Source98:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvipdfmx.doc.tar.xz
-Source99:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvipdfmx.tar.xz
-Source100:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvipng.doc.tar.xz
-Source101:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvipng.tar.xz
-Source102:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvipos.doc.tar.xz
-Source103:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvipos.tar.xz
-Source104:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvips.doc.tar.xz
-Source105:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvips.tar.xz
-Source106:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvisvgm.doc.tar.xz
-Source107:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/dvisvgm.tar.xz
-Source108:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ebong.doc.tar.xz
-Source109:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ebong.tar.xz
-Source110:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/eplain.doc.tar.xz
-Source111:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/eplain.tar.xz
-Source112:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/epspdf.doc.tar.xz
-Source113:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/epspdf.tar.xz
-Source114:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/epstopdf.doc.tar.xz
-Source115:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/epstopdf.tar.xz
-Source116:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/exceltex.doc.tar.xz
-Source117:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/exceltex.tar.xz
-Source118:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fig4latex.doc.tar.xz
-Source119:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fig4latex.tar.xz
-Source120:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/findhyph.doc.tar.xz
-Source121:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/findhyph.tar.xz
-Source122:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fontinst.doc.tar.xz
-Source123:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fontinst.tar.xz
-Source124:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fontools.doc.tar.xz
-Source125:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fontools.tar.xz
-Source126:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fontware.doc.tar.xz
-Source127:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fragmaster.doc.tar.xz
-Source128:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/fragmaster.tar.xz
-Source129:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/getmap.doc.tar.xz
-Source130:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/getmap.tar.xz
-Source131:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/glossaries.doc.tar.xz
-Source132:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/glossaries.tar.xz
-Source133:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/gregoriotex.doc.tar.xz
-Source134:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/gregoriotex.tar.xz
-Source135:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/gsftopk.doc.tar.xz
-Source136:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/gsftopk.tar.xz
-Source137:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/installfont.doc.tar.xz
-Source138:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/installfont.tar.xz
-Source139:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/jadetex.doc.tar.xz
-Source140:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/jadetex.tar.xz
-Source141:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/jfmutil.doc.tar.xz
-Source142:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/jfmutil.tar.xz
-Source143:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/kotex-utils.doc.tar.xz
-Source144:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/kotex-utils.tar.xz
-Source145:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/kpathsea.doc.tar.xz
-Source146:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/kpathsea.tar.xz
-Source147:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/l3build.tar.xz
-Source148:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/l3build.doc.tar.xz
-Source149:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lacheck.doc.tar.xz
-Source150:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex2man.doc.tar.xz
-Source151:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex2man.tar.xz
-Source152:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex2nemeth.doc.tar.xz
-Source153:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex2nemeth.tar.xz
-Source154:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexdiff.doc.tar.xz
-Source155:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexdiff.tar.xz
-Source156:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexfileversion.doc.tar.xz
-Source157:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexfileversion.tar.xz
-Source158:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex-git-log.doc.tar.xz
-Source159:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex-git-log.tar.xz
-Source160:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexindent.doc.tar.xz
-Source161:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexindent.tar.xz
-Source162:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexpand.doc.tar.xz
-Source163:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latexpand.tar.xz
-Source164:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex-papersize.doc.tar.xz
-Source165:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/latex-papersize.tar.xz
-Source166:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lcdftypetools.doc.tar.xz
-Source167:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lilyglyphs.doc.tar.xz
-Source168:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lilyglyphs.tar.xz
-Source169:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/listbib.doc.tar.xz
-Source170:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/listbib.tar.xz
-Source171:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/listings-ext.doc.tar.xz
-Source172:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/listings-ext.tar.xz
-Source173:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lollipop.doc.tar.xz
-Source174:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lollipop.tar.xz
-Source175:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ltxfileinfo.doc.tar.xz
-Source176:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ltxfileinfo.tar.xz
-Source177:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ltximg.doc.tar.xz
-Source178:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ltximg.tar.xz
-Source179:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lua2dox.doc.tar.xz
-Source180:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lua2dox.tar.xz
-Source181:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/luaotfload.doc.tar.xz
-Source182:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/luaotfload.tar.xz
-Source183:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/luatex.doc.tar.xz
-Source184:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/luatex.tar.xz
-Source185:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lwarp.doc.tar.xz
-Source186:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/lwarp.tar.xz
-Source187:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/make4ht.doc.tar.xz
-Source188:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/make4ht.tar.xz
-Source189:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/makedtx.doc.tar.xz
-Source190:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/makedtx.tar.xz
-Source191:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/makeindex.doc.tar.xz
-Source192:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/makeindex.tar.xz
-Source193:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/match_parens.doc.tar.xz
-Source194:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/match_parens.tar.xz
-Source195:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mathspic.doc.tar.xz
-Source196:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mathspic.tar.xz
-Source197:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/metafont.doc.tar.xz
-Source198:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/metafont.tar.xz
-Source199:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/metapost.doc.tar.xz
-Source200:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/metapost.tar.xz
-Source201:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mex.doc.tar.xz
-Source202:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mex.tar.xz
-Source203:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mf2pt1.doc.tar.xz
-Source204:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mf2pt1.tar.xz
-Source205:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mflua.tar.xz
-Source206:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mfware.doc.tar.xz
-Source207:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mfware.tar.xz
-Source208:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mkgrkindex.doc.tar.xz
-Source209:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mkgrkindex.tar.xz
-Source210:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mkjobtexmf.doc.tar.xz
-Source211:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mkjobtexmf.tar.xz
-Source212:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mkpic.doc.tar.xz
-Source213:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mkpic.tar.xz
-Source214:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mltex.doc.tar.xz
-Source215:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mltex.tar.xz
-Source216:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mptopdf.doc.tar.xz
-Source217:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/mptopdf.tar.xz
-Source218:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/m-tx.doc.tar.xz
-Source219:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/m-tx.tar.xz
-Source220:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/multibibliography.doc.tar.xz
-Source221:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/multibibliography.tar.xz
-Source222:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/musixtex.doc.tar.xz
-Source223:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/musixtex.tar.xz
-Source224:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/musixtnt.doc.tar.xz
-Source225:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/musixtnt.tar.xz
-Source226:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/omegaware.doc.tar.xz
-Source227:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/patgen.doc.tar.xz
-Source228:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/patgen.tar.xz
-Source229:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pax.doc.tar.xz
-Source230:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pax.tar.xz
-Source231:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfbook2.doc.tar.xz
-Source232:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfbook2.tar.xz
-Source233:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfcrop.doc.tar.xz
-Source234:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfcrop.tar.xz
-Source235:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfjam.doc.tar.xz
-Source236:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfjam.tar.xz
-Source237:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdflatexpicscale.doc.tar.xz
-Source238:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdflatexpicscale.tar.xz
-Source239:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdftex.doc.tar.xz
-Source240:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdftex.tar.xz
-Source241:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdftools.doc.tar.xz
-Source242:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdftools.tar.xz
-Source243:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfxup.doc.tar.xz
-Source244:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pdfxup.tar.xz
-Source245:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pedigree-perl.doc.tar.xz
-Source246:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pedigree-perl.tar.xz
-Source247:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/perltex.doc.tar.xz
-Source248:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/perltex.tar.xz
-Source249:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/petri-nets.doc.tar.xz
-Source250:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/petri-nets.tar.xz
-Source251:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pfarrei.doc.tar.xz
-Source252:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pfarrei.tar.xz
-Source253:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pkfix.doc.tar.xz
-Source254:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pkfix-helper.doc.tar.xz
-Source255:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pkfix-helper.tar.xz
-Source256:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pkfix.tar.xz
-Source257:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pmxchords.doc.tar.xz
-Source258:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pmxchords.tar.xz
-Source259:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pmx.doc.tar.xz
-Source260:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pmx.tar.xz
-Source261:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ps2pk.doc.tar.xz
-Source262:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ps2pk.tar.xz
-Source263:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pst2pdf.doc.tar.xz
-Source264:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pst2pdf.tar.xz
-Source265:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pstools.tar.xz
-Source266:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pst-pdf.doc.tar.xz
-Source267:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pst-pdf.tar.xz
-Source268:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ptex2pdf.doc.tar.xz
-Source269:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ptex2pdf.tar.xz
-Source270:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ptex.doc.tar.xz
-Source271:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ptex-fontmaps.doc.tar.xz
-Source272:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ptex-fontmaps.tar.xz
-Source273:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ptex.tar.xz
-Source274:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/purifyeps.doc.tar.xz
-Source275:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/purifyeps.tar.xz
-Source276:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pygmentex.doc.tar.xz
-Source277:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pygmentex.tar.xz
-Source278:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pythontex.doc.tar.xz
-Source279:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/pythontex.tar.xz
-Source280:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/rubik.doc.tar.xz
-Source281:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/rubik.tar.xz
-Source282:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/seetexk.doc.tar.xz
-Source283:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/seetexk.tar.xz
-Source284:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/splitindex.doc.tar.xz
-Source285:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/splitindex.tar.xz
-Source286:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/srcredact.doc.tar.xz
-Source287:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/srcredact.tar.xz
-Source288:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/sty2dtx.doc.tar.xz
-Source289:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/sty2dtx.tar.xz
-Source290:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/svn-multi.doc.tar.xz
-Source291:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/svn-multi.tar.xz
-Source292:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/synctex.doc.tar.xz
-Source293:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/synctex.tar.xz
-Source294:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tetex.doc.tar.xz
-Source295:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tetex.tar.xz
-Source296:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tex4ebook.doc.tar.xz
-Source297:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tex4ebook.tar.xz
-Source298:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tex4ht.doc.tar.xz
-Source299:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tex4ht.tar.xz
-Source300:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texcount.doc.tar.xz
-Source301:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texcount.tar.xz
-Source302:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdef.doc.tar.xz
-Source303:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdef.tar.xz
-Source304:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdiff.doc.tar.xz
-Source305:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdiff.tar.xz
-Source306:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdirflatten.doc.tar.xz
-Source307:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdirflatten.tar.xz
-Source308:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdoc.doc.tar.xz
-Source309:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tex.doc.tar.xz
-Source310:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdoc.tar.xz
-Source311:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdoctk.tar.xz
-Source312:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texdoctk.doc.tar.xz
-Source313:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texfot.doc.tar.xz
-Source314:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texfot.tar.xz
-Source315:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texlive.infra.doc.tar.xz
-Source316:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texlive.infra.tar.xz
-Source317:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texliveonfly.doc.tar.xz
-Source318:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texliveonfly.tar.xz
-Source319:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texlive-scripts.doc.tar.xz
-Source320:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texlive-scripts.tar.xz
-Source321:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texloganalyser.doc.tar.xz
-Source322:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texloganalyser.tar.xz
-Source323:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texosquery.doc.tar.xz
-Source324:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texosquery.tar.xz
-Source325:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texsis.doc.tar.xz
-Source326:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texsis.tar.xz
-Source327:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tex.tar.xz
-Source328:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texware.doc.tar.xz
-Source329:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/texware.tar.xz
-Source330:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/thumbpdf.doc.tar.xz
-Source331:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/thumbpdf.tar.xz
-Source332:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tie.doc.tar.xz
-Source333:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tie.tar.xz
-Source334:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tpic2pdftex.doc.tar.xz
-Source335:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/tpic2pdftex.tar.xz
-Source336:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ttfutils.doc.tar.xz
-Source337:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ttfutils.tar.xz
-Source338:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/typeoutfileinfo.doc.tar.xz
-Source339:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/typeoutfileinfo.tar.xz
-Source340:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ulqda.doc.tar.xz
-Source341:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/ulqda.tar.xz
-Source342:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/uplatex.doc.tar.xz
-Source343:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/uptex.doc.tar.xz
-Source344:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/urlbst.doc.tar.xz
-Source345:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/urlbst.tar.xz
-Source346:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/velthuis.doc.tar.xz
-Source347:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/velthuis.tar.xz
-Source348:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/vlna.doc.tar.xz
-Source349:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/vpe.doc.tar.xz
-Source350:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/vpe.tar.xz
-Source351:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/web.doc.tar.xz
-Source352:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/web.tar.xz
-Source353:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/wordcount.doc.tar.xz
-Source354:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/wordcount.tar.xz
-Source355:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xdvi.doc.tar.xz
-Source356:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xdvi.tar.xz
-Source357:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xetex.doc.tar.xz
-Source358:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xetex.tar.xz
-Source359:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xindy.doc.tar.xz
-Source360:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xindy.tar.xz
-Source361:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xmltex.doc.tar.xz
-Source362:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/xmltex.tar.xz
-Source363:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/yplan.doc.tar.xz
-Source364:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/archive/yplan.tar.xz
+Source5:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cyrillic.tar.xz
+Source6:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cyrillic.doc.tar.xz
+Source7:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/glyphlist.tar.xz
+Source8:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex.tar.xz
+Source9:        http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex.doc.tar.xz
+Source10:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lyluatex.tar.xz
+Source11:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lyluatex.doc.tar.xz
+Source12:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/oberdiek.tar.xz
+Source13:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/oberdiek.doc.tar.xz
+Source14:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive-en.doc.tar.xz
+Source15:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/a2ping.doc.tar.xz
+Source16:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/a2ping.tar.xz
+Source17:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/accfonts.doc.tar.xz
+Source18:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/accfonts.tar.xz
+Source19:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/adhocfilelist.doc.tar.xz
+Source20:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/adhocfilelist.tar.xz
+Source21:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/afm2pl.tar.xz
+Source22:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/aleph.doc.tar.xz
+Source23:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/aleph.tar.xz
+Source24:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/amstex.doc.tar.xz
+Source25:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/amstex.tar.xz
+Source26:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/arara.doc.tar.xz
+Source27:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/arara.tar.xz
+Source28:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/attachfile2.doc.tar.xz
+Source29:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/attachfile2.tar.xz
+Source30:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/authorindex.doc.tar.xz
+Source31:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/authorindex.tar.xz
+Source32:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/autosp.doc.tar.xz
+Source33:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/axodraw2.doc.tar.xz
+Source34:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/axodraw2.tar.xz
+Source35:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bib2gls.doc.tar.xz
+Source36:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bib2gls.tar.xz
+Source37:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibexport.doc.tar.xz
+Source38:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibexport.tar.xz
+Source39:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibtex8.doc.tar.xz
+Source40:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibtex8.tar.xz
+Source41:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibtex.doc.tar.xz
+Source42:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibtex.tar.xz
+Source43:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibtexu.doc.tar.xz
+Source44:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bundledoc.doc.tar.xz
+Source45:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bundledoc.tar.xz
+Source46:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cachepic.doc.tar.xz
+Source47:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cachepic.tar.xz
+Source48:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/checkcites.doc.tar.xz
+Source49:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/checkcites.tar.xz
+Source50:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/checklistings.doc.tar.xz
+Source51:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/checklistings.tar.xz
+Source52:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/chklref.doc.tar.xz
+Source53:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/chklref.tar.xz
+Source54:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/chktex.doc.tar.xz
+Source55:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/chktex.tar.xz
+Source56:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cjk-gs-integrate.doc.tar.xz
+Source57:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cjk-gs-integrate.tar.xz
+Source58:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cjkutils.tar.xz
+Source59:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/clojure-pamphlet.doc.tar.xz
+Source60:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/clojure-pamphlet.tar.xz
+Source61:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cluttex.doc.tar.xz
+Source62:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cluttex.tar.xz
+Source63:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/context.doc.tar.xz
+Source64:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/context.tar.xz
+Source65:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/convbkmk.doc.tar.xz
+Source66:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/convbkmk.tar.xz
+Source67:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/crossrefware.doc.tar.xz
+Source68:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/crossrefware.tar.xz
+Source69:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cslatex.tar.xz
+Source70:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/csplain.tar.xz
+Source71:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctanbib.doc.tar.xz
+Source72:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctanbib.tar.xz
+Source73:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctanify.doc.tar.xz
+Source74:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctanify.tar.xz
+Source75:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctan-o-mat.doc.tar.xz
+Source76:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctan-o-mat.tar.xz
+Source77:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctanupload.doc.tar.xz
+Source78:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctanupload.tar.xz
+Source79:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ctie.doc.tar.xz
+Source80:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cweb.doc.tar.xz
+Source81:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cweb.tar.xz
+Source82:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cyrillic-bin.doc.tar.xz
+Source83:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cyrillic-bin.tar.xz
+Source84:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/de-macro.doc.tar.xz
+Source85:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/de-macro.tar.xz
+Source86:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/detex.doc.tar.xz
+Source87:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/detex.tar.xz
+Source88:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/diadia.doc.tar.xz
+Source89:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/diadia.tar.xz
+Source90:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dosepsbin.doc.tar.xz
+Source91:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dosepsbin.tar.xz
+Source92:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dtl.doc.tar.xz
+Source93:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dtl.tar.xz
+Source94:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dtxgen.doc.tar.xz
+Source95:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dtxgen.tar.xz
+Source96:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvi2tty.doc.tar.xz
+Source97:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvi2tty.tar.xz
+Source98:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviasm.doc.tar.xz
+Source99:       http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviasm.tar.xz
+Source100:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvicopy.doc.tar.xz
+Source101:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvicopy.tar.xz
+Source102:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvidvi.doc.tar.xz
+Source103:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvidvi.tar.xz
+Source104:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviinfox.doc.tar.xz
+Source105:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviinfox.tar.xz
+Source106:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviljk.doc.tar.xz
+Source107:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviljk.tar.xz
+Source108:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dviout-util.doc.tar.xz
+Source109:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvipdfmx.doc.tar.xz
+Source110:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvipdfmx.tar.xz
+Source111:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvipng.doc.tar.xz
+Source112:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvipng.tar.xz
+Source113:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvipos.doc.tar.xz
+Source114:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvipos.tar.xz
+Source115:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvips.doc.tar.xz
+Source116:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvips.tar.xz
+Source117:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvisvgm.doc.tar.xz
+Source118:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dvisvgm.tar.xz
+Source119:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ebong.doc.tar.xz
+Source120:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ebong.tar.xz
+Source121:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/eplain.doc.tar.xz
+Source122:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/eplain.tar.xz
+Source123:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/epspdf.doc.tar.xz
+Source124:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/epspdf.tar.xz
+Source125:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/epstopdf.doc.tar.xz
+Source126:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/epstopdf.tar.xz
+Source127:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/exceltex.doc.tar.xz
+Source128:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/exceltex.tar.xz
+Source129:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fig4latex.doc.tar.xz
+Source130:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fig4latex.tar.xz
+Source131:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/findhyph.doc.tar.xz
+Source132:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/findhyph.tar.xz
+Source133:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fontinst.doc.tar.xz
+Source134:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fontinst.tar.xz
+Source135:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fontools.doc.tar.xz
+Source136:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fontools.tar.xz
+Source137:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fontware.doc.tar.xz
+Source138:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fragmaster.doc.tar.xz
+Source139:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/fragmaster.tar.xz
+Source140:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/getmap.doc.tar.xz
+Source141:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/getmap.tar.xz
+Source142:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/glossaries.doc.tar.xz
+Source143:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/glossaries.tar.xz
+Source144:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/gregoriotex.doc.tar.xz
+Source145:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/gregoriotex.tar.xz
+Source146:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/gsftopk.doc.tar.xz
+Source147:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/gsftopk.tar.xz
+Source148:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/installfont.doc.tar.xz
+Source149:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/installfont.tar.xz
+Source150:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/jadetex.doc.tar.xz
+Source151:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/jadetex.tar.xz
+Source152:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/jfmutil.doc.tar.xz
+Source153:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/jfmutil.tar.xz
+Source154:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ketcindy.doc.tar.xz
+Source155:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ketcindy.tar.xz
+Source156:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/kotex-utils.doc.tar.xz
+Source157:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/kotex-utils.tar.xz
+Source158:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/kpathsea.doc.tar.xz
+Source159:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/kpathsea.tar.xz
+Source160:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/l3build.tar.xz
+Source161:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/l3build.doc.tar.xz
+Source162:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lacheck.doc.tar.xz
+Source163:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex2man.doc.tar.xz
+Source164:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex2man.tar.xz
+Source165:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex2nemeth.doc.tar.xz
+Source166:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex2nemeth.tar.xz
+Source167:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexdiff.doc.tar.xz
+Source168:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexdiff.tar.xz
+Source169:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexfileversion.doc.tar.xz
+Source170:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexfileversion.tar.xz
+Source171:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex-git-log.doc.tar.xz
+Source172:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex-git-log.tar.xz
+Source173:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexindent.doc.tar.xz
+Source174:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexindent.tar.xz
+Source175:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexpand.doc.tar.xz
+Source176:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latexpand.tar.xz
+Source177:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex-papersize.doc.tar.xz
+Source178:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex-papersize.tar.xz
+Source179:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lcdftypetools.doc.tar.xz
+Source180:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lilyglyphs.doc.tar.xz
+Source181:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lilyglyphs.tar.xz
+Source182:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/listbib.doc.tar.xz
+Source183:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/listbib.tar.xz
+Source184:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/listings-ext.doc.tar.xz
+Source185:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/listings-ext.tar.xz
+Source186:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lollipop.doc.tar.xz
+Source187:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lollipop.tar.xz
+Source188:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ltxfileinfo.doc.tar.xz
+Source189:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ltxfileinfo.tar.xz
+Source190:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ltximg.doc.tar.xz
+Source191:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ltximg.tar.xz
+Source192:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/luaotfload.doc.tar.xz
+Source193:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/luaotfload.tar.xz
+Source194:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/luahbtex.doc.tar.xz
+Source195:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/luahbtex.tar.xz
+Source196:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/luatex.doc.tar.xz
+Source197:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/luatex.tar.xz
+Source198:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lwarp.doc.tar.xz
+Source199:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lwarp.tar.xz
+Source200:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/make4ht.doc.tar.xz
+Source201:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/make4ht.tar.xz
+Source202:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/makedtx.doc.tar.xz
+Source203:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/makedtx.tar.xz
+Source204:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/makeindex.doc.tar.xz
+Source205:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/makeindex.tar.xz
+Source206:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/match_parens.doc.tar.xz
+Source207:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/match_parens.tar.xz
+Source208:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mathspic.doc.tar.xz
+Source209:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mathspic.tar.xz
+Source210:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/metafont.doc.tar.xz
+Source211:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/metafont.tar.xz
+Source212:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/metapost.doc.tar.xz
+Source213:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/metapost.tar.xz
+Source214:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mex.doc.tar.xz
+Source215:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mex.tar.xz
+Source216:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mf2pt1.doc.tar.xz
+Source217:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mf2pt1.tar.xz
+Source218:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mflua.tar.xz
+Source219:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mfware.doc.tar.xz
+Source220:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mfware.tar.xz
+Source221:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mkgrkindex.doc.tar.xz
+Source222:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mkgrkindex.tar.xz
+Source223:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mkjobtexmf.doc.tar.xz
+Source224:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mkjobtexmf.tar.xz
+Source225:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mkpic.doc.tar.xz
+Source226:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mkpic.tar.xz
+Source227:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mltex.doc.tar.xz
+Source228:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mltex.tar.xz
+Source229:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mptopdf.doc.tar.xz
+Source230:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/mptopdf.tar.xz
+Source231:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/m-tx.doc.tar.xz
+Source232:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/m-tx.tar.xz
+Source233:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/multibibliography.doc.tar.xz
+Source234:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/multibibliography.tar.xz
+Source235:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/musixtex.doc.tar.xz
+Source236:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/musixtex.tar.xz
+Source237:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/musixtnt.doc.tar.xz
+Source238:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/musixtnt.tar.xz
+Source239:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/omegaware.doc.tar.xz
+Source240:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/patgen.doc.tar.xz
+Source241:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/patgen.tar.xz
+Source242:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pax.doc.tar.xz
+Source243:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pax.tar.xz
+Source244:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfbook2.doc.tar.xz
+Source245:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfbook2.tar.xz
+Source246:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfcrop.doc.tar.xz
+Source247:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfcrop.tar.xz
+Source248:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfjam.doc.tar.xz
+Source249:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfjam.tar.xz
+Source250:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdflatexpicscale.doc.tar.xz
+Source251:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdflatexpicscale.tar.xz
+Source252:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdftex.doc.tar.xz
+Source253:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdftex.tar.xz
+Source254:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdftex-quiet.doc.tar.xz
+Source255:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdftex-quiet.tar.xz
+Source256:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfxup.doc.tar.xz
+Source257:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pdfxup.tar.xz
+Source258:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pedigree-perl.doc.tar.xz
+Source259:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pedigree-perl.tar.xz
+Source260:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/perltex.doc.tar.xz
+Source261:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/perltex.tar.xz
+Source262:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/petri-nets.doc.tar.xz
+Source263:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/petri-nets.tar.xz
+Source264:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pfarrei.doc.tar.xz
+Source265:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pfarrei.tar.xz
+Source266:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pkfix.doc.tar.xz
+Source267:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pkfix-helper.doc.tar.xz
+Source268:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pkfix-helper.tar.xz
+Source269:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pkfix.tar.xz
+Source270:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pmxchords.doc.tar.xz
+Source271:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pmxchords.tar.xz
+Source272:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pmx.doc.tar.xz
+Source273:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pmx.tar.xz
+Source274:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ps2eps.doc.tar.xz
+Source275:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ps2eps.tar.xz
+Source276:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ps2pk.doc.tar.xz
+Source277:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ps2pk.tar.xz
+Source278:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pst2pdf.doc.tar.xz
+Source279:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pst2pdf.tar.xz
+Source280:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pst-pdf.doc.tar.xz
+Source281:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pst-pdf.tar.xz
+Source282:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/psutils.doc.tar.xz
+Source283:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/psutils.tar.xz
+Source284:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ptex2pdf.doc.tar.xz
+Source285:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ptex2pdf.tar.xz
+Source286:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ptex.doc.tar.xz
+Source287:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ptex-fontmaps.doc.tar.xz
+Source288:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ptex-fontmaps.tar.xz
+Source289:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ptex.tar.xz
+Source290:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/purifyeps.doc.tar.xz
+Source291:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/purifyeps.tar.xz
+Source292:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pygmentex.doc.tar.xz
+Source293:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pygmentex.tar.xz
+Source294:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pythontex.doc.tar.xz
+Source295:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/pythontex.tar.xz
+Source296:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/rubik.doc.tar.xz
+Source297:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/rubik.tar.xz
+Source298:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/seetexk.doc.tar.xz
+Source299:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/seetexk.tar.xz
+Source300:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/splitindex.doc.tar.xz
+Source301:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/splitindex.tar.xz
+Source302:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/srcredact.doc.tar.xz
+Source303:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/srcredact.tar.xz
+Source304:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/sty2dtx.doc.tar.xz
+Source305:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/sty2dtx.tar.xz
+Source306:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/svn-multi.doc.tar.xz
+Source307:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/svn-multi.tar.xz
+Source308:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/synctex.doc.tar.xz
+Source309:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/synctex.tar.xz
+Source310:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tex4ebook.doc.tar.xz
+Source311:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tex4ebook.tar.xz
+Source312:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tex4ht.doc.tar.xz
+Source313:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tex4ht.tar.xz
+Source314:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texcount.doc.tar.xz
+Source315:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texcount.tar.xz
+Source316:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdef.doc.tar.xz
+Source317:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdef.tar.xz
+Source318:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdiff.doc.tar.xz
+Source319:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdiff.tar.xz
+Source320:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdirflatten.doc.tar.xz
+Source321:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdirflatten.tar.xz
+Source322:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdoc.doc.tar.xz
+Source323:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tex.doc.tar.xz
+Source324:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdoc.tar.xz
+Source325:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdoctk.tar.xz
+Source326:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texdoctk.doc.tar.xz
+Source327:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texfot.doc.tar.xz
+Source328:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texfot.tar.xz
+Source329:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive.infra.doc.tar.xz
+Source330:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive.infra.tar.xz
+Source331:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texliveonfly.doc.tar.xz
+Source332:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texliveonfly.tar.xz
+Source333:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive-scripts.doc.tar.xz
+Source334:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive-scripts.tar.xz
+Source335:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive-scripts-extra.doc.tar.xz
+Source336:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texlive-scripts-extra.tar.xz
+Source337:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texloganalyser.doc.tar.xz
+Source338:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texloganalyser.tar.xz
+Source339:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texosquery.doc.tar.xz
+Source340:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texosquery.tar.xz
+Source341:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texplate.doc.tar.xz
+Source342:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texplate.tar.xz
+Source343:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texsis.doc.tar.xz
+Source344:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texsis.tar.xz
+Source345:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tex.tar.xz
+Source346:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texware.doc.tar.xz
+Source347:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/texware.tar.xz
+Source348:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/thumbpdf.doc.tar.xz
+Source349:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/thumbpdf.tar.xz
+Source350:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tie.doc.tar.xz
+Source351:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tie.tar.xz
+Source352:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tpic2pdftex.doc.tar.xz
+Source353:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tpic2pdftex.tar.xz
+Source354:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ttfutils.doc.tar.xz
+Source355:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ttfutils.tar.xz
+Source356:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/typeoutfileinfo.doc.tar.xz
+Source357:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/typeoutfileinfo.tar.xz
+Source358:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ulqda.doc.tar.xz
+Source359:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/ulqda.tar.xz
+Source360:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/uplatex.doc.tar.xz
+Source361:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/uptex.doc.tar.xz
+Source362:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/urlbst.doc.tar.xz
+Source363:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/urlbst.tar.xz
+Source364:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/velthuis.doc.tar.xz
+Source365:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/velthuis.tar.xz
+Source366:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/vlna.doc.tar.xz
+Source367:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/vpe.doc.tar.xz
+Source368:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/vpe.tar.xz
+Source369:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/web.doc.tar.xz
+Source370:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/web.tar.xz
+Source371:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/webquiz.doc.tar.xz
+Source372:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/webquiz.tar.xz
+Source373:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/wordcount.doc.tar.xz
+Source374:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/wordcount.tar.xz
+Source375:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xdvi.doc.tar.xz
+Source376:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xdvi.tar.xz
+Source377:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xetex.doc.tar.xz
+Source378:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xetex.tar.xz
+Source379:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xindex.doc.tar.xz
+Source380:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xindex.tar.xz
+Source383:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xmltex.doc.tar.xz
+Source384:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xmltex.tar.xz
+Source385:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xpdfopen.doc.tar.xz
+Source386:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/yplan.doc.tar.xz
+Source387:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/yplan.tar.xz
+Source388:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/optex.tar.xz
+Source389:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/optex.doc.tar.xz
+Source390:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/albatross.tar.xz
+Source391:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/albatross.doc.tar.xz
+Source392:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/git-latexdiff.tar.xz
+Source393:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/git-latexdiff.doc.tar.xz
+Source394:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyperxmp.tar.xz
+Source395:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyperxmp.doc.tar.xz
+Source396:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/light-latex-make.tar.xz
+Source397:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/light-latex-make.doc.tar.xz
+Source398:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/spix.tar.xz
+Source399:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/spix.doc.tar.xz
+Source400:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tikztosvg.tar.xz
+Source401:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/tikztosvg.doc.tar.xz
+Source402:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xml2pmx.tar.xz
+Source403:      http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xml2pmx.doc.tar.xz
+
 Patch0001:      tl-kpfix.patch
 Patch0002:      tl-format.patch
-Patch0005:      texlive-20180414-synctex-version.patch
-Patch0006:      texlive-base-CVE-2018-17407.patch
-Patch0007:      fix-build-error-when-srctopdf-is-ok.patch
-Patch0008:      remove-support-of-poppler.patch
+Patch0005:      texlive-2016-kpathsea-texlive-path.patch
+
+Patch0008:      texlive-20210325-texinfo-path-fix.patch
+Patch0017:      texlive-20180414-annocheck.patch
+
+Patch0020:      texlive-20190410-dvisvgm-fix-libgs-detection.patch
+Patch0021:      texlive-20190410-tlmgr-ignore-warning.patch
+
+Patch0030:      texlive-base-20200327-out-of-memory.patch
+
+Patch0032:      texlive-base-20210325-mendex-weird-arch-fixes.patch
+Patch0033:      texlive-base-20210325-no-setpdfwrite.patch
+
 
 BuildRequires:  xz libXaw-devel libXi-devel ncurses-devel bison flex file perl(Digest::MD5) texinfo gcc-c++
-BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel
+BuildRequires:  gd-devel freetype-devel libpng-devel zlib-devel potrace-devel
 BuildRequires:  zziplib-devel libicu-devel cairo-devel harfbuzz-devel perl-generators pixman-devel graphite2-devel
 BuildRequires:  libpaper-devel autoconf automake libtool libgs-devel
-BuildRequires:  gmp-devel mpfr-devel python3-devel chrpath
-Provides:       texlive-cjk-gs-integrate = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cjk-gs-integrate <= 7:20170520
-Provides:       tex-cjk-gs-integrate = %{epoch}:20180414-%{release}
-Obsoletes:      tex-cjk-gs-integrate <= 7:20170520
-Provides:       texlive-cjk-gs-integrate-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cjk-gs-integrate-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cjk-gs-integrate-bin <= 7:20170520
-Obsoletes:      tex-cjk-gs-integrate-bin <= 7:20170520
-Provides:       texlive-cjk-gs-integrate-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cjk-gs-integrate-doc <= 7:20170520
+BuildRequires:  gmp-devel mpfr-devel python3-devel poppler-devel t1utils
+# For macros.
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  chrpath tex(expl3.sty)
+Provides:       texlive-cjk-gs-integrate = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cjk-gs-integrate <= 7:20180414
+Provides:       tex-cjk-gs-integrate = %{epoch}:20210325-%{release}
+Obsoletes:      tex-cjk-gs-integrate <= 7:20180414
+Provides:       texlive-cjk-gs-integrate-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cjk-gs-integrate-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cjk-gs-integrate-bin <= 7:20180414
+Obsoletes:      tex-cjk-gs-integrate-bin <= 7:20180414
+Provides:       texlive-cjk-gs-integrate-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cjk-gs-integrate-doc <= 7:20180414
 
 %description
 The TeX Live software distribution offers a complete TeX system for a
@@ -408,10 +459,10 @@ The distribution includes extensive general documentation about TeX,
 as well as the documentation for the included software packages.
 
 %package -n texlive-a2ping
-Provides:       tex-a2ping = %{epoch}:20180414-%{release}
-Provides:       texlive-a2ping-bin = %{epoch}:20180414-%{release}
-Provides:       tex-a2ping-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-a2ping-bin < 7:20170520
+Provides:       tex-a2ping = %{epoch}:20210325-%{release}
+Provides:       texlive-a2ping-bin = %{epoch}:20210325-%{release}
+Provides:       tex-a2ping-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-a2ping-bin < 7:20180414
 License:        GPL+
 Summary:        Advanced PS, PDF, EPS converter
 Requires:       texlive-base texlive-kpathsea
@@ -430,21 +481,21 @@ many glitches during the EPS to EPS conversion, so its output
 is often more compatible and better embeddable than its input.
 
 %package -n texlive-accfonts
-Provides:       tex-accfonts = %{epoch}:20180414-%{release}
-Provides:       texlive-accfonts-bin = %{epoch}:20180414-%{release}
-Provides:       tex-accfonts-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-accfonts-bin < 7:20170520
-Provides:       tex-accfonts-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-accfonts-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-accfonts-doc < 7:20170520
+Provides:       tex-accfonts = %{epoch}:20210325-%{release}
+Provides:       texlive-accfonts-bin = %{epoch}:20210325-%{release}
+Provides:       tex-accfonts-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-accfonts-bin < 7:20180414
+Provides:       tex-accfonts-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-accfonts-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-accfonts-doc < 7:20180414
 License:        GPL+
 Summary:        Utilities to derive new fonts from existing ones
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(CSX.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ISO-Latin1.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ISO-Latin2.def) = %{epoch}:20180414-%{release}
-Provides:       tex(IndUni_Omega.def) = %{epoch}:20180414-%{release}
-Provides:       tex(Norman.def) = %{epoch}:20180414-%{release}
+Provides:       tex(CSX.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ISO-Latin1.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ISO-Latin2.def) = %{epoch}:20210325-%{release}
+Provides:       tex(IndUni_Omega.def) = %{epoch}:20210325-%{release}
+Provides:       tex(Norman.def) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-accfonts
@@ -463,13 +514,13 @@ generates suitable "hints" to enhance quality at small sizes or
 poor resolutions. The programs are written in Perl.
 
 %package -n texlive-adhocfilelist
-Provides:       tex-adhocfilelist = %{epoch}:20180414-%{release}
-Provides:       texlive-adhocfilelist-bin = %{epoch}:20180414-%{release}
-Provides:       tex-adhocfilelist-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-adhocfilelist-bin < 7:20170520
-Provides:       tex-adhocfilelist-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-adhocfilelist-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-adhocfilelist-doc < 7:20170520
+Provides:       tex-adhocfilelist = %{epoch}:20210325-%{release}
+Provides:       texlive-adhocfilelist-bin = %{epoch}:20210325-%{release}
+Provides:       tex-adhocfilelist-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-adhocfilelist-bin < 7:20180414
+Provides:       tex-adhocfilelist-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-adhocfilelist-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-adhocfilelist-doc < 7:20180414
 License:        LPPL
 Summary:        '\listfiles' entries from the command line
 Requires:       texlive-base texlive-kpathsea
@@ -483,60 +534,69 @@ package was developed on a Unix-like system, using (among other
 things) the gnu variant of the find command.
 
 %package -n texlive-afm2pl
-Provides:       tex-afm2pl = %{epoch}:20180414-%{release}
-Provides:       texlive-afm2pl-bin = %{epoch}:20180414-%{release}
-Provides:       tex-afm2pl-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-afm2pl-bin < 7:20170520
+Provides:       tex-afm2pl = %{epoch}:20210325-%{release}
+Provides:       texlive-afm2pl-bin = %{epoch}:20210325-%{release}
+Provides:       tex-afm2pl-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-afm2pl-bin < 7:20180414
 License:        LPPL
 Summary:        afm2pl package
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(afm2pl-ot1.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(afm2pl-ot1ital.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(afm2pl-ot1tt.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(afm2pl-texnanlc.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(afm2pl-texnanuc.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(makesc8y.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(afm2pl-ot1.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(afm2pl-ot1ital.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(afm2pl-ot1tt.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(afm2pl-texnanlc.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(afm2pl-texnanuc.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(makesc8y.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-afm2pl
 afm2pl package.
 
+%package -n texlive-albatross
+Summary:        Find fonts that contain a given glyph
+License:        BSD
+Requires:       texlive-base texlive-kpathsea
+
+%description -n texlive-albatross
+This is a command line tool for finding fonts that contain a
+given (Unicode) glyph. It relies on Fontconfig.
+
 %package -n texlive-aleph
-Provides:       tex-aleph = %{epoch}:20180414-%{release}
-Provides:       texlive-aleph-bin = %{epoch}:20180414-%{release}
-Provides:       tex-aleph-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-aleph-bin < 7:20170520
-Provides:       tex-aleph-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-aleph-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-aleph-doc < 7:20170520
+Provides:       tex-aleph = %{epoch}:20210325-%{release}
+Provides:       texlive-aleph-bin = %{epoch}:20210325-%{release}
+Provides:       tex-aleph-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-aleph-bin < 7:20180414
+Provides:       tex-aleph-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-aleph-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-aleph-doc < 7:20180414
 Summary:        Extended TeX
-Requires:       texlive-base texlive-kpathsea texlive-tetex
+Requires:       texlive-base texlive-kpathsea
 Requires(post,postun): coreutils
 Requires:       texlive-latex texlive-plain texlive-lambda texlive-cm texlive-hyphen-base texlive-knuth-lib
-Requires:       texlive-knuth-lib texlive-antomega texlive-latex-fonts texlive-omega
+Requires:       texlive-knuth-lib texlive-antomega texlive-latex-fonts texlive-omega texlive-l3kernel
 
 %description -n texlive-aleph
 An development of omega, using most of the extensions of TeX
 itself developed for e-TeX.
 
 %package -n texlive-amstex
-Provides:       tex-amstex = %{epoch}:20180414-%{release}
-Provides:       texlive-amstex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-amstex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-amstex-bin < 7:20170520
-Provides:       tex-amstex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-amstex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-amstex-doc < 7:20170520
+Provides:       tex-amstex = %{epoch}:20210325-%{release}
+Provides:       texlive-amstex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-amstex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-amstex-bin < 7:20180414
+Provides:       tex-amstex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-amstex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-amstex-doc < 7:20180414
 License:        LPPL
 Summary:        American Mathematical Society plain TeX macros
-Requires:       texlive-base texlive-kpathsea texlive-tetex
+Requires:       texlive-base texlive-kpathsea
 Requires(post,postun): coreutils
 Requires:       texlive-tex texlive-amsfonts texlive-cm texlive-hyphen-base texlive-knuth-lib
-Requires:       texlive-pdftex texlive-plain
-Provides:       tex(amsppt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(amsppt1.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(amstex.bug) = %{epoch}:20180414-%{release}
-Provides:       tex(amstex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(amstex.ini) = %{epoch}:20180414-%{release}
+Requires:       texlive-plain
+Provides:       tex(amsppt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(amsppt1.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(amstex.bug) = %{epoch}:20210325-%{release}
+Provides:       tex(amstex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(amstex.ini) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-amstex
@@ -549,13 +609,13 @@ authors. More recently, the focus of attention has switched to
 amslatex, but AMSTeX remains as a working system.
 
 %package -n texlive-arara
-Provides:       tex-arara = %{epoch}:20180414-%{release}
-Provides:       texlive-arara-bin = %{epoch}:20180414-%{release}
-Provides:       tex-arara-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-arara-bin < 7:20170520
-Provides:       tex-arara-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-arara-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-arara-doc < 7:20170520
+Provides:       tex-arara = %{epoch}:20210325-%{release}
+Provides:       texlive-arara-bin = %{epoch}:20210325-%{release}
+Provides:       tex-arara-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-arara-bin < 7:20180414
+Provides:       tex-arara-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-arara-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-arara-doc < 7:20180414
 License:        BSD
 Summary:        Automation of LaTeX compilation
 Requires:       texlive-base texlive-kpathsea
@@ -571,18 +631,36 @@ like latexmk and rubber. The key difference is that that arara
 determines its actions from metadata in the source code, rather
 than relying on indirect resources, such as log file analysis.
 
+%package -n texlive-attachfile2
+Provides:       tex-attachfile2 = %{epoch}:20210325-%{release}
+Provides:       tex-attachfile2-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-attachfile2-bin = %{epoch}:20210325-%{release}
+License:        LPPL
+Summary:        Attach files into PDF
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Provides:       tex(attachfile2.sty) = %{epoch}:20210325-%{release}
+BuildArch:      noarch
+
+%description -n texlive-attachfile2
+This package can be used to attach files to a PDF document. It
+is a further development of Scott Pakin's package attachfile
+for pdfTeX. Apart from bug fixes, this package adds support for
+dvips, some new options, and gets and writes meta information
+data about the attached files.
+
 %package -n texlive-authorindex
-Provides:       tex-authorindex = %{epoch}:20180414-%{release}
-Provides:       texlive-authorindex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-authorindex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-authorindex-bin < 7:20170520
-Provides:       tex-authorindex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-authorindex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-authorindex-doc < 7:20170520
+Provides:       tex-authorindex = %{epoch}:20210325-%{release}
+Provides:       texlive-authorindex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-authorindex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-authorindex-bin < 7:20180414
+Provides:       tex-authorindex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-authorindex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-authorindex-doc < 7:20180414
 License:        LPPL
 Summary:        Index citations by author names
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(authorindex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(authorindex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-authorindex
@@ -595,13 +673,13 @@ on BibTeX being used to handle citations. Additionally, it
 requires Perl (version 5 or higher).
 
 %package -n texlive-autosp
-Provides:       tex-autosp = %{epoch}:20180414-%{release}
-Provides:       texlive-autosp-bin = %{epoch}:20180414-%{release}
-Provides:       tex-autosp-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-autosp-bin < 7:20170520
-Provides:       tex-autosp-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-autosp-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-autosp-doc < 7:20170520
+Provides:       tex-autosp = %{epoch}:20210325-%{release}
+Provides:       texlive-autosp-bin = %{epoch}:20210325-%{release}
+Provides:       tex-autosp-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-autosp-bin < 7:20180414
+Provides:       tex-autosp-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-autosp-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-autosp-doc < 7:20180414
 License:        GPLv2
 Summary:        A Preprocessor that generates note-spacing commands for MusiXTeX scores
 Requires:       texlive-base
@@ -618,12 +696,12 @@ other parts. For example, \anotes\qa J\qa K&\ca l\qa m\ca n\en
 generates \Notes\qa J\sk\qa K\sk&\ca l\qa m\sk\ca n\en .
 
 %package -n texlive-axodraw2
-Provides:       tex-axodraw2 = %{epoch}:20180414-%{release}
-Provides:       texlive-axodraw2-bin = %{epoch}:20180414-%{release}
+Provides:       tex-axodraw2 = %{epoch}:20210325-%{release}
+Provides:       texlive-axodraw2-bin = %{epoch}:20210325-%{release}
 License:        GPLv3
 Summary:        Feynman diagrams in a LaTeX document
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(axodraw2.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(axodraw2.sty) = %{epoch}:20210325-%{release}
 
 %description -n texlive-axodraw2
 This package defines macros for drawing Feynman graphs in LaTeX
@@ -640,8 +718,8 @@ file. The processing involves a run of pdfLaTeX, a run of
 axohelp, and then another run of pdfLaTeX.
 
 %package -n texlive-bib2gls
-Provides:       tex-bib2gls = %{epoch}:20180414-%{release}
-Provides:       texlive-bib2gls-bin = %{epoch}:20180414-%{release}
+Provides:       tex-bib2gls = %{epoch}:20210325-%{release}
+Provides:       texlive-bib2gls-bin = %{epoch}:20210325-%{release}
 License:        GPLv3+
 Summary:        Convert .bib files to glossaries-extra.sty resource files
 Requires:       texlive-base
@@ -664,13 +742,13 @@ containing definitions (\newglossaryentry etc.) to the .bib
 format required by bib2gls.
 
 %package -n texlive-bibexport
-Provides:       tex-bibexport = %{epoch}:20180414-%{release}
-Provides:       texlive-bibexport-bin = %{epoch}:20180414-%{release}
-Provides:       tex-bibexport-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibexport-bin < 7:20170520
-Provides:       tex-bibexport-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-bibexport-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibexport-doc < 7:20170520
+Provides:       tex-bibexport = %{epoch}:20210325-%{release}
+Provides:       texlive-bibexport-bin = %{epoch}:20210325-%{release}
+Provides:       tex-bibexport-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibexport-bin < 7:20180414
+Provides:       tex-bibexport-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-bibexport-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibexport-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Extract a BibTeX file based on a .aux file
 Requires:       texlive-base texlive-kpathsea
@@ -683,18 +761,18 @@ BibTeX file, expanding the abbreviations (other than the built-
 in ones like month names) and followig the cross-references.
 
 %package -n texlive-bibtex
-Provides:       tex-bibtex = %{epoch}:20180414-%{release}
-Provides:       texlive-bibtex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-bibtex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibtex-bin < 7:20170520
-Provides:       tex-bibtex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-bibtex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibtex-doc < 7:20170520
+Provides:       tex-bibtex = %{epoch}:20210325-%{release}
+Provides:       texlive-bibtex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-bibtex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibtex-bin < 7:20180414
+Provides:       tex-bibtex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-bibtex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibtex-doc < 7:20180414
 License:        Knuth
 Summary:        Process bibliographies for LaTeX, etc
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(apalike.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(apalike.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(apalike.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(apalike.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-bibtex
 BibTeX allows the user to store his citation data in generic
@@ -712,13 +790,13 @@ output. In fact, it is best to avoid BibTeX in favour of biber
 and biblatex, if at all possible.
 
 %package -n texlive-bibtexu
-Provides:       tex-bibtexu = %{epoch}:20180414-%{release}
-Provides:       texlive-bibtexu-bin = %{epoch}:20180414-%{release}
-Provides:       tex-bibtexu-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibtexu-bin < 7:20170520
-Provides:       tex-bibtexu-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-bibtexu-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibtexu-doc < 7:20170520
+Provides:       tex-bibtexu = %{epoch}:20210325-%{release}
+Provides:       texlive-bibtexu-bin = %{epoch}:20210325-%{release}
+Provides:       tex-bibtexu-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibtexu-bin < 7:20180414
+Provides:       tex-bibtexu-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-bibtexu-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibtexu-doc < 7:20180414
 License:        LPPL
 Summary:        bibtexu package
 Requires:       texlive-base texlive-kpathsea
@@ -727,13 +805,13 @@ Requires:       texlive-base texlive-kpathsea
 bibtexu package.
 
 %package -n texlive-bibtex8
-Provides:       tex-bibtex8 = %{epoch}:20180414-%{release}
-Provides:       texlive-bibtex8-bin = %{epoch}:20180414-%{release}
-Provides:       tex-bibtex8-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibtex8-bin < 7:20170520
-Provides:       tex-bibtex8-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-bibtex8-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bibtex8-doc < 7:20170520
+Provides:       tex-bibtex8 = %{epoch}:20210325-%{release}
+Provides:       texlive-bibtex8-bin = %{epoch}:20210325-%{release}
+Provides:       tex-bibtex8-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibtex8-bin < 7:20180414
+Provides:       tex-bibtex8-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-bibtex8-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bibtex8-doc < 7:20180414
 License:        GPL+
 Summary:        A fully 8-bit adaptation of BibTeX 0.99
 Requires:       texlive-base texlive-kpathsea
@@ -746,19 +824,19 @@ character set and sorting order are controlled by an external
 configuration file. Various examples are included.
 
 %package -n texlive-bundledoc
-Provides:       tex-bundledoc = %{epoch}:20180414-%{release}
-Provides:       texlive-bundledoc-bin = %{epoch}:20180414-%{release}
-Provides:       tex-bundledoc-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bundledoc-bin < 7:20170520
-Provides:       tex-bundledoc-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-bundledoc-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-bundledoc-doc < 7:20170520
+Provides:       tex-bundledoc = %{epoch}:20210325-%{release}
+Provides:       texlive-bundledoc-bin = %{epoch}:20210325-%{release}
+Provides:       tex-bundledoc-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bundledoc-bin < 7:20180414
+Provides:       tex-bundledoc-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-bundledoc-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-bundledoc-doc < 7:20180414
 License:        LPPL
 Summary:        Bundle together all the files needed to build a LaTeX document
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(miktex.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(texlive-unix-arlatex.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(texlive-unix.cfg) = %{epoch}:20180414-%{release}
+Provides:       tex(miktex.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(texlive-unix-arlatex.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(texlive-unix.cfg) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-bundledoc
@@ -775,18 +853,18 @@ document, together with the document itself, using the
 filecontents* environment.
 
 %package -n texlive-cachepic
-Provides:       tex-cachepic = %{epoch}:20180414-%{release}
-Provides:       texlive-cachepic-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cachepic-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cachepic-bin < 7:20170520
-Provides:       tex-cachepic-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-cachepic-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cachepic-doc < 7:20170520
+Provides:       tex-cachepic = %{epoch}:20210325-%{release}
+Provides:       texlive-cachepic-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cachepic-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cachepic-bin < 7:20180414
+Provides:       tex-cachepic-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-cachepic-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cachepic-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Convert document fragments into graphics
 Requires:       texlive-base texlive-kpathsea tex(graphicx.sty) tex(verbatim.sty)
-Provides:       tex(cachepic.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(prcachepic.def) = %{epoch}:20180414-%{release}
+Provides:       tex(cachepic.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(prcachepic.def) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-cachepic
@@ -797,13 +875,13 @@ interface, and a command line tool (written in lua) that
 generates the external graphics.
 
 %package -n texlive-checkcites
-Provides:       tex-checkcites = %{epoch}:20180414-%{release}
-Provides:       texlive-checkcites-bin = %{epoch}:20180414-%{release}
-Provides:       tex-checkcites-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-checkcites-bin < 7:20170520
-Provides:       tex-checkcites-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-checkcites-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-checkcites-doc < 7:20170520
+Provides:       tex-checkcites = %{epoch}:20210325-%{release}
+Provides:       texlive-checkcites-bin = %{epoch}:20210325-%{release}
+Provides:       tex-checkcites-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-checkcites-bin < 7:20180414
+Provides:       tex-checkcites-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-checkcites-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-checkcites-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Check citation commands in a document
 Requires:       texlive-base texlive-kpathsea
@@ -815,18 +893,18 @@ of detecting undefined and unused references from LaTeX
 auxiliary or bibliography files.
 
 %package -n texlive-checklistings
-Provides:       tex-checklistings = %{epoch}:20180414-%{release}
-Provides:       texlive-checklistings-bin = %{epoch}:20180414-%{release}
-Provides:       tex-checklistings-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-checklistings-bin < 7:20170520
-Provides:       tex-checklistings-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-checklistings-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-checklistings-doc < 7:20170520
+Provides:       tex-checklistings = %{epoch}:20210325-%{release}
+Provides:       texlive-checklistings-bin = %{epoch}:20210325-%{release}
+Provides:       tex-checklistings-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-checklistings-bin < 7:20180414
+Provides:       tex-checklistings-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-checklistings-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-checklistings-doc < 7:20180414
 License:        LPPL 1.2
 Summary:        Pass verbatim contents through a compiler and reincorporate the resulting output
 Requires:       texlive-base texlive-kpathsea tex(keyval.sty) tex(kvoptions.sty) tex(fancyvrb.sty)
 Requires:       tex(color.sty) tex(listings.sty)
-Provides:       tex(checklistings.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(checklistings.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-checklistings
@@ -838,14 +916,31 @@ package does not focus on a specific programming language, but
 it is designed to work well with languages and compilers in the
 ML family.
 
+%package -n texlive-chklref
+Provides:       tex-chklref = %{epoch}:20210325-%{release}
+License:        GPLv3
+Summary:        Check for problems with labels in LaTeX
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Provides:       tex(chklref.sty) = %{epoch}:20210325-%{release}
+# perl
+BuildArch: noarch
+
+%description -n texlive-chklref
+It is quite common that after modifying a TeX file, many unused
+labels remain in it. The purpose of chklref is to automatically
+find these useless labels. It also looks for "non starred"
+mathematical environments with no labels and advises the user
+to use a starred version instead.
+
 %package -n texlive-chktex
-Provides:       tex-chktex = %{epoch}:20180414-%{release}
-Provides:       texlive-chktex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-chktex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-chktex-bin < 7:20170520
-Provides:       tex-chktex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-chktex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-chktex-doc < 7:20170520
+Provides:       tex-chktex = %{epoch}:20210325-%{release}
+Provides:       texlive-chktex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-chktex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-chktex-bin < 7:20180414
+Provides:       tex-chktex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-chktex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-chktex-doc < 7:20180414
 License:        GPL+
 Summary:        Check for errors in LaTeX documents
 Requires:       texlive-base texlive-kpathsea
@@ -857,232 +952,276 @@ parts of CWEB documents.
 
 
 %package -n texlive-cjkutils
-Provides:       tex-cjkutils = %{epoch}:20180414-%{release}
-Provides:       texlive-cjkutils-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cjkutils-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cjkutils-bin < 7:20170520
+Provides:       tex-cjkutils = %{epoch}:20210325-%{release}
+Provides:       texlive-cjkutils-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cjkutils-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cjkutils-bin < 7:20180414
 License:        LPPL
 Summary:        cjkutils package
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(b5ka12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(b5kr12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(b5so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c1so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c2so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c3so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c4so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c5so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c6so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(c7so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(csso12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(gsfs14.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(j2so12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(jsso12.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(ksso17.cfg) = %{epoch}:20180414-%{release}
+Provides:       tex(b5ka12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(b5kr12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(b5so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c1so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c2so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c3so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c4so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c5so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c6so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(c7so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(csso12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(gsfs14.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(j2so12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(jsso12.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(ksso17.cfg) = %{epoch}:20210325-%{release}
 
 %description -n texlive-cjkutils
 cjkutils package.
 
+%package -n texlive-clojure-pamphlet
+Provides:       tex-clojure-pamphlet = %{epoch}:20210325-%{release}
+Provides:       texlive-clojure-pamphlet-bin = %{epoch}:20210325-%{release}
+Provides:       tex-clojure-pamphlet-bin = %{epoch}:20210325-%{release}
+License:        GPLv3+
+Summary:        A simple literate programming tool based on clojure's pamphlet system
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Provides:       tex(clojure-pamphlet.sty) = %{epoch}:20210325-%{release}
+BuildArch: noarch
+
+%description -n texlive-clojure-pamphlet
+The Clojure pamphlet system is a system based on the Clojure
+literate system. In the Clojure's pamphlet system you have your
+main LaTeX file, which can be compiled regularly. This file
+contains documentation and source code (just like in other
+forms of literate programming). These code snippets are wrapped
+in the chunk environment, hence they can be recognized by the
+tangler in order to extract them. Chunks can be included inside
+each other by the getchunk command (which will be typesetted
+accordingly). Finally, the LaTeX file will be run through the
+tangler to get the desired chunk of code.
+
+%package -n texlive-cluttex
+Provides:       tex-cluttex = %{epoch}:20210325-%{release}
+Provides:       texlive-cluttex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cluttex-bin = %{epoch}:20210325-%{release}
+License:        GPLv3
+Summary:        An automation tool for running LaTeX
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+BuildArch: noarch
+
+%description -n texlive-cluttex
+This is another tool for the automation of LaTeX document
+processing, like latexmk or arara. The main feature of this
+tool is that it does not clutter your working directory with
+.aux or .log or other auxiliary files. It has of course the
+usual features of automation tools: It automatically re-runs
+(La)TeX for cross-references. MakeIndex, BibTeX, Biber, or
+makeglossaries will be executed if a corresponding option is
+set. Furthermore, cluttex can watch input files for changes
+(using an external program).
+
 %package -n texlive-context
-Provides:       tex-context = %{epoch}:20180414-%{release}
-Provides:       texlive-context-bin = %{epoch}:20180414-%{release}
-Provides:       tex-context-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-context-bin < 7:20170520
-Provides:       tex-context-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-context-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-context-doc < 7:20170520
+Provides:       tex-context = %{epoch}:20210325-%{release}
+Provides:       texlive-context-bin = %{epoch}:20210325-%{release}
+Provides:       tex-context-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-context-bin < 7:20180414
+Provides:       tex-context-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-context-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-context-doc < 7:20180414
 License:        GPL+ or LPPL
 Summary:        The ConTeXt macro package
-Requires:       texlive-base texlive-kpathsea texlive-tetex texlive-metapost
+Requires:       texlive-base texlive-kpathsea texlive-metapost
 Requires(post,postun): coreutils
 Requires:       texlive-pdftex texlive-xetex texlive-luatex texlive-lm texlive-lm-math texlive-amsfonts
 Requires:       texlive-manfnt-font texlive-mflogo-font texlive-stmaryrd texlive-mptopdf
 Requires:       ruby tex(pstricks.sty)
 Requires:       tex(pst-plot.sty)
-Provides:       tex(notepad++.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(texworks-setup.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(tools.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(TeXworks.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(scite-context-readme.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(type-buy.dat) = %{epoch}:20180414-%{release}
-Provides:       tex(type-fsf.dat) = %{epoch}:20180414-%{release}
-Provides:       tex(type-ghz.dat) = %{epoch}:20180414-%{release}
-Provides:       tex(type-tmf.dat) = %{epoch}:20180414-%{release}
-Provides:       tex(contnav.afm) = %{epoch}:20180414-%{release}
-Provides:       tex(cmin.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(cmit.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(cmitt.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(cmrm.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(cmsc.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(cmtt.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(ec-2004.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-8r.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(teff-trinite.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(contnav.map) = %{epoch}:20180414-%{release}
-Provides:       tex(8r-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(ec-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(ec-os-public-lm.map) = %{epoch}:20180414-%{release}
-Provides:       tex(mkiv-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(mkiv-px.map) = %{epoch}:20180414-%{release}
-Provides:       tex(mkiv-tx.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-adobe-euro.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-ams-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-ams-cmr.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-ams-euler.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-context-symbol.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-dummy.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-empty.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-micropress-informal.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-public-csr.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-public-lm.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-public-plr.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-public-vnr.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-vogel-symbol.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-wasy.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-youngryu-px.map) = %{epoch}:20180414-%{release}
-Provides:       tex(original-youngryu-tx.map) = %{epoch}:20180414-%{release}
-Provides:       tex(qx-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(qx-os-public-lm.map) = %{epoch}:20180414-%{release}
-Provides:       tex(t5-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(t5-os-public-lm.map) = %{epoch}:20180414-%{release}
-Provides:       tex(texnansi-base.map) = %{epoch}:20180414-%{release}
-Provides:       tex(texnansi-os-public-lm.map) = %{epoch}:20180414-%{release}
-Provides:       tex(tlig.map) = %{epoch}:20180414-%{release}
-Provides:       tex(contnav.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(contnav.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(bidi-symbols.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(demo-symbols.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(export-example.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-cweb.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-datastrc.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-educat.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-format.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-layout.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-narrowtt.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-newmat.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-pictex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-streams.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-subsub.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(metatex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-arrange.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-combine.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-common.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-copy.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-ideas.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-listing.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-markdown.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-precache.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-select.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-sql.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-timing.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mtx-context-xml.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-abr-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-abr-02.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-abr-03.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-abr-04.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-cdr-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-faq-00.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-faq-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-faq-02.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-faq-03.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-mag-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-00.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-02.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-03.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-04.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-05.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-06.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-07.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-08.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-09.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-10.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-11.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-12.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-13.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-14.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-15.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-16.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-18.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-19.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-22.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-23.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-26.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-27.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-50.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-61.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-62.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-63.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-64.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-66.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-67.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-68.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-93.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-pre-96.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(s-ptj-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(status-mkiv.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(supp-mis.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(supp-mpe.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(supp-pdf.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(x-dir-01.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-ams.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-apa-de.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-apa-fr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-apa-it.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-apa.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-aps.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-num-fr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-num.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bibl-ssa.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mag-0000.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(setup-qr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(aesop-de.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bryson.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cervantes-es.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(darwin.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(davis.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(dawkins.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(demo-mps.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(demo-tex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(demo-xml.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(douglas.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(hawking.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(khatt-ar.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(khatt-en.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(knuth.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(linden.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lorem.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(materie.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(montgomery.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(quevedo-es.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(reich.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(sample.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(samples.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(thuan.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(tufte.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ward.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(weisman.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(zapf.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(context-test.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-basics.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-fonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-languages.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-math.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-mplib.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-plain.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-preprocessor-test.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-preprocessor.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-swiglib-test.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-swiglib.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-test.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-ch-de.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-ch-en.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-ch-nl.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(m-ch-de.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(m-ch-en.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(m-ch-nl.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(m-pictex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(notepad++.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(texworks-setup.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(tools.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(TeXworks.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(scite-context-readme.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(type-buy.dat) = %{epoch}:20210325-%{release}
+Provides:       tex(type-fsf.dat) = %{epoch}:20210325-%{release}
+Provides:       tex(type-ghz.dat) = %{epoch}:20210325-%{release}
+Provides:       tex(type-tmf.dat) = %{epoch}:20210325-%{release}
+Provides:       tex(contnav.afm) = %{epoch}:20210325-%{release}
+Provides:       tex(cmin.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(cmit.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(cmitt.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(cmrm.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(cmsc.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(cmtt.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(ec-2004.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-8r.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(teff-trinite.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(contnav.map) = %{epoch}:20210325-%{release}
+Provides:       tex(8r-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(ec-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(ec-os-public-lm.map) = %{epoch}:20210325-%{release}
+Provides:       tex(mkiv-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(mkiv-px.map) = %{epoch}:20210325-%{release}
+Provides:       tex(mkiv-tx.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-adobe-euro.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-ams-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-ams-cmr.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-ams-euler.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-context-symbol.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-dummy.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-empty.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-micropress-informal.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-public-csr.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-public-lm.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-public-plr.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-public-vnr.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-vogel-symbol.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-wasy.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-youngryu-px.map) = %{epoch}:20210325-%{release}
+Provides:       tex(original-youngryu-tx.map) = %{epoch}:20210325-%{release}
+Provides:       tex(qx-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(qx-os-public-lm.map) = %{epoch}:20210325-%{release}
+Provides:       tex(t5-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(t5-os-public-lm.map) = %{epoch}:20210325-%{release}
+Provides:       tex(texnansi-base.map) = %{epoch}:20210325-%{release}
+Provides:       tex(texnansi-os-public-lm.map) = %{epoch}:20210325-%{release}
+Provides:       tex(tlig.map) = %{epoch}:20210325-%{release}
+Provides:       tex(contnav.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(contnav.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(bidi-symbols.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(demo-symbols.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(export-example.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-cweb.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-datastrc.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-educat.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-format.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-layout.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-narrowtt.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-newmat.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-pictex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-streams.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-subsub.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(metatex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-arrange.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-combine.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-common.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-copy.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-ideas.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-listing.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-markdown.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-precache.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-select.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-sql.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-timing.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mtx-context-xml.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-abr-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-abr-02.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-abr-03.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-abr-04.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-cdr-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-faq-00.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-faq-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-faq-02.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-faq-03.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-mag-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-00.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-02.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-03.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-04.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-05.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-06.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-07.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-08.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-09.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-10.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-11.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-12.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-13.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-14.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-15.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-16.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-18.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-19.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-22.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-23.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-26.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-27.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-50.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-61.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-62.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-63.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-64.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-66.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-67.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-68.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-93.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-pre-96.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(s-ptj-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(status-mkiv.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(supp-mis.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(supp-mpe.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(supp-pdf.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(x-dir-01.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-ams.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-apa-de.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-apa-fr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-apa-it.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-apa.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-aps.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-num-fr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-num.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bibl-ssa.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mag-0000.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(setup-qr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(aesop-de.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(bryson.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cervantes-es.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(darwin.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(davis.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(dawkins.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(demo-mps.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(demo-tex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(demo-xml.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(douglas.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(hawking.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(khatt-ar.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(khatt-en.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(knuth.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(linden.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lorem.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(materie.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(montgomery.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(quevedo-es.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(reich.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(sample.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(samples.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(thuan.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(tufte.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ward.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(weisman.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(zapf.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(context-test.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-basics.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-fonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-languages.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-math.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-mplib.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-plain.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-preprocessor-test.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-preprocessor.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-swiglib-test.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-swiglib.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatex-test.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-ch-de.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-ch-en.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-ch-nl.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(m-ch-de.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(m-ch-en.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(m-ch-nl.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(m-pictex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-context
@@ -1090,14 +1229,23 @@ A full featured, parameter driven macro package, which fully
 supports advanced interactive documents. See the ConTeXt garden
 for a wealth of support information.
 
+%package -n texlive-context-doc
+Requires: texlive-context
+Provides: tex-context-doc = %{epoch}:20210325-%{release}
+Summary: Documentation for context
+License: GPL+ or LPPL
+
+%description -n texlive-context-doc
+Documentation for context.
+
 %package -n texlive-convbkmk
-Provides:       tex-convbkmk = %{epoch}:20180414-%{release}
-Provides:       texlive-convbkmk-bin = %{epoch}:20180414-%{release}
-Provides:       tex-convbkmk-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-convbkmk-bin < 7:20170520
-Provides:       tex-convbkmk-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-convbkmk-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-convbkmk-doc < 7:20170520
+Provides:       tex-convbkmk = %{epoch}:20210325-%{release}
+Provides:       texlive-convbkmk-bin = %{epoch}:20210325-%{release}
+Provides:       tex-convbkmk-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-convbkmk-bin < 7:20180414
+Provides:       tex-convbkmk-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-convbkmk-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-convbkmk-doc < 7:20180414
 License:        MIT
 Summary:        Correct platex/uplatex bookmarks in PDF created with hyperref
 Requires:       texlive-base texlive-kpathsea ruby
@@ -1109,13 +1257,13 @@ bookmarks in PDF files created by platex/uplatex, using
 hyperref.
 
 %package -n texlive-crossrefware
-Provides:       tex-crossrefware = %{epoch}:20180414-%{release}
-Provides:       texlive-crossrefware-bin = %{epoch}:20180414-%{release}
-Provides:       tex-crossrefware-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-crossrefware-bin < 7:20170520
-Provides:       tex-crossrefware-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-crossrefware-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-crossrefware-doc < 7:20170520
+Provides:       tex-crossrefware = %{epoch}:20210325-%{release}
+Provides:       texlive-crossrefware-bin = %{epoch}:20210325-%{release}
+Provides:       tex-crossrefware-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-crossrefware-bin < 7:20180414
+Provides:       tex-crossrefware-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-crossrefware-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-crossrefware-doc < 7:20180414
 License:        GPL+
 Summary:        Scripts for working with crossref.org
 BuildArch:      noarch
@@ -1128,118 +1276,133 @@ a tool for the creation of XML files for submitting to the
 parent site
 
 %package -n texlive-cslatex
-Provides:       tex-cslatex = %{epoch}:20180414-%{release}
-Provides:       texlive-cslatex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cslatex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cslatex-bin < 7:20170520
+Provides:       tex-cslatex = %{epoch}:20210325-%{release}
+Provides:       texlive-cslatex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cslatex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cslatex-bin < 7:20180414
 License:        GPL+
 Summary:        LaTeX support for Czech/Slovak typesetting
-Requires:       texlive-base texlive-kpathsea texlive-latex texlive-pdftex texlive-tetex
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-latex
+Requires:       texlive-cm
+Requires:       texlive-csplain
+Requires:       texlive-hyphen-base
+Requires:       texlive-latex-fonts
+Requires:       texlive-tex-ini-files
 Requires(post,postun): coreutils
 Requires:       tex(czech.ldf) tex(slovak.ldf)
-Provides:       tex(czech.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fonttext.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(hyphen.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2cmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(il2lcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2lcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(slovak.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(cspsfont.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(il2pag.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2pbk.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2pcr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2phv.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2phvn.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2pnc.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2ppl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2ptm.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(il2pzc.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(nhelvet.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ntimes.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2pag.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2pbk.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2pcr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2phv.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2phvn.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2pnc.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2ppl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2ptm.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(xl2pzc.fd) = %{epoch}:20180414-%{release}
+Provides:       tex(czech.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fonttext.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(hyphen.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2cmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(il2lcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2lcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(slovak.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(cspsfont.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(il2pag.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2pbk.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2pcr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2phv.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2phvn.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2pnc.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2ppl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2ptm.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(il2pzc.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(nhelvet.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ntimes.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2pag.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2pbk.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2pcr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2phv.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2phvn.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2pnc.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2ppl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2ptm.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(xl2pzc.fd) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-cslatex
 LaTeX support for Czech/Slovak typesetting
 
 %package -n texlive-csplain
-Provides:       tex-csplain = %{epoch}:20180414-%{release}
-Provides:       texlive-csplain-bin = %{epoch}:20180414-%{release}
-Provides:       tex-csplain-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-csplain-bin < 7:20170520
+Provides:       tex-csplain = %{epoch}:20210325-%{release}
+Provides:       texlive-csplain-bin = %{epoch}:20210325-%{release}
+Provides:       tex-csplain-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-csplain-bin < 7:20180414
 License:        GPLv2+
 Summary:        Plain TeX multilanguage support
-Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-pdftex texlive-tetex
-Requires(post,postun): coreutils
+Requires:       texlive-base
+Requires:       texlive-kpathsea
 Requires:       texlive-tex
-Provides:       tex(csenc-k.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(csenc-p.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(csenc-u.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(csenc-w.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(csfonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(csfontsm.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(czhyphen.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(extcode.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(fonttabs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(il2code.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(plaina4.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(skhyphen.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(t1code.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(t1enc-u.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ucode.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(uni-lcuc.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ams-math.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cavantga.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cbookman.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(chars-8z.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(chelvet.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cncent.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cpalatin.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-adventor.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-all.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-antt.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-arev.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-bera.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-bonum.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-charter.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-cursor.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-heros.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-pagella.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-polta.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-schola.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cs-termes.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ctimes.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(cyrchars.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(dcfonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ecfonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(exchars.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lmfonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luafonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ntx-math.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(tx-math.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(unifam.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(opmac-bib-iso690.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(opmac-bib-simple.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(opmac-bib.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(opmac-xetex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(opmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfuni.tex) = %{epoch}:20180414-%{release}
+Requires:       texlive-cm
+Requires(post,postun): coreutils
+Requires:       texlive-cs
+Requires:       texlive-hyphen-base
+Requires:       texlive-plain
+Requires:       texlive-enctex
+Requires:       texlive-tex-ini-files
+Requires:       texlive-luatex
+Requires:       texlive-luatex85
+Provides:       tex(csenc-k.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(csenc-p.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(csenc-u.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(csenc-w.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(csfonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(csfontsm.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(czhyphen.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(extcode.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(fonttabs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(il2code.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(plaina4.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(skhyphen.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(t1code.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(t1enc-u.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ucode.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(uni-lcuc.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ams-math.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cavantga.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cbookman.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(chars-8z.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(chelvet.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cncent.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cpalatin.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-adventor.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-all.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-antt.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-arev.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-bera.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-bonum.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-charter.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-cursor.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-heros.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-pagella.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-polta.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-schola.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cs-termes.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ctimes.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(cyrchars.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(dcfonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ecfonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(exchars.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lmfonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luafonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ntx-math.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(tx-math.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(unifam.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(opmac-bib-iso690.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(opmac-bib-simple.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(opmac-bib.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(opmac-xetex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(opmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfuni.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-csplain
@@ -1260,8 +1423,8 @@ OPmac macros can generate and bibliography without any external
 program.
 
 %package -n texlive-ctan-o-mat
-Provides:       tex-ctan-o-mat = %{epoch}:20180414-%{release}
-Provides:       texlive-ctan-o-mat-bin = %{epoch}:20180414-%{release}
+Provides:       tex-ctan-o-mat = %{epoch}:20210325-%{release}
+Provides:       texlive-ctan-o-mat-bin = %{epoch}:20210325-%{release}
 License:        BSD
 Summary:        Upload or validate a package for CTAN
 Requires:       texlive-base texlive-kpathsea
@@ -1283,14 +1446,27 @@ requires an Internet connection to the CTAN server. Even the
 validation retrieves the known attributes and the basic
 constraints from the server.
 
+%package -n texlive-ctanbib
+Provides:       tex-ctanbib = %{epoch}:20210325-%{release}
+Provides:       texlive-ctanbib-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ctanbib-bin = %{epoch}:20210325-%{release}
+License:        LPPL
+Summary:        Export ctan entries to bib format
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+BuildArch: noarch
+
+%description -n texlive-ctanbib
+This script can generate BibTeX records for LaTeX packages hosted on CTAN.
+
 %package -n texlive-ctanify
-Provides:       tex-ctanify = %{epoch}:20180414-%{release}
-Provides:       texlive-ctanify-bin = %{epoch}:20180414-%{release}
-Provides:       tex-ctanify-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ctanify-bin < 7:20170520
-Provides:       tex-ctanify-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ctanify-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ctanify-doc < 7:20170520
+Provides:       tex-ctanify = %{epoch}:20210325-%{release}
+Provides:       texlive-ctanify-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ctanify-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ctanify-bin < 7:20180414
+Provides:       tex-ctanify-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ctanify-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ctanify-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Prepare a package for upload to CTAN
 Requires:       texlive-base texlive-kpathsea
@@ -1307,13 +1483,13 @@ distribution. (The TDS ZIP file will be installed in the CTAN
 install/ tree.)
 
 %package -n texlive-ctanupload
-Provides:       tex-ctanupload = %{epoch}:20180414-%{release}
-Provides:       texlive-ctanupload-bin = %{epoch}:20180414-%{release}
-Provides:       tex-ctanupload-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ctanupload-bin < 7:20170520
-Provides:       tex-ctanupload-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ctanupload-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ctanupload-doc < 7:20170520
+Provides:       tex-ctanupload = %{epoch}:20210325-%{release}
+Provides:       texlive-ctanupload-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ctanupload-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ctanupload-bin < 7:20180414
+Provides:       tex-ctanupload-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ctanupload-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ctanupload-doc < 7:20180414
 License:        GPLv3+
 Summary:        Support for users uploading to CTAN
 Requires:       texlive-base texlive-kpathsea
@@ -1325,9 +1501,9 @@ contribution to CTAN from the command line. The aim is to
 simplify the release process for LaTeX package authors.
 
 %package -n texlive-ctie
-Provides:       tex-ctie = %{epoch}:20180414-%{release} texlive-ctie-bin = %{epoch}:20180414-%{release}
-Provides:       tex-ctie-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ctie-bin < 7:20170520
+Provides:       tex-ctie = %{epoch}:20210325-%{release} texlive-ctie-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ctie-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ctie-bin < 7:20180414
 License:        GPL+
 Summary:        C version of tie (merging Web change files)
 Requires:       texlive-base texlive-kpathsea
@@ -1336,22 +1512,22 @@ Requires:       texlive-base texlive-kpathsea
 This is a version of tie converted for use with cweb.
 
 %package -n texlive-cweb
-Provides:       tex-cweb = %{epoch}:20180414-%{release} texlive-cweb-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cweb-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cweb-bin < 7:20170520
-Provides:       tex-cweb-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-cweb-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cweb-doc < 7:20170520
+Provides:       tex-cweb = %{epoch}:20210325-%{release} texlive-cweb-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cweb-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cweb-bin < 7:20180414
+Provides:       tex-cweb-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-cweb-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cweb-doc < 7:20180414
 License:        Knuth
 Summary:        A Web system in C
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(cwebmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfXcwebmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcwebmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfdcwebmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdffcwebmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdficwebmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfwebmac.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(cwebmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfXcwebmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcwebmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfdcwebmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdffcwebmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdficwebmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfwebmac.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-cweb
 The Cweb system is a system for Structured Software
@@ -1359,127 +1535,127 @@ Documentation (also known as Literate Programming) in the
 programming language C.
 
 %package -n texlive-cyrillic
-Provides:       tex-cyrillic = %{epoch}:20180414-%{release}
-Provides:       texlive-cyrillic-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cyrillic-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cyrillic-bin < 7:20170520
-Provides:       tex-cyrillic-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-cyrillic-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cyrillic-doc < 7:20170520
-Provides:       texlive-cyrillic-bin-bin = %{epoch}:20180414-%{release}
-Provides:       tex-cyrillic-bin-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-cyrillic-bin-bin < 7:20170520
+Provides:       tex-cyrillic = %{epoch}:20210325-%{release}
+Provides:       texlive-cyrillic-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cyrillic-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cyrillic-bin < 7:20180414
+Provides:       tex-cyrillic-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-cyrillic-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cyrillic-doc < 7:20180414
+Provides:       texlive-cyrillic-bin-bin = %{epoch}:20210325-%{release}
+Provides:       tex-cyrillic-bin-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-cyrillic-bin-bin < 7:20180414
 License:        LPPL 1.3
 Summary:        Support for Cyrillic fonts in LaTeX
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(fontenc.sty)
-Provides:       tex(cp1251.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp855.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp866.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp866av.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp866mav.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp866nav.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp866tat.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ctt.def) = %{epoch}:20180414-%{release}
-Provides:       tex(dbk.def) = %{epoch}:20180414-%{release}
-Provides:       tex(iso88595.def) = %{epoch}:20180414-%{release}
-Provides:       tex(isoir111.def) = %{epoch}:20180414-%{release}
-Provides:       tex(koi8-r.def) = %{epoch}:20180414-%{release}
-Provides:       tex(koi8-ru.def) = %{epoch}:20180414-%{release}
-Provides:       tex(koi8-u.def) = %{epoch}:20180414-%{release}
-Provides:       tex(lcy.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(lcyccr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmbr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmtl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcycmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcydefs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lcyenc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(lcylcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(lcylcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(maccyr.def) = %{epoch}:20180414-%{release}
-Provides:       tex(macukr.def) = %{epoch}:20180414-%{release}
-Provides:       tex(mik.def) = %{epoch}:20180414-%{release}
-Provides:       tex(mls.def) = %{epoch}:20180414-%{release}
-Provides:       tex(mnk.def) = %{epoch}:20180414-%{release}
-Provides:       tex(mos.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ncc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2ccr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmbr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmtl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2cmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2lcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2lcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2wlcyr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2wlcyss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2wncyr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot2wncyss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(pt154.def) = %{epoch}:20180414-%{release}
-Provides:       tex(pt254.def) = %{epoch}:20180414-%{release}
-Provides:       tex(t2accr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmbr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmtl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2acmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2aenc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(t2alcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2alcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bccr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmbr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmtl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2bcmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2benc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(t2blcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2blcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2cccr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmbr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmtl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2ccmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2cenc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(t2clcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t2clcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2ccr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmbr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmtl.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2cmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x2lcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(x2lcmtt.fd) = %{epoch}:20180414-%{release}
+Provides:       tex(cp1251.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp855.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp866.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp866av.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp866mav.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp866nav.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp866tat.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ctt.def) = %{epoch}:20210325-%{release}
+Provides:       tex(dbk.def) = %{epoch}:20210325-%{release}
+Provides:       tex(iso88595.def) = %{epoch}:20210325-%{release}
+Provides:       tex(isoir111.def) = %{epoch}:20210325-%{release}
+Provides:       tex(koi8-r.def) = %{epoch}:20210325-%{release}
+Provides:       tex(koi8-ru.def) = %{epoch}:20210325-%{release}
+Provides:       tex(koi8-u.def) = %{epoch}:20210325-%{release}
+Provides:       tex(lcy.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(lcyccr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmbr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmtl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcycmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcydefs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lcyenc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(lcylcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(lcylcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(maccyr.def) = %{epoch}:20210325-%{release}
+Provides:       tex(macukr.def) = %{epoch}:20210325-%{release}
+Provides:       tex(mik.def) = %{epoch}:20210325-%{release}
+Provides:       tex(mls.def) = %{epoch}:20210325-%{release}
+Provides:       tex(mnk.def) = %{epoch}:20210325-%{release}
+Provides:       tex(mos.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ncc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2ccr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmbr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmtl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2cmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2lcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2lcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2wlcyr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2wlcyss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2wncyr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot2wncyss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(pt154.def) = %{epoch}:20210325-%{release}
+Provides:       tex(pt254.def) = %{epoch}:20210325-%{release}
+Provides:       tex(t2accr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmbr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmtl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2acmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2aenc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(t2alcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2alcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bccr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmbr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmtl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2bcmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2benc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(t2blcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2blcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2cccr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmbr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmtl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2ccmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2cenc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(t2clcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t2clcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2ccr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmbr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmtl.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2cmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(x2lcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(x2lcmtt.fd) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-cyrillic
@@ -1490,13 +1666,13 @@ cover (between them) pretty much every language that is written
 in a Cyrillic alphabet.
 
 %package -n texlive-de-macro
-Provides:       tex-de-macro = %{epoch}:20180414-%{release}
-Provides:       texlive-de-macro-bin = %{epoch}:20180414-%{release}
-Provides:       tex-de-macro-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-de-macro-bin < 7:20170520
-Provides:       tex-de-macro-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-de-macro-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-de-macro-doc < 7:20170520
+Provides:       tex-de-macro = %{epoch}:20210325-%{release}
+Provides:       texlive-de-macro-bin = %{epoch}:20210325-%{release}
+Provides:       tex-de-macro-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-de-macro-bin < 7:20180414
+Provides:       tex-de-macro-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-de-macro-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-de-macro-doc < 7:20180414
 License:        AFL
 Summary:        Expand private macros in a document
 Requires:       texlive-base texlive-kpathsea
@@ -1512,10 +1688,10 @@ running de-macro on it. De-macro will expand macros defined in
 document, or in the document's "private" package file.
 
 %package -n texlive-detex
-Provides:       tex-detex = %{epoch}:20180414-%{release}
-Provides:       texlive-detex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-detex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-detex-bin < 7:20170520
+Provides:       tex-detex = %{epoch}:20210325-%{release}
+Provides:       texlive-detex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-detex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-detex-bin < 7:20180414
 License:        NCSA
 Summary:        Strip TeX from a source file
 Requires:       texlive-base texlive-kpathsea
@@ -1528,13 +1704,13 @@ in the text. In this case, it also recognizes the \include and
 \includeonly commands.
 
 %package -n texlive-diadia
-Provides:       tex-diadia = %{epoch}:20180414-%{release}
-Provides:       texlive-diadia-bin = %{epoch}:20180414-%{release}
-Provides:       tex-diadia-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-diadia-bin < 7:20170520
-Provides:       tex-diadia-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-diadia-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-diadia-doc < 7:20170520
+Provides:       tex-diadia = %{epoch}:20210325-%{release}
+Provides:       texlive-diadia-bin = %{epoch}:20210325-%{release}
+Provides:       tex-diadia-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-diadia-bin < 7:20180414
+Provides:       tex-diadia-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-diadia-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-diadia-doc < 7:20180414
 License:        LPPL
 Summary:        Package to keep a diabetes diary
 Requires:       texlive-base texlive-kpathsea
@@ -1546,8 +1722,8 @@ Requires:       tex(calc.sty) tex(translations.sty)
 Requires:       tex(amsmath.sty) tex(tcolorbox.sty)
 Requires:       tex(environ.sty) tex(multicol.sty)
 Requires:       tex(amssymb.sty)
-Provides:       tex(diadia.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(diadia.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(diadia.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(diadia.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-diadia
@@ -1563,13 +1739,13 @@ supports medication charts and info boxes. Supported languages:
 English, German. Feel free to provide other translation files!
 
 %package -n texlive-dosepsbin
-Provides:       tex-dosepsbin = %{epoch}:20180414-%{release}
-Provides:       texlive-dosepsbin-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dosepsbin-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dosepsbin-bin < 7:20170520
-Provides:       tex-dosepsbin-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-dosepsbin-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dosepsbin-doc < 7:20170520
+Provides:       tex-dosepsbin = %{epoch}:20210325-%{release}
+Provides:       texlive-dosepsbin-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dosepsbin-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dosepsbin-bin < 7:20180414
+Provides:       tex-dosepsbin-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-dosepsbin-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dosepsbin-doc < 7:20180414
 License:        GPLv2 or Artistic
 Summary:        Deal with DOS binary EPS files
 Requires:       texlive-base texlive-kpathsea
@@ -1588,9 +1764,9 @@ sections of such a file, in particular providing a 'text'-form
 EPS file for use with (La)TeX.
 
 %package -n texlive-dtl
-Provides:       tex-dtl = %{epoch}:20180414-%{release} texlive-dtl-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dtl-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dtl-bin < 7:20170520
+Provides:       tex-dtl = %{epoch}:20210325-%{release} texlive-dtl-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dtl-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dtl-bin < 7:20180414
 License:        Public Domain
 Summary:        Tools to dis-assemble and re-assemble DVI files
 Requires:       texlive-base texlive-kpathsea
@@ -1604,13 +1780,13 @@ DVI files). The DTL bundle was developed so as to avoid some
 infelicities of dvitype (among other pressing reasons).
 
 %package -n texlive-dtxgen
-Provides:       tex-dtxgen = %{epoch}:20180414-%{release}
-Provides:       texlive-dtxgen-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dtxgen-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dtxgen-bin < 7:20170520
-Provides:       tex-dtxgen-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-dtxgen-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dtxgen-doc < 7:20170520
+Provides:       tex-dtxgen = %{epoch}:20210325-%{release}
+Provides:       texlive-dtxgen-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dtxgen-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dtxgen-bin < 7:20180414
+Provides:       tex-dtxgen-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-dtxgen-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dtxgen-doc < 7:20180414
 License:        GPL+
 Summary:        Creates a template for a self-extracting .dtx file
 Requires:       texlive-base texlive-kpathsea
@@ -1622,10 +1798,10 @@ The bash script dtxgen creates a template for a self-extracting
 Documented LaTeX Source (.dtx) file.
 
 %package -n texlive-dvi2tty
-Provides:       tex-dvi2tty = %{epoch}:20180414-%{release}
-Provides:       texlive-dvi2tty-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvi2tty-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvi2tty-bin < 7:20170520
+Provides:       tex-dvi2tty = %{epoch}:20210325-%{release}
+Provides:       texlive-dvi2tty-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvi2tty-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvi2tty-bin < 7:20180414
 License:        GPL+
 Summary:        Produce ASCII from DVI
 Requires:       texlive-base texlive-kpathsea
@@ -1636,13 +1812,13 @@ document. The original version was written in Pascal, and the
 present author translated the program to C.
 
 %package -n texlive-dviasm
-Provides:       tex-dviasm = %{epoch}:20180414-%{release}
-Provides:       texlive-dviasm-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dviasm-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dviasm-bin < 7:20170520
-Provides:       tex-dviasm-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-dviasm-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dviasm-doc < 7:20170520
+Provides:       tex-dviasm = %{epoch}:20210325-%{release}
+Provides:       texlive-dviasm-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dviasm-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dviasm-bin < 7:20180414
+Provides:       tex-dviasm-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-dviasm-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dviasm-doc < 7:20180414
 License:        GPLv3+
 Summary:        A utility for editing DVI files
 Requires:       texlive-base texlive-kpathsea
@@ -1655,10 +1831,10 @@ binary format. It supports advanced features such as adding a
 preprint number or watermarks.
 
 %package -n texlive-dvicopy
-Provides:       tex-dvicopy = %{epoch}:20180414-%{release}
-Provides:       texlive-dvicopy-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvicopy-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvicopy-bin < 7:20170520
+Provides:       tex-dvicopy = %{epoch}:20210325-%{release}
+Provides:       texlive-dvicopy-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvicopy-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvicopy-bin < 7:20180414
 License:        GPL+
 Summary:        Copy DVI files, flattening VFs
 Requires:       texlive-base texlive-kpathsea
@@ -1670,10 +1846,10 @@ file that does not contain such references. It also serves as a
 basis for writing DVI drivers (much like DVItype).
 
 %package -n texlive-dvidvi
-Provides:       tex-dvidvi = %{epoch}:20180414-%{release}
-Provides:       texlive-dvidvi-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvidvi-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvidvi-bin < 7:20170520
+Provides:       tex-dvidvi = %{epoch}:20210325-%{release}
+Provides:       texlive-dvidvi-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvidvi-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvidvi-bin < 7:20180414
 License:        Copyright only
 Summary:        Convert one DVI file into another
 Requires:       texlive-base texlive-kpathsea
@@ -1684,8 +1860,8 @@ commands; series of pages and page number ranges may be
 specified, as well as inclusions and exclusions.
 
 %package -n texlive-dviinfox
-Provides:       tex-dviinfox = %{epoch}:20180414-%{release}
-Provides:       texlive-dviinfox-bin = %{epoch}:20180414-%{release}
+Provides:       tex-dviinfox = %{epoch}:20210325-%{release}
+Provides:       texlive-dviinfox-bin = %{epoch}:20210325-%{release}
 License:        MIT
 Summary:        Perl script to print DVI meta information
 BuildArch:      noarch
@@ -1697,10 +1873,10 @@ The package provides a perl script which prints information
 about a DVI file. It also supports XeTeX XDV format.
 
 %package -n texlive-dviljk
-Provides:       tex-dviljk = %{epoch}:20180414-%{release}
-Provides:       texlive-dviljk-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dviljk-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dviljk-bin < 7:20170520
+Provides:       tex-dviljk = %{epoch}:20210325-%{release}
+Provides:       texlive-dviljk-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dviljk-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dviljk-bin < 7:20180414
 License:        GPL+
 Summary:        DVI to Laserjet output
 Requires:       texlive-base texlive-kpathsea
@@ -1709,22 +1885,37 @@ Requires:       texlive-base texlive-kpathsea
 A dvi driver for the LaserJet printers, using kpathsea
 recursive file searching.
 
+%package -n texlive-dviout-util
+Provides:       tex-dviout-util = %{epoch}:20210325-%{release}
+Provides:       texlive-dviout-util-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dviout-util-bin = %{epoch}:20210325-%{release}
+License:        MIT
+Summary:        DVI output utilities
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+
+%description -n texlive-dviout-util
+This is a partial repackaging of elements of the DVIOUT package
+by Toshio OSHIMA, Yoshiki OTOBE, and Kazunori ASAYAMA.
+Here we don't include the main DVI previewer, but just want small utility
+programs.
+
 %package -n texlive-dvipdfmx
-Provides:       tex-dvipdfmx = %{epoch}:20180414-%{release}
-Provides:       texlive-dvipdfmx-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvipdfmx-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvipdfmx-bin < 7:20170520
-Provides:       tex-dvipdfmx-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-dvipdfmx-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvipdfmx-doc < 7:20170520
-Provides:       dvipdfmx = %{epoch}:20180414-%{release} dvipdfm = %{epoch}:20180414-%{release}
+Provides:       tex-dvipdfmx = %{epoch}:20210325-%{release}
+Provides:       texlive-dvipdfmx-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvipdfmx-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvipdfmx-bin < 7:20180414
+Provides:       tex-dvipdfmx-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-dvipdfmx-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvipdfmx-doc < 7:20180414
+Provides:       dvipdfmx = %{epoch}:20210325-%{release} dvipdfm = %{epoch}:20210325-%{release}
 License:        GPL+
 Summary:        An extended version of dvipdfm
 Requires:       texlive-base texlive-glyphlist
 Requires:       texlive-kpathsea
-Provides:       tex(dvipdfmx.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(cid-x.map) = %{epoch}:20180414-%{release}
-Provides:       tex(ckx.map) = %{epoch}:20180414-%{release}
+Provides:       tex(dvipdfmx.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(cid-x.map) = %{epoch}:20210325-%{release}
+Provides:       tex(ckx.map) = %{epoch}:20210325-%{release}
 
 %description -n texlive-dvipdfmx
 Dvipdfmx (formerly dvipdfm-cjk) is a development of dvipdfm
@@ -1738,14 +1929,14 @@ users are advised to consult the documentation of dvipdfm (as
 well, of course, as the package Readme.
 
 %package -n texlive-dvipng
-Provides:       tex-dvipng = %{epoch}:20180414-%{release}
-Provides:       texlive-dvipng-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvipng-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvipng-bin < 7:20170520
-Provides:       tex-dvipng-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-dvipng-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvipng-doc < 7:20170520
-Provides:       dvipng = %{epoch}:20180414-%{release}
+Provides:       tex-dvipng = %{epoch}:20210325-%{release}
+Provides:       texlive-dvipng-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvipng-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvipng-bin < 7:20180414
+Provides:       tex-dvipng-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-dvipng-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvipng-doc < 7:20180414
+Provides:       dvipng = %{epoch}:20210325-%{release}
 License:        LGPLv2+
 Summary:        A fast DVI to PNG/GIF converter
 Requires:       texlive-base texlive-kpathsea
@@ -1767,10 +1958,10 @@ PostScript Type1, and TrueType fonts, colour specials, and
 inclusion of PostScript, PNG, JPEG or GIF images.
 
 %package -n texlive-dvipos
-Provides:       tex-dvipos = %{epoch}:20180414-%{release}
-Provides:       texlive-dvipos-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvipos-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvipos-bin < 7:20170520
+Provides:       tex-dvipos = %{epoch}:20210325-%{release}
+Provides:       texlive-dvipos-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvipos-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvipos-bin < 7:20180414
 License:        LPPL
 Summary:        dvipos package
 Requires:       texlive-base texlive-kpathsea
@@ -1779,66 +1970,66 @@ Requires:       texlive-base texlive-kpathsea
 dvipos package.
 
 %package -n texlive-dvips
-Provides:       tetex-dvips = %{epoch}:20180414-%{release}
-Provides:       tex-dvips = %{epoch}:20180414-%{release}
-Provides:       texlive-dvips-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvips-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvips-bin < 7:20170520
-Provides:       tex-dvips-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-dvips-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvips-doc < 7:20170520
+Provides:       tetex-dvips = %{epoch}:20210325-%{release}
+Provides:       tex-dvips = %{epoch}:20210325-%{release}
+Provides:       texlive-dvips-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvips-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvips-bin < 7:20180414
+Provides:       tex-dvips-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-dvips-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvips-doc < 7:20180414
 License:        GPL+
 Summary:        A DVI to PostScript driver
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(canonex.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(cx.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(deskjet.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(dfaxhigh.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(dvired.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(epson.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(ibmvga.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(ljfour.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(qms.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(toshiba.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(6w.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(7t.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(8a.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(8r.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(ad.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(ansinew.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(asex.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(asexp.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(dc.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(dvips.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(ec.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(extex.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(funky.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(odvips.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-cs-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-ec-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-l7x-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-qx-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-rm-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-t2a-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-t2b-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-t2c-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-t5-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-texnansi-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(q-ts1-uni.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(qx.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(stormex.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(tex256.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(texmext.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(texmital.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(texmsym.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(texnansx.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(blackdvi.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(blackdvi.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(colordvi.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(colordvi.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(rotate.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(rotate.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(dvips) = %{epoch}:20180414-%{release}
+Provides:       tex(canonex.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(cx.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(deskjet.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(dfaxhigh.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(dvired.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(epson.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(ibmvga.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(ljfour.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(qms.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(toshiba.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(6w.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(7t.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(8a.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(8r.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(ad.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(ansinew.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(asex.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(asexp.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(dc.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(dvips.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(ec.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(extex.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(funky.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(odvips.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-cs-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-ec-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-l7x-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-qx-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-rm-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-t2a-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-t2b-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-t2c-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-t5-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-texnansi-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(q-ts1-uni.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(qx.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(stormex.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(tex256.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(texmext.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(texmital.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(texmsym.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(texnansx.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(blackdvi.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(blackdvi.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(colordvi.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(colordvi.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(rotate.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(rotate.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(dvips) = %{epoch}:20210325-%{release}
 Requires:       texlive-latex-fonts
 
 %description -n texlive-dvips
@@ -1848,10 +2039,10 @@ be found in the distribution of dvipsk which forms part of the
 TeX Live sources.
 
 %package -n texlive-dvisvgm
-Provides:       tex-dvisvgm = %{epoch}:20180414-%{release}
-Provides:       texlive-dvisvgm-bin = %{epoch}:20180414-%{release}
-Provides:       tex-dvisvgm-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-dvisvgm-bin < 7:20170520
+Provides:       tex-dvisvgm = %{epoch}:20210325-%{release}
+Provides:       texlive-dvisvgm-bin = %{epoch}:20210325-%{release}
+Provides:       tex-dvisvgm-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-dvisvgm-bin < 7:20180414
 License:        GPL+
 Summary:        Convert DVI files to Scalable Vector Graphics format (SVG)
 Requires:       texlive-base texlive-kpathsea
@@ -1869,13 +2060,13 @@ other features, dvisvgm also supports color, emTeX, tpic, PDF
 mapfile and PostScript specials.
 
 %package -n texlive-ebong
-Provides:       tex-ebong = %{epoch}:20180414-%{release}
-Provides:       texlive-ebong-bin = %{epoch}:20180414-%{release}
-Provides:       tex-ebong-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ebong-bin < 7:20170520
-Provides:       tex-ebong-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ebong-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ebong-doc < 7:20170520
+Provides:       tex-ebong = %{epoch}:20210325-%{release}
+Provides:       texlive-ebong-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ebong-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ebong-bin < 7:20180414
+Provides:       tex-ebong-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ebong-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ebong-doc < 7:20180414
 License:        Public Domain
 Summary:        Utility for writing Bengali in Rapid Roman Format
 Requires:       texlive-base texlive-kpathsea
@@ -1888,21 +2079,27 @@ Roman Bangla and convert it to the bangtex format by a python
 program. All LaTeX markups are preserved in the target file.
 
 %package -n texlive-eplain
-Provides:       tex-eplain = %{epoch}:20180414-%{release}
-Provides:       texlive-eplain-bin = %{epoch}:20180414-%{release}
-Provides:       tex-eplain-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-eplain-bin < 7:20170520
-Provides:       tex-eplain-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-eplain-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-eplain-doc < 7:20170520
+Provides:       tex-eplain = %{epoch}:20210325-%{release}
+Provides:       texlive-eplain-bin = %{epoch}:20210325-%{release}
+Provides:       tex-eplain-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-eplain-bin < 7:20180414
+Provides:       tex-eplain-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-eplain-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-eplain-doc < 7:20180414
 License:        GPLv2+
 Summary:        Extended plain TeX macros
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-pdftex texlive-tetex
+Requires:       texlive-pdftex texlive-babel
+Requires:       texlive-cm texlive-hyphen-base
+Requires:       texlive-latex-fonts texlive-l3backend
+Requires:       texlive-l3kernel texlive-l3packages
+Requires:       texlive-tex-ini-files texlive-unicode-data
+Requires:       texlive-dehyph texlive-hyph-utf8
+Requires:       texlive-knuth-lib
 Requires(post,postun): coreutils
-Provides:       tex(arrow.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(btxmac.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(eplain.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(arrow.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(btxmac.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(eplain.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-eplain
@@ -1916,13 +2113,13 @@ graphics), color, autopict (a package instance of the LaTeX
 picture code), psfrag, and url.
 
 %package -n texlive-epspdf
-Provides:       tex-epspdf = %{epoch}:20180414-%{release}
-Provides:       texlive-epspdf-bin = %{epoch}:20180414-%{release}
-Provides:       tex-epspdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-epspdf-bin < 7:20170520
-Provides:       tex-epspdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-epspdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-epspdf-doc < 7:20170520
+Provides:       tex-epspdf = %{epoch}:20210325-%{release}
+Provides:       texlive-epspdf-bin = %{epoch}:20210325-%{release}
+Provides:       tex-epspdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-epspdf-bin < 7:20180414
+Provides:       tex-epspdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-epspdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-epspdf-doc < 7:20180414
 License:        GPL+
 Summary:        Converter for PostScript, EPS and PDF
 Requires:       texlive-base texlive-kpathsea
@@ -1936,13 +2133,13 @@ conversion options are made possible by converting in multiple
 steps.
 
 %package -n texlive-epstopdf
-Provides:       tex-epstopdf = %{epoch}:20180414-%{release}
-Provides:       texlive-epstopdf-bin = %{epoch}:20180414-%{release}
-Provides:       tex-epstopdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-epstopdf-bin < 7:20170520
-Provides:       tex-epstopdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-epstopdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-epstopdf-doc < 7:20170520
+Provides:       tex-epstopdf = %{epoch}:20210325-%{release}
+Provides:       texlive-epstopdf-bin = %{epoch}:20210325-%{release}
+Provides:       tex-epstopdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-epstopdf-bin < 7:20180414
+Provides:       tex-epstopdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-epstopdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-epstopdf-doc < 7:20180414
 License:        BSD
 Summary:        Convert EPS to 'encapsulated' PDF using Ghostscript
 Requires:       texlive-base texlive-kpathsea
@@ -1963,18 +2160,18 @@ fly", thus giving the illusion that PDFLaTeX is accepting EPS
 graphic files.
 
 %package -n texlive-exceltex
-Provides:       tex-exceltex = %{epoch}:20180414-%{release}
-Provides:       texlive-exceltex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-exceltex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-exceltex-bin < 7:20170520
-Provides:       tex-exceltex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-exceltex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-exceltex-doc < 7:20170520
+Provides:       tex-exceltex = %{epoch}:20210325-%{release}
+Provides:       texlive-exceltex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-exceltex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-exceltex-bin < 7:20180414
+Provides:       tex-exceltex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-exceltex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-exceltex-doc < 7:20180414
 License:        GPL+
 Summary:        Get data from Excel files into LaTeX
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(ulem.sty) tex(color.sty)
-Provides:       tex(exceltex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(exceltex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-exceltex
@@ -1991,13 +2188,13 @@ spreadsheet applications are able to read and write Excel
 files.
 
 %package -n texlive-fig4latex
-Provides:       tex-fig4latex = %{epoch}:20180414-%{release}
-Provides:       texlive-fig4latex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-fig4latex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fig4latex-bin < 7:20170520
-Provides:       tex-fig4latex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-fig4latex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fig4latex-doc < 7:20170520
+Provides:       tex-fig4latex = %{epoch}:20210325-%{release}
+Provides:       texlive-fig4latex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-fig4latex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fig4latex-bin < 7:20180414
+Provides:       tex-fig4latex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-fig4latex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fig4latex-doc < 7:20180414
 License:        GPLv3+
 Summary:        Management of figures for large LaTeX documents
 Requires:       texlive-base texlive-kpathsea
@@ -2011,13 +2208,13 @@ graphics which use the combined PS/LaTeX (or PDF/LaTeX) export
 method. An example document (with its output) is provided.
 
 %package -n texlive-findhyph
-Provides:       tex-findhyph = %{epoch}:20180414-%{release}
-Provides:       texlive-findhyph-bin = %{epoch}:20180414-%{release}
-Provides:       tex-findhyph-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-findhyph-bin < 7:20170520
-Provides:       tex-findhyph-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-findhyph-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-findhyph-doc < 7:20170520
+Provides:       tex-findhyph = %{epoch}:20210325-%{release}
+Provides:       texlive-findhyph-bin = %{epoch}:20210325-%{release}
+Provides:       tex-findhyph-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-findhyph-bin < 7:20180414
+Provides:       tex-findhyph-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-findhyph-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-findhyph-doc < 7:20180414
 License:        GPL+
 Summary:        Find hyphenated words in a document
 Requires:       texlive-base texlive-kpathsea
@@ -2030,28 +2227,28 @@ contains enough context to enable you to find the hyphenated
 word that's being referenced.
 
 %package -n texlive-fontinst
-Provides:       tex-fontinst = %{epoch}:20180414-%{release}
-Provides:       texlive-fontinst-bin = %{epoch}:20180414-%{release}
-Provides:       tex-fontinst-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fontinst-bin < 7:20170520
-Provides:       tex-fontinst-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-fontinst-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fontinst-doc < 7:20170520
+Provides:       tex-fontinst = %{epoch}:20210325-%{release}
+Provides:       texlive-fontinst-bin = %{epoch}:20210325-%{release}
+Provides:       tex-fontinst-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fontinst-bin < 7:20180414
+Provides:       tex-fontinst-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-fontinst-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fontinst-doc < 7:20180414
 License:        LPPL
 Summary:        Help with installing fonts for TeX and LaTeX
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(color.sty) tex(amstext.sty)
-Provides:       tex(bbox.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(cfntinst.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fontinst.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(finstmsc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fontinst.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(multislot.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(xfntinst.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(csc2x.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(csckrn2x.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(osf2x.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(fontdoc.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(bbox.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(cfntinst.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fontinst.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(finstmsc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fontinst.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(multislot.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(xfntinst.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(csc2x.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(csckrn2x.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(osf2x.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(fontdoc.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-fontinst
@@ -2070,20 +2267,20 @@ normally be done manually or with the help of some other tool,
 such as the pltotf and vptovf programs.
 
 %package -n texlive-fontools
-Provides:       tex-fontools = %{epoch}:20180414-%{release}
-Provides:       texlive-fontools-bin = %{epoch}:20180414-%{release}
-Provides:       tex-fontools-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fontools-bin < 7:20170520
-Provides:       tex-fontools-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-fontools-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fontools-doc < 7:20170520
+Provides:       tex-fontools = %{epoch}:20210325-%{release}
+Provides:       texlive-fontools-bin = %{epoch}:20210325-%{release}
+Provides:       tex-fontools-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fontools-bin < 7:20180414
+Provides:       tex-fontools-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-fontools-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fontools-doc < 7:20180414
 License:        GPLv2+
 Summary:        Tools to simplify using fonts (especially TT/OTF ones)
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(fontools_ly1.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(fontools_ot1.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(fontools_t1.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(fontools_ts1.enc) = %{epoch}:20180414-%{release}
+Provides:       tex(fontools_ly1.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(fontools_ot1.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(fontools_t1.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(fontools_ts1.enc) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-fontools
@@ -2096,10 +2293,10 @@ plus .fd and .sty files; and ot2kpx - extract all kerning pairs
 from an OpenType font.
 
 %package -n texlive-fontware
-Provides:       tex-fontware = %{epoch}:20180414-%{release}
-Provides:       texlive-fontware-bin = %{epoch}:20180414-%{release}
-Provides:       tex-fontware-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fontware-bin < 7:20170520
+Provides:       tex-fontware = %{epoch}:20210325-%{release}
+Provides:       texlive-fontware-bin = %{epoch}:20210325-%{release}
+Provides:       tex-fontware-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fontware-bin < 7:20180414
 License:        LPPL
 Summary:        fontware package
 Requires:       texlive-base texlive-kpathsea
@@ -2108,13 +2305,13 @@ Requires:       texlive-base texlive-kpathsea
 fontware package.
 
 %package -n texlive-fragmaster
-Provides:       tex-fragmaster = %{epoch}:20180414-%{release}
-Provides:       texlive-fragmaster-bin = %{epoch}:20180414-%{release}
-Provides:       tex-fragmaster-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fragmaster-bin < 7:20170520
-Provides:       tex-fragmaster-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-fragmaster-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-fragmaster-doc < 7:20170520
+Provides:       tex-fragmaster = %{epoch}:20210325-%{release}
+Provides:       texlive-fragmaster-bin = %{epoch}:20210325-%{release}
+Provides:       tex-fragmaster-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fragmaster-bin < 7:20180414
+Provides:       tex-fragmaster-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-fragmaster-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-fragmaster-doc < 7:20180414
 License:        GPL+
 Summary:        Using psfrag with PDFLaTeX
 Requires:       texlive-base texlive-kpathsea
@@ -2126,20 +2323,20 @@ EPS files and psfrag substitution definition files, and
 produces PDF and EPS files with the substitutions included.
 
 %package -n texlive-getmap
-Provides:       tex-getmap = %{epoch}:20180414-%{release}
-Provides:       texlive-getmap-bin = %{epoch}:20180414-%{release}
-Provides:       tex-getmap-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-getmap-bin < 7:20170520
-Provides:       tex-getmap-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-getmap-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-getmap-doc < 7:20170520
+Provides:       tex-getmap = %{epoch}:20210325-%{release}
+Provides:       texlive-getmap-bin = %{epoch}:20210325-%{release}
+Provides:       tex-getmap-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-getmap-bin < 7:20180414
+Provides:       tex-getmap-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-getmap-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-getmap-doc < 7:20180414
 License:        LPPL
 Summary:        Download OpenStreetMap maps for use in documents
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(xkeyval.sty) tex(stringenc.sty)
 Requires:       tex(ifthen.sty)
-Provides:       tex(getmap.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(getmap.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(getmap.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(getmap.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-getmap
@@ -2152,14 +2349,25 @@ LaTeX must be running with \write 18 enabled). The ("external")
 lua script may be used from the command line; a bash version is
 provided.
 
+%package -n texlive-git-latexdiff
+Summary:        Call latexdiff on two Git revisions of a file
+License:        BSD
+Requires:       texlive-base texlive-kpathsea
+Requires:       git, texlive-latexdiff
+
+%description -n texlive-git-latexdiff
+git-latexdiff is a tool to graphically visualize differences
+between different versions of a LaTeX file. Technically, it is
+a wrapper around git and latexdiff.
+
 %package -n texlive-glossaries
-Provides:       tex-glossaries = %{epoch}:20180414-%{release}
-Provides:       texlive-glossaries-bin = %{epoch}:20180414-%{release}
-Provides:       tex-glossaries-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-glossaries-bin < 7:20170520
-Provides:       tex-glossaries-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-glossaries-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-glossaries-doc < 7:20170520
+Provides:       tex-glossaries = %{epoch}:20210325-%{release}
+Provides:       texlive-glossaries-bin = %{epoch}:20210325-%{release}
+Provides:       tex-glossaries-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-glossaries-bin < 7:20180414
+Provides:       tex-glossaries-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-glossaries-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-glossaries-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Create glossaries and lists of acronyms
 Requires:       texlive-base texlive-kpathsea
@@ -2172,34 +2380,34 @@ Requires:       tex(glossary-tree.sty) tex(translator.sty)
 Requires:       tex(accsupp.sty) tex(longtable.sty)
 Requires:       tex(array.sty) tex(multicol.sty)
 Requires:       tex(supertabular.sty)
-Provides:       tex(glossaries-babel.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossaries-compatible-207.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossaries-compatible-307.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossaries-polyglossia.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossaries-prefix.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossaries.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossaries-accsupp.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-hypernav.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-inline.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-list.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-long.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-longragged.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-mcols.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-super.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-superragged.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(glossary-tree.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-acronym-desc.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-acronym.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-acronyms-lang.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-brief.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-childnoname.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-cite.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-images.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-long.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-multipar.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-parent.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-symbols.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(example-glossaries-url.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(glossaries-babel.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossaries-compatible-207.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossaries-compatible-307.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossaries-polyglossia.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossaries-prefix.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossaries.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossaries-accsupp.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-hypernav.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-inline.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-list.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-long.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-longragged.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-mcols.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-super.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-superragged.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(glossary-tree.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-acronym-desc.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-acronym.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-acronyms-lang.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-brief.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-childnoname.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-cite.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-images.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-long.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-multipar.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-parent.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-symbols.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(example-glossaries-url.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-glossaries
@@ -2224,7 +2432,7 @@ supersedes the author's glossary package (which is now
 obsolete), and a conversion tool is provided.
 
 %package -n texlive-glyphlist
-Provides:       tex-glyphlist = %{epoch}:20180414-%{release}
+Provides:       tex-glyphlist = %{epoch}:20210325-%{release}
 License:        LPPL
 Summary:        glyphlist package
 BuildArch:      noarch
@@ -2234,27 +2442,27 @@ Requires:       texlive-base texlive-kpathsea
 glyphlist package.
 
 %package -n texlive-gregoriotex
-Provides:       tex-gregoriotex = %{epoch}:20180414-%{release}
-Provides:       texlive-gregoriotex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-gregoriotex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-gregoriotex-bin < 7:20170520
-Provides:       tex-gregoriotex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-gregoriotex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-gregoriotex-doc < 7:20170520
+Provides:       tex-gregoriotex = %{epoch}:20210325-%{release}
+Provides:       texlive-gregoriotex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-gregoriotex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-gregoriotex-bin < 7:20180414
+Provides:       tex-gregoriotex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-gregoriotex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-gregoriotex-doc < 7:20180414
 License:        GPLv3
 Summary:        Engraving Gregorian Chant scores
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(gregoriosyms.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-signs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-syllable.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-main.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gsp-default.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-nabc.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-symbols.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-chars.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(gregoriotex-spaces.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(gregoriosyms.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-signs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-syllable.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-main.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gsp-default.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-nabc.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-symbols.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-chars.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(gregoriotex-spaces.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-gregoriotex
 Gregorio is a software application for engraving Gregorian
@@ -2264,10 +2472,10 @@ GregorioTeX file, which makes TeX able to create a PDF of your
 score.
 
 %package -n texlive-gsftopk
-Provides:       tex-gsftopk = %{epoch}:20180414-%{release}
-Provides:       texlive-gsftopk-bin = %{epoch}:20180414-%{release}
-Provides:       tex-gsftopk-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-gsftopk-bin < 7:20170520
+Provides:       tex-gsftopk = %{epoch}:20210325-%{release}
+Provides:       texlive-gsftopk-bin = %{epoch}:20210325-%{release}
+Provides:       tex-gsftopk-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-gsftopk-bin < 7:20180414
 License:        GPL+
 Summary:        Convert "ghostscript fonts" to PK files
 Requires:       texlive-base texlive-kpathsea
@@ -2279,14 +2487,49 @@ ordinarily be much used nowadays, since both its target
 applications are now capable of dealing with Type 1 fonts,
 direct.
 
+%package -n texlive-hyperxmp
+Summary:        Embed XMP metadata within a LaTeX document
+License:        LPPL 1.3
+Requires:       texlive-base texlive-kpathsea
+Requires:       tex(atenddvi.sty)
+Requires:       tex(kvoptions.sty)
+Requires:       tex(pdfescape.sty)
+Requires:       tex(stringenc.sty)
+Requires:       tex(intcalc.sty)
+Requires:       tex(ifxetex.sty)
+Provides:       tex(hyperxmp.sty) = %{epoch}:20210325-%{release}
+Provides:       texlive-hyperxmp-doc = %{epoch}:20210325-%{release}
+Provides:       tex-hyperxmp-doc = %{epoch}:20210325-%{release}
+
+%description -n texlive-hyperxmp
+XMP (eXtensible Metadata Platform) is a mechanism proposed by
+Adobe for embedding document metadata within the document
+itself. The metadata is designed to be easy to extract, even by
+programs that are oblivious to the document's file format. Most
+of Adobe's applications store XMP metadata when saving files.
+Now, with the hyperxmp package, it is trivial for LaTeX
+document authors to store XMP metadata in their documents as
+well. The package integrates seamlessly with hyperref and
+requires virtually no modifications to documents that already
+exploit hyperref's mechanisms for specifying PDF metadata. The
+current version of hyperxmp can embed the following metadata as
+XMP: title, authors, primary author's title or position,
+metadata writer, subject/summary, keywords, copyright, license
+URL, document base URL, document identifier and instance
+identifier, language, source file name, PDF generating tool,
+PDF version, and contact telephone number/postal address/email
+address/URL. Hyperxmp currently embeds XMP only within PDF
+documents; it is compatible with pdfLaTeX, XeLaTeX,
+LaTeX+dvipdfm, and LaTeX+dvips+ps2pdf.
+
 %package -n texlive-installfont
-Provides:       tex-installfont = %{epoch}:20180414-%{release}
-Provides:       texlive-installfont-bin = %{epoch}:20180414-%{release}
-Provides:       tex-installfont-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-installfont-bin < 7:20170520
-Provides:       tex-installfont-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-installfont-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-installfont-doc < 7:20170520
+Provides:       tex-installfont = %{epoch}:20210325-%{release}
+Provides:       texlive-installfont-bin = %{epoch}:20210325-%{release}
+Provides:       tex-installfont-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-installfont-bin < 7:20180414
+Provides:       tex-installfont-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-installfont-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-installfont-doc < 7:20180414
 License:        LPPL
 Summary:        A bash script for installing a LaTeX font family
 Requires:       texlive-base texlive-kpathsea
@@ -2304,24 +2547,71 @@ scheme (e.g. 5bbr8a.pfb). After running the script, you should
 have a working font installation in your local TeX tree.
 
 %package -n texlive-jadetex
-Provides:       tex-jadetex = %{epoch}:20180414-%{release}
-Provides:       texlive-jadetex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-jadetex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-jadetex-bin < 7:20170520
-Provides:       tex-jadetex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-jadetex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-jadetex-doc < 7:20170520
-Provides:       jadetex = %{epoch}:20180414-%{release}
+Provides:       tex-jadetex = %{epoch}:20210325-%{release}
+Provides:       texlive-jadetex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-jadetex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-jadetex-bin < 7:20180414
+Provides:       tex-jadetex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-jadetex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-jadetex-doc < 7:20180414
+Provides:       jadetex = %{epoch}:20210325-%{release}
 License:        MIT
 Summary:        Macros supporting Jade DSSSL output
 Requires:       texlive-base texlive-kpathsea
 Requires:       texlive-latex texlive-passivetex
-Requires:       texlive-pdftex texlive-tetex
+Requires:       texlive-pdftex
 Requires:       texlive-tex
+Requires:       texlive-amsfonts
+Requires:       texlive-atbegshi
+Requires:       texlive-atveryend
+Requires:       texlive-auxhook
+Requires:       texlive-babel
+Requires:       texlive-bigintcalc
+Requires:       texlive-bitset
+Requires:       texlive-cm
+Requires:       texlive-colortbl
+Requires:       texlive-cyrillic
+Requires:       texlive-dehyph
+Requires:       texlive-ec
+Requires:       texlive-etexcmds
+Requires:       texlive-fancyhdr
+Requires:       texlive-graphics
+Requires:       texlive-graphics-cfg
+Requires:       texlive-graphics-def
+Requires:       texlive-hycolor
+Requires:       texlive-hyperref
+Requires:       texlive-hyph-utf8
+Requires:       texlive-iftex
+Requires:       texlive-infwarerr
+Requires:       texlive-intcalc
+Requires:       texlive-kvdefinekeys
+Requires:       texlive-kvoptions
+Requires:       texlive-kvsetkeys
+Requires:       texlive-l3kernel
+Requires:       texlive-latex-fonts
+Requires:       texlive-latexconfig
+Requires:       texlive-letltxmacro
+Requires:       texlive-ltxcmds
+Requires:       texlive-marvosym
+Requires:       texlive-pdfescape
+Requires:       texlive-pdftexcmds
+Requires:       texlive-psnfss
+Requires:       texlive-rerunfilecheck
+Requires:       texlive-stmaryrd
+Requires:       texlive-symbol
+Requires:       texlive-tex-ini-files
+Requires:       texlive-tipa
+Requires:       texlive-tools
+Requires:       texlive-ulem
+Requires:       texlive-uniquecounter
+Requires:       texlive-unicode-data
+Requires:       texlive-url
+Requires:       texlive-wasysym
+Requires:       texlive-zapfding
 Requires(post,postun): coreutils
-Provides:       tex(dsssl.def) = %{epoch}:20180414-%{release}
-Provides:       tex(uentities.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ut1omlgc.fd) = %{epoch}:20180414-%{release}
+Provides:       tex(dsssl.def) = %{epoch}:20210325-%{release}
+Provides:       tex(uentities.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ut1omlgc.fd) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-jadetex
@@ -2329,8 +2619,8 @@ Macro package on top of LaTeX to typeset TeX output of the Jade
 DSSSL implementation.
 
 %package -n texlive-jfmutil
-Provides:       tex-jfmutil = %{epoch}:20180414-%{release}
-Provides:       texlive-jfmutil-bin = %{epoch}:20180414-%{release}
+Provides:       tex-jfmutil = %{epoch}:20210325-%{release}
+Provides:       texlive-jfmutil-bin = %{epoch}:20210325-%{release}
 License:        MIT
 Summary:        Utility to process pTeX-extended TFM and VF
 BuildArch:      noarch
@@ -2347,14 +2637,37 @@ counterpart to the vftovp/vptovf programs. The mutual
 conversion between VF files alone and files in the "ZVP0
 format", which is a subset of the ZVP format.
 
+%package -n texlive-ketcindy
+Provides:       tex-ketcindy = %{epoch}:20210325-%{release}
+Provides:       tex-ketcindy-bin = %{epoch}:20210325-%{release}
+License:        GPLv3+
+Summary:        Macros for graphic generation and Cinderella plugin
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Provides:       tex(ketlayer.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ketlayer2e.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ketmedia.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ketpic.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ketpic2e.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ketslide.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ketslide2.sty) = %{epoch}:20210325-%{release}
+BuildArch:      noarch
+
+%description -n texlive-ketcindy
+KETpic is a macro package designed for computer algebra systems
+(CAS) to generate LaTeX source codes for high-quality
+mathematical artwork. KETcindy is a plugin for Cinderella that
+allows to generate graphics using KETpic. The generated code
+can be included in any LaTeX document.
+
 %package -n texlive-kotex-utils
-Provides:       tex-kotex-utils = %{epoch}:20180414-%{release}
-Provides:       texlive-kotex-utils-bin = %{epoch}:20180414-%{release}
-Provides:       tex-kotex-utils-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-kotex-utils-bin < 7:20170520
-Provides:       tex-kotex-utils-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-kotex-utils-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-kotex-utils-doc < 7:20170520
+Provides:       tex-kotex-utils = %{epoch}:20210325-%{release}
+Provides:       texlive-kotex-utils-bin = %{epoch}:20210325-%{release}
+Provides:       tex-kotex-utils-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-kotex-utils-bin < 7:20180414
+Provides:       tex-kotex-utils-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-kotex-utils-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-kotex-utils-doc < 7:20180414
 License:        LPPL
 Summary:        Utility scripts and support files for typesetting Korean
 Requires:       texlive-base texlive-kotex-utf
@@ -2369,19 +2682,20 @@ the ko.TeX bundle.
 %package -n texlive-kpathsea
 License:        LGPLv2+
 Summary:        Path searching library for TeX-related files
-Provides:       kpathsea = %{epoch}:20180414-%{release}
-Obsoletes:      kpathsea < 20180414
-Provides:       tex-kpathsea = %{epoch}:20180414-%{release}
-Provides:       texlive-kpathsea-bin = %{epoch}:20180414-%{release}
-Provides:       tex-kpathsea-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-kpathsea-bin < 7:20170520
-Provides:       tex-kpathsea-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-kpathsea-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-kpathsea-doc < 7:20170520
-Requires:       coreutils grep texlive-base texlive-tetex
-Provides:       tex(fmtutil.cnf) = %{epoch}:20180414-%{release}
-Provides:       tex(mktex.cnf) = %{epoch}:20180414-%{release}
-Provides:       tex(texmf.cnf) = %{epoch}:20180414-%{release}
+Provides:       kpathsea = %{epoch}:20210325-%{release}
+Obsoletes:      kpathsea < 20210325
+Provides:       tex-kpathsea = %{epoch}:20210325-%{release}
+Provides:       texlive-kpathsea-bin = %{epoch}:20210325-%{release}
+Provides:       tex-kpathsea-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-kpathsea-bin < 7:20180414
+Provides:       tex-kpathsea-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-kpathsea-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-kpathsea-doc < 7:20180414
+Requires:       coreutils grep texlive-base
+Requires(post): texlive-texlive-scripts = %{epoch}:20210325-%{release}
+Provides:       tex(fmtutil.cnf) = %{epoch}:20210325-%{release}
+Provides:       tex(mktex.cnf) = %{epoch}:20210325-%{release}
+Provides:       tex(texmf.cnf) = %{epoch}:20210325-%{release}
 
 %description -n texlive-kpathsea
 Kpathsea is a library and utility programs which provide path
@@ -2390,14 +2704,14 @@ locating feature required for movable installations, layered on
 top of a general search mechanism.
 
 %package -n texlive-l3build
-Provides:       tex-l3build = %{epoch}:20180414-%{release}
-Provides:       texlive-l3build-bin = %{epoch}:20180414-%{release}
-Provides:       tex-l3build-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-l3build-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-l3build-doc < 7:20180414
+Provides:       tex-l3build = %{epoch}:20210325-%{release}
+Provides:       texlive-l3build-bin = %{epoch}:20210325-%{release}
+Provides:       tex-l3build-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-l3build-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-l3build-doc < 7:20210325
 License:        LPPL
 Summary:        A testing and building system for (La)TeX
-Provides:       tex(regression-test.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(regression-test.tex) = %{epoch}:20210325-%{release}
 Requires:       texlive-base texlive-kpathsea
 BuildArch:      noarch
 
@@ -2410,10 +2724,10 @@ documentation; and An automated process for creating CTAN
 releases.
 
 %package -n texlive-lacheck
-Provides:       tex-lacheck = %{epoch}:20180414-%{release}
-Provides:       texlive-lacheck-bin = %{epoch}:20180414-%{release}
-Provides:       tex-lacheck-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lacheck-bin < 7:20170520
+Provides:       tex-lacheck = %{epoch}:20210325-%{release}
+Provides:       texlive-lacheck-bin = %{epoch}:20210325-%{release}
+Provides:       tex-lacheck-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lacheck-bin < 7:20180414
 License:        GPL+
 Summary:        LaTeX checker
 Requires:       texlive-base texlive-kpathsea
@@ -2424,170 +2738,175 @@ documents. The distribution includes sources, and executables
 for OS/2 and Win32 environments.
 
 %package -n texlive-latex
-Provides:       tex-latex = %{epoch}:20180414-%{release}
-Provides:       tetex-latex = %{epoch}:20180414-%{release}
-Provides:       texlive-latex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-bin < 7:20170520
-Provides:       texlive-latex-bin-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latex-bin-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-bin-bin < 7:20170520
-Provides:       tex-latex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-doc < 7:20170520
+Provides:       tex-latex = %{epoch}:20210325-%{release}
+Provides:       tetex-latex = %{epoch}:20210325-%{release}
+Provides:       texlive-latex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-bin < 7:20180414
+Provides:       texlive-latex-bin-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latex-bin-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-bin-bin < 7:20180414
+Provides:       tex-latex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        A TeX macro package that defines LaTeX
-Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-luatex texlive-pdftex
-Requires:       texlive-latexconfig texlive-latex-fonts
-Requires:       texlive-tetex
+Requires:       texlive-base
+Requires:       tex(expl3.sty)
+Requires:       texlive-kpathsea
+Requires:       texlive-luatex
+Requires:       texlive-pdftex
+Requires:       texlive-latexconfig
+Requires:       texlive-latex-fonts
+Requires:       texlive-cm-super
+Requires:       texlive-psnfss
 Requires(post,postun): coreutils
 Requires:       tex(multicol.sty) tex(url.sty)
 Requires:       tex(hyperref.sty)
-Provides:       tex(alltt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ansinew.def) = %{epoch}:20180414-%{release}
-Provides:       tex(applemac.def) = %{epoch}:20180414-%{release}
-Provides:       tex(article.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(article.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ascii.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bezier.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(bk10.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(bk11.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(bk12.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(book.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(book.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(cp1250.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp1252.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp1257.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp437.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp437de.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp850.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp852.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp858.def) = %{epoch}:20180414-%{release}
-Provides:       tex(cp865.def) = %{epoch}:20180414-%{release}
-Provides:       tex(decmulti.def) = %{epoch}:20180414-%{release}
-Provides:       tex(doc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(docstrip.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(exscale.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fix-cm.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fixltx2e.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(flafter.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fleqn.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(fleqn.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fltrace.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fontenc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fontmath.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(fonttext.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(graphpap.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(idx.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ifthen.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(inputenc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(lablst.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(latex209.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latexbug.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(latexrelease.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(latexsym.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(latin1.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latin10.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latin2.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latin3.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latin4.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latin5.def) = %{epoch}:20180414-%{release}
-Provides:       tex(latin9.def) = %{epoch}:20180414-%{release}
-Provides:       tex(leqno.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(leqno.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(letter.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(letter.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(lppl.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ltnews.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(ltxcheck.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(ltxdoc.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(ltxguide.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(macce.def) = %{epoch}:20180414-%{release}
-Provides:       tex(makeidx.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(minimal.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(newlfont.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(next.def) = %{epoch}:20180414-%{release}
-Provides:       tex(nfssfont.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(oldlfont.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(omlcmm.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omlcmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omlenc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(omllcmm.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omscmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omscmsy.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omsenc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(omslcmsy.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omxcmex.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(omxlcmex.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(openbib.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1cmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1lcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot1lcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ot4enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(preload.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(proc.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(proc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(report.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(report.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(sample2e.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(sfonts.def) = %{epoch}:20180414-%{release}
-Provides:       tex(shortvrb.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(showidx.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(size10.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(size11.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(size12.clo) = %{epoch}:20180414-%{release}
-Provides:       tex(slides.cls) = %{epoch}:20180414-%{release}
-Provides:       tex(slides.def) = %{epoch}:20180414-%{release}
-Provides:       tex(slides.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(small2e.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(source2e.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(syntonly.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmfib.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmfr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1cmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(t1enc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(t1lcmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(t1lcmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(testpage.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(texsys.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(textcomp.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(tracefnt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ts1cmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ts1cmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ts1cmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ts1cmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ts1enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(tuenc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmdh.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmssq.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmssq.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(tulmvtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ucmr.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ucmss.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ucmtt.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ulasy.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(ullasy.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(utf8-test.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(utf8.def) = %{epoch}:20180414-%{release}
-Provides:       tex(utf8test.tex) = %{epoch}:20180414-%{release}
-Provides:       texlive-texmf-latex = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texmf-latex < 20180414
+Provides:       tex(alltt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ansinew.def) = %{epoch}:20210325-%{release}
+Provides:       tex(applemac.def) = %{epoch}:20210325-%{release}
+Provides:       tex(article.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(article.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ascii.def) = %{epoch}:20210325-%{release}
+Provides:       tex(bezier.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(bk10.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(bk11.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(bk12.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(book.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(book.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(cp1250.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp1252.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp1257.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp437.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp437de.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp850.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp852.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp858.def) = %{epoch}:20210325-%{release}
+Provides:       tex(cp865.def) = %{epoch}:20210325-%{release}
+Provides:       tex(decmulti.def) = %{epoch}:20210325-%{release}
+Provides:       tex(doc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(docstrip.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(exscale.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fix-cm.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fixltx2e.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(flafter.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fleqn.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(fleqn.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fltrace.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fontenc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fontmath.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(fonttext.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(graphpap.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(idx.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ifthen.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(inputenc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(lablst.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(latex209.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latexbug.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(latexrelease.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(latexsym.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(latin1.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latin10.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latin2.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latin3.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latin4.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latin5.def) = %{epoch}:20210325-%{release}
+Provides:       tex(latin9.def) = %{epoch}:20210325-%{release}
+Provides:       tex(leqno.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(leqno.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(letter.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(letter.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(lppl.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ltnews.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(ltxcheck.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(ltxdoc.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(ltxguide.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(macce.def) = %{epoch}:20210325-%{release}
+Provides:       tex(makeidx.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(minimal.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(newlfont.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(next.def) = %{epoch}:20210325-%{release}
+Provides:       tex(nfssfont.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(oldlfont.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(omlcmm.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omlcmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omlenc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(omllcmm.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omscmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omscmsy.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omsenc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(omslcmsy.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omxcmex.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(omxlcmex.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(openbib.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1cmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1lcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot1lcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ot4enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(preload.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(proc.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(proc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(report.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(report.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(sample2e.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(sfonts.def) = %{epoch}:20210325-%{release}
+Provides:       tex(shortvrb.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(showidx.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(size10.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(size11.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(size12.clo) = %{epoch}:20210325-%{release}
+Provides:       tex(slides.cls) = %{epoch}:20210325-%{release}
+Provides:       tex(slides.def) = %{epoch}:20210325-%{release}
+Provides:       tex(slides.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(small2e.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(source2e.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(syntonly.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmfib.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmfr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1cmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(t1enc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(t1lcmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(t1lcmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(testpage.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(texsys.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(textcomp.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(tracefnt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ts1cmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ts1cmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ts1cmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ts1cmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ts1enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(tuenc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmdh.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmssq.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmssq.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(tulmvtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ucmr.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ucmss.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ucmtt.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ulasy.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(ullasy.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(utf8-test.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(utf8.def) = %{epoch}:20210325-%{release}
+Provides:       tex(utf8test.tex) = %{epoch}:20210325-%{release}
+Provides:       texlive-texmf-latex = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texmf-latex < 20210325
 BuildArch:      noarch
 
 %description -n texlive-latex
@@ -2607,13 +2926,13 @@ writing, font encodings, configuration options and modification
 of LaTeX.
 
 %package -n texlive-latex-git-log
-Provides:       tex-latex-git-log = %{epoch}:20180414-%{release}
-Provides:       texlive-latex-git-log-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latex-git-log-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-git-log-bin < 7:20170520
-Provides:       tex-latex-git-log-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latex-git-log-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-git-log-doc < 7:20170520
+Provides:       tex-latex-git-log = %{epoch}:20210325-%{release}
+Provides:       texlive-latex-git-log-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latex-git-log-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-git-log-bin < 7:20180414
+Provides:       tex-latex-git-log-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latex-git-log-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-git-log-doc < 7:20180414
 License:        GPLv3+
 Summary:        Typeset git log information
 Requires:       texlive-base texlive-kpathsea
@@ -2626,13 +2945,13 @@ typically be redirected to a file; the author recommends
 typesetting in landscape orientation.
 
 %package -n texlive-latex-papersize
-Provides:       tex-latex-papersize = %{epoch}:20180414-%{release}
-Provides:       texlive-latex-papersize-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latex-papersize-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-papersize-bin < 7:20170520
-Provides:       tex-latex-papersize-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latex-papersize-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex-papersize-doc < 7:20170520
+Provides:       tex-latex-papersize = %{epoch}:20210325-%{release}
+Provides:       texlive-latex-papersize-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latex-papersize-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-papersize-bin < 7:20180414
+Provides:       tex-latex-papersize-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latex-papersize-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex-papersize-doc < 7:20180414
 License:        ASL 2.0
 Summary:        Calculate LaTeX settings for any font and paper size
 Requires:       texlive-base texlive-kpathsea
@@ -2647,19 +2966,19 @@ the settings for various font and paper sizes. More details are
 to be read in the script itself.
 
 %package -n texlive-latex2man
-Provides:       tex-latex2man = %{epoch}:20180414-%{release}
-Provides:       texlive-latex2man-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latex2man-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex2man-bin < 7:20170520
-Provides:       tex-latex2man-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latex2man-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex2man-doc < 7:20170520
+Provides:       tex-latex2man = %{epoch}:20210325-%{release}
+Provides:       texlive-latex2man-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latex2man-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex2man-bin < 7:20180414
+Provides:       tex-latex2man-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latex2man-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex2man-doc < 7:20180414
 License:        LPPL
 Summary:        Translate LaTeX-based manual pages into Unix man format
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(fancyheadings.sty) tex(fancyhdr.sty)
-Provides:       tex(latex2man.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(latex2man.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(latex2man.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(latex2man.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-latex2man
@@ -2670,13 +2989,13 @@ parts of the text may be supressed using the conditional text
 feature.
 
 %package -n texlive-latex2nemeth
-Provides:       tex-latex2nemeth = %{epoch}:20180414-%{release}
-Provides:       texlive-latex2nemeth-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latex2nemeth-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex2nemeth-bin < 7:20170520
-Provides:       tex-latex2nemeth-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latex2nemeth-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latex2nemeth-doc < 7:20170520
+Provides:       tex-latex2nemeth = %{epoch}:20210325-%{release}
+Provides:       texlive-latex2nemeth-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latex2nemeth-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex2nemeth-bin < 7:20180414
+Provides:       tex-latex2nemeth-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latex2nemeth-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latex2nemeth-doc < 7:20180414
 License:        GPLv3
 Summary:        Convert LaTeX source to Braille with math in Nemeth
 Requires:       texlive-base texlive-kpathsea
@@ -2699,13 +3018,13 @@ LibreOffice and odt2braille as this project does not deal with
 embossers' drivers.
 
 %package -n texlive-latexdiff
-Provides:       tex-latexdiff = %{epoch}:20180414-%{release}
-Provides:       texlive-latexdiff-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latexdiff-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexdiff-bin < 7:20170520
-Provides:       tex-latexdiff-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latexdiff-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexdiff-doc < 7:20170520
+Provides:       tex-latexdiff = %{epoch}:20210325-%{release}
+Provides:       texlive-latexdiff-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latexdiff-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexdiff-bin < 7:20180414
+Provides:       tex-latexdiff-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latexdiff-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexdiff-doc < 7:20180414
 License:        GPLv3+
 Summary:        Determine and mark up significant differences between LaTeX files
 Requires:       texlive-base texlive-kpathsea
@@ -2724,13 +3043,13 @@ to override this default behaviour and accept or reject
 selected changes only.
 
 %package -n texlive-latexfileversion
-Provides:       tex-latexfileversion = %{epoch}:20180414-%{release}
-Provides:       texlive-latexfileversion-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latexfileversion-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexfileversion-bin < 7:20170520
-Provides:       tex-latexfileversion-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latexfileversion-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexfileversion-doc < 7:20170520
+Provides:       tex-latexfileversion = %{epoch}:20210325-%{release}
+Provides:       texlive-latexfileversion-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latexfileversion-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexfileversion-bin < 7:20180414
+Provides:       tex-latexfileversion-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latexfileversion-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexfileversion-doc < 7:20180414
 License:        LPPL
 Summary:        Prints the version and date of a LaTeX class or style file
 Requires:       texlive-base texlive-kpathsea
@@ -2744,13 +3063,13 @@ programme handles style files (extension .sty), class files
 must be given.
 
 %package -n texlive-latexindent
-Provides:       tex-latexindent = %{epoch}:20180414-%{release}
-Provides:       texlive-latexindent-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latexindent-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexindent-bin < 7:20170520
-Provides:       tex-latexindent-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latexindent-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexindent-doc < 7:20170520
+Provides:       tex-latexindent = %{epoch}:20210325-%{release}
+Provides:       texlive-latexindent-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latexindent-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexindent-bin < 7:20180414
+Provides:       tex-latexindent-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latexindent-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexindent-doc < 7:20180414
 License:        GPLv3+
 Summary:        Indent a LaTeX document, highlighting the programming structure
 Requires:       texlive-base texlive-kpathsea
@@ -2761,13 +3080,13 @@ The Perl script processes a LaTeX file, indenting parts so as to
 highlight the structure for the reader.
 
 %package -n texlive-latexpand
-Provides:       tex-latexpand = %{epoch}:20180414-%{release}
-Provides:       texlive-latexpand-bin = %{epoch}:20180414-%{release}
-Provides:       tex-latexpand-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexpand-bin < 7:20170520
-Provides:       tex-latexpand-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-latexpand-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-latexpand-doc < 7:20170520
+Provides:       tex-latexpand = %{epoch}:20210325-%{release}
+Provides:       texlive-latexpand-bin = %{epoch}:20210325-%{release}
+Provides:       tex-latexpand-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexpand-bin < 7:20180414
+Provides:       tex-latexpand-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-latexpand-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-latexpand-doc < 7:20180414
 License:        BSD
 Summary:        Expand \input and \include in a LaTeX document
 Requires:       texlive-base texlive-kpathsea
@@ -2779,11 +3098,11 @@ Latexpand is a Perl script that simply replaces \input and
 The script does not deal with \includeonly commands.
 
 %package -n texlive-lcdftypetools
-Provides:       tex-lcdftypetools = %{epoch}:20180414-%{release}
-Provides:       lcdf-typetools = %{epoch}:20180414-%{release}
-Provides:       texlive-lcdftypetools-bin = %{epoch}:20180414-%{release}
-Provides:       tex-lcdftypetools-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lcdftypetools-bin < 7:20170520
+Provides:       tex-lcdftypetools = %{epoch}:20210325-%{release}
+Provides:       lcdf-typetools = %{epoch}:20210325-%{release}
+Provides:       texlive-lcdftypetools-bin = %{epoch}:20210325-%{release}
+Provides:       tex-lcdftypetools-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lcdftypetools-bin < 7:20180414
 License:        GPL+
 Summary:        A bundle of outline font manipulation tools
 Requires:       texlive-base texlive-kpathsea
@@ -2811,7 +3130,7 @@ for a Type 1 font.
 
 %package -n texlive-lib
 Summary:        Shared libraries for TeX-related files
-Provides:       texlive-kpathsea-lib = %{epoch}:20180414-%{release}
+Provides:       texlive-kpathsea-lib = %{epoch}:20210325-%{release}
 Provides:       texlive-kpathsea-lib(%{__isa}) = 6:2016
 Obsoletes:      texlive-kpathsea-lib < 2015
 Provides:       bundled(lua) = 5.2.4
@@ -2822,35 +3141,35 @@ TeX specific shared libraries.
 %package -n texlive-lib-devel
 Summary:        Development files for TeX specific shared libraries
 Requires:       texlive-lib%{?_isa}
-Provides:       texlive-kpathsea-lib-devel = %{epoch}:20180414-%{release}
+Provides:       texlive-kpathsea-lib-devel = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-kpathsea-lib-devel < 2015
 
 %description -n texlive-lib-devel
 Development files for TeX specific shared libraries.
 
 %package -n texlive-lilyglyphs
-Provides:       tex-lilyglyphs = %{epoch}:20180414-%{release}
-Provides:       texlive-lilyglyphs-bin = %{epoch}:20180414-%{release}
-Provides:       tex-lilyglyphs-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lilyglyphs-bin < 7:20170520
-Provides:       tex-lilyglyphs-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-lilyglyphs-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lilyglyphs-doc < 7:20170520
+Provides:       tex-lilyglyphs = %{epoch}:20210325-%{release}
+Provides:       texlive-lilyglyphs-bin = %{epoch}:20210325-%{release}
+Provides:       tex-lilyglyphs-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lilyglyphs-bin < 7:20180414
+Provides:       tex-lilyglyphs-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-lilyglyphs-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lilyglyphs-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Access lilypond fragments and glyphs, in LaTeX
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(keyval.sty) tex(pgf.sty)
 Requires:       tex(adjustbox.sty)
-Provides:       tex(emmentaler-11.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-13.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-14.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-16.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-18.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-20.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-23.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-26.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(emmentaler-brace.otf) = %{epoch}:20180414-%{release}
-Provides:       tex(lilyglyphs.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(emmentaler-11.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-13.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-14.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-16.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-18.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-20.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-23.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-26.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(emmentaler-brace.otf) = %{epoch}:20210325-%{release}
+Provides:       tex(lilyglyphs.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-lilyglyphs
@@ -2860,19 +3179,19 @@ font, in a LaTeX document. The package uses OpenType fonts, and
 as a result must be compiled with LuaLaTeX or XeLaTeX.
 
 %package -n texlive-listbib
-Provides:       tex-listbib = %{epoch}:20180414-%{release}
-Provides:       texlive-listbib-bin = %{epoch}:20180414-%{release}
-Provides:       tex-listbib-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-listbib-bin < 7:20170520
-Provides:       tex-listbib-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-listbib-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-listbib-doc < 7:20170520
+Provides:       tex-listbib = %{epoch}:20210325-%{release}
+Provides:       texlive-listbib-bin = %{epoch}:20210325-%{release}
+Provides:       tex-listbib-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-listbib-bin < 7:20180414
+Provides:       tex-listbib-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-listbib-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-listbib-doc < 7:20180414
 License:        GPL+
 Summary:        Lists contents of BibTeX files
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(listbib.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(listbib.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(listbib.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(listbib.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(listbib.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(listbib.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-listbib
@@ -2882,18 +3201,18 @@ which is better suited for this purpose than the standard
 styles.
 
 %package -n texlive-listings-ext
-Provides:       tex-listings-ext = %{epoch}:20180414-%{release}
-Provides:       texlive-listings-ext-bin = %{epoch}:20180414-%{release}
-Provides:       tex-listings-ext-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-listings-ext-bin < 7:20170520
-Provides:       tex-listings-ext-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-listings-ext-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-listings-ext-doc < 7:20170520
+Provides:       tex-listings-ext = %{epoch}:20210325-%{release}
+Provides:       texlive-listings-ext-bin = %{epoch}:20210325-%{release}
+Provides:       tex-listings-ext-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-listings-ext-bin < 7:20180414
+Provides:       tex-listings-ext-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-listings-ext-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-listings-ext-doc < 7:20180414
 License:        LPPL 1.2
 Summary:        Automated input of source
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(listings.sty) tex(xkeyval.sty)
-Provides:       tex(listings-ext.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(listings-ext.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-listings-ext
@@ -2905,31 +3224,56 @@ blocks of source. These tags are processed by a shell script to
 make a steering file that is used by the package when LaTeX is
 being run.
 
+%package -n texlive-light-latex-make
+Summary:        llmk: A build tool for LaTeX documents
+License:        MIT
+Requires:       texlive-base texlive-kpathsea
+
+%description -n texlive-light-latex-make
+This program is yet another build tool specific for LaTeX
+documents. Its aim is to provide a simple way to specify a
+workflow of processing LaTeX documents and encourage people to
+always explicitly show the right workflow for each document.
+The main features of the executable llmk are all about the
+above purpose. First, you can describe the workflows either in
+an external file llmk.toml or in a LaTeX document source in the
+form of magic comments. Further, multiple magic comment formats
+can be used. Second, it is fully cross-platform. The only
+requirement of the program is the texlua command; llmk provides
+a uniform way to describe the workflows available for nearly
+all TeX environments. Third, it behaves exactly the same in any
+environment. At this point, llmk intentionally does not provide
+any method for user configuration. Therefore one can guarantee
+that for a LaTeX document with an llmk setup, the process of
+typesetting the document will be reproduced in any TeX
+environment with the program.
+
+
 %package -n texlive-lollipop
-Provides:       tex-lollipop = %{epoch}:20180414-%{release}
-Provides:       texlive-lollipop-bin = %{epoch}:20180414-%{release}
-Provides:       tex-lollipop-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lollipop-bin < 7:20170520
-Provides:       tex-lollipop-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-lollipop-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lollipop-doc < 7:20170520
+Provides:       tex-lollipop = %{epoch}:20210325-%{release}
+Provides:       texlive-lollipop-bin = %{epoch}:20210325-%{release}
+Provides:       tex-lollipop-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lollipop-bin < 7:20180414
+Provides:       tex-lollipop-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-lollipop-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lollipop-doc < 7:20180414
 License:        GPLv3+
 Summary:        TeX made easy
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex texlive-tex
+Requires:       texlive-cm texlive-hyphen-base texlive-tex
 Requires(post,postun): coreutils
-Provides:       tex(lollipop-define.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-document.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-float.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-fontdefs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-fonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-heading.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-lists.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-output.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-plain.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-text.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop-tools.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(lollipop.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(lollipop-define.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-document.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-float.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-fontdefs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-fonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-heading.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-lists.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-output.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-plain.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-text.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop-tools.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(lollipop.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-lollipop
@@ -2947,13 +3291,13 @@ Lollipop documents written in RTL languages (such as Persian)
 is underway.
 
 %package -n texlive-ltxfileinfo
-Provides:       tex-ltxfileinfo = %{epoch}:20180414-%{release}
-Provides:       texlive-ltxfileinfo-bin = %{epoch}:20180414-%{release}
-Provides:       tex-ltxfileinfo-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ltxfileinfo-bin < 7:20170520
-Provides:       tex-ltxfileinfo-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ltxfileinfo-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ltxfileinfo-doc < 7:20170520
+Provides:       tex-ltxfileinfo = %{epoch}:20210325-%{release}
+Provides:       texlive-ltxfileinfo-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ltxfileinfo-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ltxfileinfo-bin < 7:20180414
+Provides:       tex-ltxfileinfo-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ltxfileinfo-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ltxfileinfo-doc < 7:20180414
 License:        GPL+
 Summary:        Print version information for a LaTeX file
 Requires:       texlive-base texlive-kpathsea
@@ -2968,13 +3312,13 @@ the --star or --color options) check the valididity of the
 Uwe Luck's readprov.sty.
 
 %package -n texlive-ltximg
-Provides:       tex-ltximg = %{epoch}:20180414-%{release}
-Provides:       texlive-ltximg-bin = %{epoch}:20180414-%{release}
-Provides:       tex-ltximg-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ltximg-bin < 7:20170520
-Provides:       tex-ltximg-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ltximg-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ltximg-doc < 7:20170520
+Provides:       tex-ltximg = %{epoch}:20210325-%{release}
+Provides:       texlive-ltximg-bin = %{epoch}:20210325-%{release}
+Provides:       tex-ltximg-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ltximg-bin < 7:20180414
+Provides:       tex-ltximg-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ltximg-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ltximg-doc < 7:20180414
 License:        GPLv2+
 Summary:        Split LaTeX files to sanitise a conversion process
 Requires:       texlive-base texlive-kpathsea
@@ -2986,47 +3330,21 @@ PStricks environments for separate processing to produce images
 (in eps, pdf, png or jpg format) for use by a converter or the
 preview bundle.
 
-%package -n texlive-lua2dox
-Provides:       tex-lua2dox = %{epoch}:20180414-%{release}
-Provides:       texlive-lua2dox-bin = %{epoch}:20180414-%{release}
-Provides:       tex-lua2dox-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lua2dox-bin < 7:20170520
-Provides:       tex-lua2dox-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-lua2dox-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lua2dox-doc < 7:20170520
-License:        LPPL 1.3
-Summary:        Auto-documentation of lua code
-Requires:       texlive-base texlive-kpathsea
-Provides:       tex(lua.def) = %{epoch}:20180414-%{release}
-BuildArch:      noarch
-
-%description -n texlive-lua2dox
-The package extends the well-known C-like language autodoc
-tool, doxygen, to read and document lua code. In use, you edit
-and test your code and periodically run the autodoc tool to
-update the documentation, which may be viewed via an html
-browser. Autodoc tools can read the code well enough to find
-function/... declarations and document them. If the code also
-contains appropriatly formatted "magic comments", the tool can
-use them to supplement the documentation. The package is a
-first prototype of a planned TeX2DoX tool (in development),
-which will process joint (La)TeX/lua documents.
-
 %package -n texlive-luaotfload
-Provides:       tex-luaotfload = %{epoch}:20180414-%{release}
-Provides:       texlive-luaotfload-bin = %{epoch}:20180414-%{release}
-Provides:       tex-luaotfload-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-luaotfload-bin < 7:20170520
-Provides:       tex-luaotfload-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-luaotfload-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-luaotfload-doc < 7:20170520
+Provides:       tex-luaotfload = %{epoch}:20210325-%{release}
+Provides:       texlive-luaotfload-bin = %{epoch}:20210325-%{release}
+Provides:       tex-luaotfload-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-luaotfload-bin < 7:20180414
+Provides:       tex-luaotfload-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-luaotfload-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-luaotfload-doc < 7:20180414
 License:        GPLv2+
 Summary:        OpenType 'loader' for Plain TeX and LaTeX
 Requires:       texlive-base texlive-kpathsea
 Requires:       texlive-lualibs texlive-lua-alt-getopt
 Requires:       tex(luatexbase.sty)
-Provides:       tex(luaotfload-blacklist.cnf) = %{epoch}:20180414-%{release}
-Provides:       tex(luaotfload.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(luaotfload-blacklist.cnf) = %{epoch}:20210325-%{release}
+Provides:       tex(luaotfload.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-luaotfload
@@ -3034,25 +3352,66 @@ The package adopts the TrueType/OpenType Font loader code
 provided in ConTeXt, and adapts it to use in Plain TeX and
 LaTeX. It works under LuaLaTeX only.
 
+%package -n texlive-luahbtex
+Provides:       tex-luahbtex = %{epoch}:20210325-%{release}
+Provides:       texlive-luahbtex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-luahbtex-bin = %{epoch}:20210325-%{release}
+License:        GPLv2+
+Summary:        LuaTeX with HarfBuzz library for glyph shaping
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-luatex
+Requires:       texlive-cm
+Requires:       texlive-etex
+Requires:       texlive-hyphen-base
+Requires:       texlive-knuth-lib
+Requires:       texlive-plain
+Requires:       texlive-tex-ini-files
+Requires:       texlive-unicode-data
+Requires:       texlive-hyph-utf8
+
+%description -n texlive-luahbtex
+LuaTeX with HarfBuzz library for glyph shaping.
+
+%package -n texlive-luajittex
+Provides:       tex-luajittex = %{epoch}:20210325-%{release}
+Provides:       tex-luajittex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-luajittex-bin = %{epoch}:20210325-%{release}
+License:        GPLv2+
+Summary:        LuaTeX with just-in-time (jit) compiler, with and without HarfBuzz
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-luatex
+Requires:       texlive-cm
+Requires:       texlive-etex
+Requires:       texlive-hyphen-base
+Requires:       texlive-knuth-lib
+Requires:       texlive-plain
+Requires:       texlive-tex-ini-files
+Requires:       texlive-unicode-data
+Requires:       texlive-hyph-utf8
+
+%description -n texlive-luajittex
+LuaTeX with just-in-time (jit) compiler, with and without HarfBuzz.
+
 %package -n texlive-luatex
-Provides:       tex-luatex = %{epoch}:20180414-%{release}
-Provides:       texlive-luatex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-luatex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-luatex-bin < 7:20170520
-Provides:       tex-luatex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-luatex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-luatex-doc < 7:20170520
+Provides:       tex-luatex = %{epoch}:20210325-%{release}
+Provides:       texlive-luatex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-luatex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-luatex-bin < 7:20180414
+Provides:       tex-luatex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-luatex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-luatex-doc < 7:20180414
 License:        GPLv2+
 Summary:        The LuaTeX engine
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex
 Requires(post,postun): coreutils
 Requires:       texlive-cm texlive-etex
 Requires:       texlive-hyphen-base texlive-knuth-lib
 Requires:       texlive-plain texlive-tex-ini-files
-Requires:       texlive-unicode-data tex(luatex.def)
-Provides:       tex(luatex-unicode-letters.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(luatexiniconfig.tex) = %{epoch}:20180414-%{release}
+Requires:       texlive-unicode-data texlive-hyph-utf8 tex(luatex.def)
+Provides:       tex(luatex-unicode-letters.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(luatexiniconfig.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-luatex
 LuaTeX is an extended version of pdfTeX using Lua as an
@@ -3066,13 +3425,13 @@ development; its specification has been declared stable, but
 absolute stability may not in practice be assumed.
 
 %package -n texlive-lwarp
-Provides:       tex-lwarp = %{epoch}:20180414-%{release}
-Provides:       texlive-lwarp-bin = %{epoch}:20180414-%{release}
-Provides:       tex-lwarp-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lwarp-bin < 7:20170520
-Provides:       tex-lwarp-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-lwarp-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-lwarp-doc < 7:20170520
+Provides:       tex-lwarp = %{epoch}:20210325-%{release}
+Provides:       texlive-lwarp-bin = %{epoch}:20210325-%{release}
+Provides:       tex-lwarp-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lwarp-bin < 7:20180414
+Provides:       tex-lwarp-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-lwarp-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-lwarp-doc < 7:20180414
 License:        LPPL
 Summary:        Converts LaTeX to HTML
 Requires:       texlive-base texlive-kpathsea
@@ -3096,9 +3455,18 @@ Summary:        Commands to include lilypond scores within a (Lua)LaTeX document
 Version:        svn47584
 License:        MIT
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(lyluatex.lua) = %{epoch}:20180414-%{release}
-Provides:       tex(lyluatex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(lyluatex.lua) = %{epoch}:20210325-%{release}
+Provides:       tex(lyluatex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
+Requires:       tex(currfile.sty)
+Requires:       tex(environ.sty)
+Requires:       tex(graphicx.sty)
+Requires:       tex(luaotfload.sty)
+Requires:       tex(luatexbase.sty)
+Requires:       tex(metalogo.sty)
+Requires:       tex(minibox.sty)
+Requires:       tex(pdfpages.sty)
+Requires:       tex(xkeyval.sty)
 
 %description -n texlive-lyluatex
 This package provides macros for the inclusion of LilyPond
@@ -3106,13 +3474,13 @@ scores within LuaLaTeX. It calls LilyPond to compile scores,
 then includes the produced files.
 
 %package -n texlive-make4ht
-Provides:       tex-make4ht = %{epoch}:20180414-%{release}
-Provides:       texlive-make4ht-bin = %{epoch}:20180414-%{release}
-Provides:       tex-make4ht-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-make4ht-bin < 7:20170520
-Provides:       tex-make4ht-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-make4ht-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-make4ht-doc < 7:20170520
+Provides:       tex-make4ht = %{epoch}:20210325-%{release}
+Provides:       texlive-make4ht-bin = %{epoch}:20210325-%{release}
+Provides:       tex-make4ht-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-make4ht-bin < 7:20180414
+Provides:       tex-make4ht-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-make4ht-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-make4ht-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        A build system for tex4ht
 Requires:       texlive-base texlive-kpathsea
@@ -3124,17 +3492,17 @@ executable, which simplifies tex4ht execution, and a library
 which can be used to create customized conversion programs.
 
 %package -n texlive-makedtx
-Provides:       tex-makedtx = %{epoch}:20180414-%{release}
-Provides:       texlive-makedtx-bin = %{epoch}:20180414-%{release}
-Provides:       tex-makedtx-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-makedtx-bin < 7:20170520
-Provides:       tex-makedtx-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-makedtx-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-makedtx-doc < 7:20170520
+Provides:       tex-makedtx = %{epoch}:20210325-%{release}
+Provides:       texlive-makedtx-bin = %{epoch}:20210325-%{release}
+Provides:       tex-makedtx-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-makedtx-bin < 7:20180414
+Provides:       tex-makedtx-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-makedtx-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-makedtx-doc < 7:20180414
 License:        LPPL
 Summary:        Perl script to help generate dtx and ins files
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(creatdtx.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(creatdtx.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-makedtx
@@ -3145,18 +3513,18 @@ automatically generates the character table, and also writes
 the associated installation (.ins) script.
 
 %package -n texlive-makeindex
-Provides:       tex-makeindex = %{epoch}:20180414-%{release}
-Provides:       texlive-makeindex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-makeindex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-makeindex-bin < 7:20170520
-Provides:       tex-makeindex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-makeindex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-makeindex-doc < 7:20170520
+Provides:       tex-makeindex = %{epoch}:20210325-%{release}
+Provides:       texlive-makeindex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-makeindex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-makeindex-bin < 7:20180414
+Provides:       tex-makeindex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-makeindex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-makeindex-doc < 7:20180414
 License:        MakeIndex
 Summary:        Provides sorted index from unsorted raw data
 Requires:       texlive-base texlive-kpathsea
 Requires:       texlive-makeindex
-Provides:       tex(idxmac.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(idxmac.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-makeindex
 MakeIndex is a computer program which provides a sorted index
@@ -3165,13 +3533,13 @@ by various programs, however, it is generally used with LaTeX
 and troff.
 
 %package -n texlive-match_parens
-Provides:       tex-match_parens = %{epoch}:20180414-%{release}
-Provides:       texlive-match_parens-bin = %{epoch}:20180414-%{release}
-Provides:       tex-match_parens-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-match_parens-bin < 7:20170520
-Provides:       tex-match_parens-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-match_parens-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-match_parens-doc < 7:20170520
+Provides:       tex-match_parens = %{epoch}:20210325-%{release}
+Provides:       texlive-match_parens-bin = %{epoch}:20210325-%{release}
+Provides:       tex-match_parens-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-match_parens-bin < 7:20180414
+Provides:       tex-match_parens-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-match_parens-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-match_parens-doc < 7:20180414
 License:        GPL+
 Summary:        Find mismatches of parentheses, braces, (angle) brackets, in texts
 Requires:       texlive-base texlive-kpathsea
@@ -3187,19 +3555,19 @@ will normally be almost empty, but will clearly show any
 mismatches.
 
 %package -n texlive-mathspic
-Provides:       tex-mathspic = %{epoch}:20180414-%{release}
-Provides:       texlive-mathspic-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mathspic-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mathspic-bin < 7:20170520
-Provides:       tex-mathspic-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mathspic-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mathspic-doc < 7:20170520
+Provides:       tex-mathspic = %{epoch}:20210325-%{release}
+Provides:       texlive-mathspic-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mathspic-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mathspic-bin < 7:20180414
+Provides:       tex-mathspic-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mathspic-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mathspic-doc < 7:20180414
 License:        LPPL
 Summary:        A Perl filter program for use with PiCTeX
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(prepictex.tex) tex(pictexwd.tex)
 Requires:       tex(postpictex.tex)
-Provides:       tex(mathspic.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(mathspic.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-mathspic
@@ -3217,24 +3585,24 @@ and maths (advance, multiply, and divide)--in short--it takes
 the pain out of PiCTeX.
 
 %package -n texlive-metafont
-Provides:       tex-metafont = %{epoch}:20180414-%{release}
-Provides:       texlive-metafont-bin = %{epoch}:20180414-%{release}
-Provides:       tex-metafont-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-metafont-bin < 7:20170520
+Provides:       tex-metafont = %{epoch}:20210325-%{release}
+Provides:       texlive-metafont-bin = %{epoch}:20210325-%{release}
+Provides:       tex-metafont-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-metafont-bin < 7:20180414
 License:        Knuth
 Summary:        A system for specifying fonts
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex
+Requires:       texlive-modes
 Requires(post,postun): coreutils
-Provides:       tex(mf.mf) = %{epoch}:20180414-%{release}
-Provides:       tex(plain.mf) = %{epoch}:20180414-%{release}
-Provides:       tex(cmmf.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(mf.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(mode2dpi.mf) = %{epoch}:20180414-%{release}
-Provides:       tex(mode2dpixy.mf) = %{epoch}:20180414-%{release}
-Provides:       tex(modename.mf) = %{epoch}:20180414-%{release}
-Provides:       tex(modes.mf) = %{epoch}:20180414-%{release}
-Provides:       tex(ps2mfbas.mf) = %{epoch}:20180414-%{release}
+Provides:       tex(mf.mf) = %{epoch}:20210325-%{release}
+Provides:       tex(plain.mf) = %{epoch}:20210325-%{release}
+Provides:       tex(cmmf.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(mf.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(mode2dpi.mf) = %{epoch}:20210325-%{release}
+Provides:       tex(mode2dpixy.mf) = %{epoch}:20210325-%{release}
+Provides:       tex(modename.mf) = %{epoch}:20210325-%{release}
+Provides:       tex(modes.mf) = %{epoch}:20210325-%{release}
+Provides:       tex(ps2mfbas.mf) = %{epoch}:20210325-%{release}
 
 %description -n texlive-metafont
 The program takes a semi-algorithmic specification of a font,
@@ -3245,64 +3613,63 @@ directly usable by a device driver, etc., by the tools provided
 in the parallel mfware distribution.
 
 %package -n texlive-metapost
-Provides:       tex-metapost = %{epoch}:20180414-%{release}
-Provides:       texlive-metapost-bin = %{epoch}:20180414-%{release}
-Provides:       tex-metapost-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-metapost-bin < 7:20170520
-Provides:       tex-metapost-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-metapost-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-metapost-doc < 7:20170520
+Provides:       tex-metapost = %{epoch}:20210325-%{release}
+Provides:       texlive-metapost-bin = %{epoch}:20210325-%{release}
+Provides:       tex-metapost-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-metapost-bin < 7:20180414
+Provides:       tex-metapost-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-metapost-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-metapost-doc < 7:20180414
 License:        LGPLv2+
 Summary:        A development of Metafont for creating graphics
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex
-Provides:       tex(freeeuro.afm) = %{epoch}:20180414-%{release}
-Provides:       tex(psyrgo.afm) = %{epoch}:20180414-%{release}
-Provides:       tex(zpzdr-reversed.afm) = %{epoch}:20180414-%{release}
-Provides:       tex(groff.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(troff-updmap.map) = %{epoch}:20180414-%{release}
-Provides:       tex(troff.map) = %{epoch}:20180414-%{release}
-Provides:       tex(freeeuro.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pagd8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pagdo8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pagk8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pagko8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pbkd8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pbkdi8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pbkl8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pbkli8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pcrb8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pcrbo8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pcrr8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pcrro8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvb8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvb8gn.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvbo8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvbo8gn.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvr8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvr8gn.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvro8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(phvro8gn.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pncb8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pncbi8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pncr8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pncri8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pplb8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pplbi8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pplr8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pplri8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(psyrgo.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(ptmb8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(ptmbi8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(ptmr8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(ptmri8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(pzcmi8g.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(zpzdr-reversed.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(freeeuro.pfa) = %{epoch}:20180414-%{release}
-Provides:       tex(mfplain.ini) = %{epoch}:20180414-%{release}
-Provides:       tex(trfonts.map) = %{epoch}:20180414-%{release}
-Provides:       tex(mproof.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mpsproof.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(freeeuro.afm) = %{epoch}:20210325-%{release}
+Provides:       tex(psyrgo.afm) = %{epoch}:20210325-%{release}
+Provides:       tex(zpzdr-reversed.afm) = %{epoch}:20210325-%{release}
+Provides:       tex(groff.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(troff-updmap.map) = %{epoch}:20210325-%{release}
+Provides:       tex(troff.map) = %{epoch}:20210325-%{release}
+Provides:       tex(freeeuro.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pagd8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pagdo8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pagk8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pagko8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pbkd8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pbkdi8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pbkl8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pbkli8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pcrb8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pcrbo8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pcrr8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pcrro8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvb8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvb8gn.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvbo8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvbo8gn.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvr8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvr8gn.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvro8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(phvro8gn.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pncb8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pncbi8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pncr8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pncri8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pplb8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pplbi8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pplr8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pplri8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(psyrgo.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(ptmb8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(ptmbi8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(ptmr8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(ptmri8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(pzcmi8g.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(zpzdr-reversed.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(freeeuro.pfa) = %{epoch}:20210325-%{release}
+Provides:       tex(mfplain.ini) = %{epoch}:20210325-%{release}
+Provides:       tex(trfonts.map) = %{epoch}:20210325-%{release}
+Provides:       tex(mproof.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mpsproof.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-metapost
 MetaPost uses a language based on that of Metafont to produce
@@ -3310,24 +3677,33 @@ precise technical illustrations. Its output is scalable
 PostScript or SVG, rather than the bitmaps Metafont creates.
 
 %package -n texlive-mex
-Provides:       tex-mex = %{epoch}:20180414-%{release} texlive-mex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mex-bin < 7:20170520
-Provides:       tex-mex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mex-doc < 7:20170520
+Provides:       tex-mex = %{epoch}:20210325-%{release} texlive-mex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mex-bin < 7:20180414
+Provides:       tex-mex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mex-doc < 7:20180414
 License:        Public Domain
 Summary:        Polish formats for TeX
-Requires:       texlive-base texlive-hyphen-polish
-Requires:       texlive-kpathsea texlive-pdftex
-Requires:       texlive-pl texlive-tetex
+Requires:       texlive-base
+Requires:       texlive-enctex
+Requires:       texlive-hyph-utf8
+Requires:       texlive-hyphen-base
+Requires:       texlive-hyphen-polish
+Requires:       texlive-knuth-lib
+Requires:       texlive-kpathsea
+Requires:       texlive-pdftex
+Requires:       texlive-pl
+Requires:       texlive-plain
 Requires:       texlive-tex
+Requires:       texlive-tex-ini-files
+Requires:       texlive-utf8mex
 Requires(post,postun): coreutils
-Provides:       tex(lamex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mex1.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mex2.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(mexconf.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(lamex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mex1.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mex2.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(mexconf.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-mex
@@ -3338,10 +3714,10 @@ hyphenation rules for the Polish language and sources of
 formats.
 
 %package -n texlive-mflua
-Provides:       tex-mflua = %{epoch}:20180414-%{release}
-Provides:       texlive-mflua-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mflua-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mflua-bin < 7:20170520
+Provides:       tex-mflua = %{epoch}:20210325-%{release}
+Provides:       texlive-mflua-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mflua-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mflua-bin < 7:20180414
 License:        GPL+
 Summary:        A METAFONT compliant program with a Lua interpreter embedded
 Requires:       texlive-base texlive-kpathsea
@@ -3350,10 +3726,10 @@ Requires:       texlive-base texlive-kpathsea
 A METAFONT compliant program with a Lua interpreter embedded.
 
 %package -n texlive-mfware
-Provides:       tex-mfware = %{epoch}:20180414-%{release}
-Provides:       texlive-mfware-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mfware-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mfware-bin < 7:20170520
+Provides:       tex-mfware = %{epoch}:20210325-%{release}
+Provides:       texlive-mfware-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mfware-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mfware-bin < 7:20180414
 License:        Knuth
 Summary:        Supporting tools for use with Metafont
 Requires:       texlive-base texlive-kpathsea
@@ -3363,13 +3739,13 @@ A collection of programs (as web source) for processing the
 output of Metafont.
 
 %package -n texlive-mf2pt1
-Provides:       tex-mf2pt1 = %{epoch}:20180414-%{release}
-Provides:       texlive-mf2pt1-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mf2pt1-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mf2pt1-bin < 7:20170520
-Provides:       tex-mf2pt1-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mf2pt1-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mf2pt1-doc < 7:20170520
+Provides:       tex-mf2pt1 = %{epoch}:20210325-%{release}
+Provides:       texlive-mf2pt1-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mf2pt1-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mf2pt1-bin < 7:20180414
+Provides:       tex-mf2pt1-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mf2pt1-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mf2pt1-doc < 7:20180414
 License:        LPPL
 Summary:        Produce PostScript Type 1 fonts from Metafont source
 Requires:       texlive-base texlive-kpathsea
@@ -3386,13 +3762,13 @@ reverse-engineered by TeXtrace, mftrace, and other programs
 which convert bitmaps to outline fonts.
 
 %package -n texlive-mkgrkindex
-Provides:       tex-mkgrkindex = %{epoch}:20180414-%{release}
-Provides:       texlive-mkgrkindex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mkgrkindex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mkgrkindex-bin < 7:20170520
-Provides:       tex-mkgrkindex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mkgrkindex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mkgrkindex-doc < 7:20170520
+Provides:       tex-mkgrkindex = %{epoch}:20210325-%{release}
+Provides:       texlive-mkgrkindex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mkgrkindex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mkgrkindex-bin < 7:20180414
+Provides:       tex-mkgrkindex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mkgrkindex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mkgrkindex-doc < 7:20180414
 License:        LPPL
 Summary:        Makeindex working with Greek
 Requires:       texlive-base texlive-kpathsea
@@ -3406,13 +3782,13 @@ document in such a way that makeindex will sort the entries
 according to the rules of the Greek alphabet.
 
 %package -n texlive-mkjobtexmf
-Provides:       tex-mkjobtexmf = %{epoch}:20180414-%{release}
-Provides:       texlive-mkjobtexmf-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mkjobtexmf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mkjobtexmf-bin < 7:20170520
-Provides:       tex-mkjobtexmf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mkjobtexmf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mkjobtexmf-doc < 7:20170520
+Provides:       tex-mkjobtexmf = %{epoch}:20210325-%{release}
+Provides:       texlive-mkjobtexmf-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mkjobtexmf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mkjobtexmf-bin < 7:20180414
+Provides:       tex-mkjobtexmf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mkjobtexmf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mkjobtexmf-doc < 7:20180414
 License:        GPLv2 or Artistic
 Summary:        Generate a texmf tree for a particular job
 Requires:       texlive-base texlive-kpathsea
@@ -3428,13 +3804,13 @@ The script may be used for archiving purposes or to speed up
 later TeX runs.
 
 %package -n texlive-mkpic
-Provides:       tex-mkpic = %{epoch}:20180414-%{release}
-Provides:       texlive-mkpic-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mkpic-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mkpic-bin < 7:20170520
-Provides:       tex-mkpic-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mkpic-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mkpic-doc < 7:20170520
+Provides:       tex-mkpic = %{epoch}:20210325-%{release}
+Provides:       texlive-mkpic-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mkpic-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mkpic-bin < 7:20180414
+Provides:       tex-mkpic-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mkpic-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mkpic-doc < 7:20180414
 License:        GPL+
 Summary:        Perl interface to mfpic
 Requires:       texlive-base texlive-kpathsea
@@ -3449,22 +3825,34 @@ you run it without an input file). For an extensive description
 see the file mkpicdoc.pdf, which is part of the distribution.
 
 %package -n texlive-mltex
-Provides:       tex-mltex = %{epoch}:20180414-%{release}
-Provides:       texlive-mltex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mltex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mltex-bin < 7:20170520
-Provides:       tex-mltex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mltex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mltex-doc < 7:20170520
+Provides:       tex-mltex = %{epoch}:20210325-%{release}
+Provides:       texlive-mltex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mltex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mltex-bin < 7:20180414
+Provides:       tex-mltex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mltex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mltex-doc < 7:20180414
 License:        Knuth
 Summary:        The MLTeX system
-Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-latex texlive-pdftex
-Requires:       texlive-tetex
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-latex
+Requires:       texlive-pdftex
+Requires:       texlive-cm
+Requires:       texlive-hyphen-base
+Requires:       texlive-babel
+Requires:       texlive-dehyph
+Requires:       texlive-hyph-utf8
+Requires:       texlive-l3kernel
+Requires:       texlive-latexconfig
+Requires:       texlive-latex-fonts
+Requires:       texlive-unicode-data
+Requires:       texlive-knuth-lib
+Requires:       texlive-plain
 Requires(post,postun): coreutils
-Provides:       tex(lo1enc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(mlltxchg.def) = %{epoch}:20180414-%{release}
-Provides:       tex(mltex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(lo1enc.def) = %{epoch}:20210325-%{release}
+Provides:       tex(mlltxchg.def) = %{epoch}:20210325-%{release}
+Provides:       tex(mltex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-mltex
@@ -3474,19 +3862,18 @@ Computer Modern (CM) fonts. The system is distributed as a TeX
 change file.
 
 %package -n texlive-mptopdf
-Provides:       tex-mptopdf = %{epoch}:20180414-%{release}
-Provides:       texlive-mptopdf-bin = %{epoch}:20180414-%{release}
-Provides:       tex-mptopdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mptopdf-bin < 7:20170520
-Provides:       tex-mptopdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-mptopdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-mptopdf-doc < 7:20170520
+Provides:       tex-mptopdf = %{epoch}:20210325-%{release}
+Provides:       texlive-mptopdf-bin = %{epoch}:20210325-%{release}
+Provides:       tex-mptopdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mptopdf-bin < 7:20180414
+Provides:       tex-mptopdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-mptopdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-mptopdf-doc < 7:20180414
 License:        LPPL
 Summary:        mpost to PDF, native MetaPost graphics inclusion
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex
 Requires(post,postun): coreutils
-Provides:       tex(mptopdf.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(mptopdf.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-mptopdf
@@ -3500,17 +3887,17 @@ users who do not install the rest of ConTeXt.  This can be
 found on CTAN in macros/pdftex/graphics.
 
 %package -n texlive-multibibliography
-Provides:       tex-multibibliography = %{epoch}:20180414-%{release}
-Provides:       texlive-multibibliography-bin = %{epoch}:20180414-%{release}
-Provides:       tex-multibibliography-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-multibibliography-bin < 7:20170520
-Provides:       tex-multibibliography-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-multibibliography-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-multibibliography-doc < 7:20170520
+Provides:       tex-multibibliography = %{epoch}:20210325-%{release}
+Provides:       texlive-multibibliography-bin = %{epoch}:20210325-%{release}
+Provides:       tex-multibibliography-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-multibibliography-bin < 7:20180414
+Provides:       tex-multibibliography-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-multibibliography-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-multibibliography-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Multiple versions of a bibliography, with different sort orders
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(multibibliography.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(multibibliography.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-multibibliography
@@ -3523,63 +3910,63 @@ heterogeneous styles, are also supported (and work with other
 bibliography packages).
 
 %package -n texlive-musixtex
-Provides:       tex-musixtex = %{epoch}:20180414-%{release}
-Provides:       texlive-musixtex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-musixtex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-musixtex-bin < 7:20170520
-Provides:       tex-musixtex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-musixtex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-musixtex-doc < 7:20170520
+Provides:       tex-musixtex = %{epoch}:20210325-%{release}
+Provides:       texlive-musixtex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-musixtex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-musixtex-bin < 7:20180414
+Provides:       tex-musixtex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-musixtex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-musixtex-doc < 7:20180414
 License:        GPLv2+
 Summary:        Sophisticated music typesetting
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(musixadd.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixadf.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixbar.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixbbm.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixblx.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixbm.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixcho.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixcpt.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixcrd.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixdat.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixdbr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixdia.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixec.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixeng.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixesf.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixevo.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixext.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixfll.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixgre.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixgui.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixhor.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixhou.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixhv.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixinv.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixlit.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixlyr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixmad.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixper.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixplt.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixpoi.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixppff.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixps.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixref.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixslu.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixsqr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixste.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixstf.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixstr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixsty.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixtex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixtmr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixtri.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixcpt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(musixcrd.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(musixfll.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(musixltx.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(musixtex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(musixadd.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixadf.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixbar.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixbbm.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixblx.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixbm.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixcho.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixcpt.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixcrd.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixdat.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixdbr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixdia.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixec.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixeng.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixesf.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixevo.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixext.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixfll.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixgre.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixgui.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixhor.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixhou.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixhv.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixinv.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixlit.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixlyr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixmad.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixper.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixplt.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixpoi.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixppff.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixps.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixref.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixslu.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixsqr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixste.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixstf.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixstr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixsty.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixtex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixtmr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixtri.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixcpt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(musixcrd.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(musixfll.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(musixltx.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(musixtex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-musixtex
@@ -3598,18 +3985,18 @@ the pmx preprocessor compiles a simpler input language to
 MusixTeX macros.
 
 %package -n texlive-musixtnt
-Provides:       tex-musixtnt = %{epoch}:20180414-%{release}
-Provides:       texlive-musixtnt-bin = %{epoch}:20180414-%{release}
-Provides:       tex-musixtnt-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-musixtnt-bin < 7:20170520
-Provides:       tex-musixtnt-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-musixtnt-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-musixtnt-doc < 7:20170520
+Provides:       tex-musixtnt = %{epoch}:20210325-%{release}
+Provides:       texlive-musixtnt-bin = %{epoch}:20210325-%{release}
+Provides:       tex-musixtnt-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-musixtnt-bin < 7:20180414
+Provides:       tex-musixtnt-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-musixtnt-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-musixtnt-doc < 7:20180414
 License:        GPLv2+
 Summary:        A MusiXTeX extension library that enables transformations of the effect of notes commands
 Requires:       texlive-base texlive-kpathsea
 Requires:       texlive-musixtex
-Provides:       tex(musixtnt.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(musixtnt.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-musixtnt
 The package includes an archive containing a MusiXTeX extension
@@ -3626,16 +4013,16 @@ lines in a MusiXTeX source file. This should be used before
 using \TransformNotes.
 
 %package -n texlive-m-tx
-Provides:       tex-m-tx = %{epoch}:20180414-%{release} texlive-m-tx-bin = %{epoch}:20180414-%{release}
-Provides:       tex-m-tx-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-m-tx-bin < 7:20170520
-Provides:       tex-m-tx-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-m-tx-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-m-tx-doc < 7:20170520
+Provides:       tex-m-tx = %{epoch}:20210325-%{release} texlive-m-tx-bin = %{epoch}:20210325-%{release}
+Provides:       tex-m-tx-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-m-tx-bin < 7:20180414
+Provides:       tex-m-tx-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-m-tx-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-m-tx-doc < 7:20180414
 License:        GPL+
 Summary:        A preprocessor for pmx
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(mtx.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(mtx.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-m-tx
 M-Tx is a preprocessor to pmx, which is itself a preprocessor
@@ -3645,10 +4032,10 @@ be typeset. In fact, pmx now provides a lyrics interface, but M-
 Tx continues in use by those who prefer its language.
 
 %package -n texlive-oberdiek
-Provides:       tex-oberdiek = %{epoch}:20180414-%{release}
-Provides:       tex-oberdiek-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-oberdiek-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-oberdiek-doc < 7:20170520
+Provides:       tex-oberdiek = %{epoch}:20210325-%{release}
+Provides:       tex-oberdiek-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-oberdiek-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-oberdiek-doc < 7:20180414
 License:        LPPL
 Summary:        A bundle of packages submitted by Heiko Oberdiek
 Requires:       texlive-base texlive-kpathsea
@@ -3670,352 +4057,109 @@ Requires:       tex(tikz.sty) tex(everyshi.sty)
 Requires:       tex(parallel.sty) tex(parcolumns.sty)
 Requires:       tex(lscape.sty) tex(index.sty)
 Requires:       tex(zref-pagelayout.sty)
-Provides:       tex(alphalph.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(atbegshi.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(bigintcalc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(bitset.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(catchfile.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(embedfile.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(engord.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(eolgrab.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(etexcmds.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(fibnum.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(gettitlestring.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hobsub-generic.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hobsub-hyperref.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hobsub.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hologo.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hyphsubst.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(iflang.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ifpdf.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ifvtex.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(infwarerr.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(intcalc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(kvdefinekeys.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(kvsetkeys.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ltxcmds.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-loader.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdftexcmds.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfescape.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(uniquecounter.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hobsub-hyperref.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(letltxmacro.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hopatch.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(xcolor-patch.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(atveryend.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(refcount.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hycolor.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hobsub.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hologo.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hyphsubst.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(iflang.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ifpdf.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ifvtex.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(infwarerr.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(intcalc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(kvdefinekeys.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(kvsetkeys.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ltxcmds.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex-loader.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(luatex.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(magicnum.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(mleftright.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcol.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcrypt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfescape.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfrender.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdftexcmds.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(protecteddef.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(rotchiffre.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(se-ascii-print.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-ascii.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-clean7bit.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp1250.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp1251.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp1252.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp1257.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp437.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp850.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp852.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp855.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp858.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp865.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-cp866.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-dec-mcs.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-1.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-10.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-11.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-13.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-14.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-15.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-16.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-2.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-3.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-4.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-5.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-6.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-7.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-8.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-iso-8859-9.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-koi8-r.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-mac-centeuro.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-mac-cyrillic.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-mac-roman.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-nextstep.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-pdfdoc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-utf16le.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-utf32be.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-utf32le.def) = %{epoch}:20180414-%{release}
-Provides:       tex(se-utf8.def) = %{epoch}:20180414-%{release}
-Provides:       tex(setouterhbox.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(soulutf8.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(stringenc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(telprint.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(thepdfnumber.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(uniquecounter.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(accsupp-dvipdfm.def) = %{epoch}:20180414-%{release}
-Provides:       tex(accsupp-dvips.def) = %{epoch}:20180414-%{release}
-Provides:       tex(accsupp-pdftex.def) = %{epoch}:20180414-%{release}
-Provides:       tex(accsupp.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(aliascnt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(askinclude.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(atenddvi.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(atfi-dvipdfmx.def) = %{epoch}:20180414-%{release}
-Provides:       tex(atfi-dvips.def) = %{epoch}:20180414-%{release}
-Provides:       tex(atfi-pdftex.def) = %{epoch}:20180414-%{release}
-Provides:       tex(attachfile2.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(atveryend.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(auxhook.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(bkm-dvipdfm.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bkm-dvips.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bkm-dvipsone.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bkm-pdftex.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bkm-textures.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bkm-vtex.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bmpsize-base.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(bmpsize-dvipdfm.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bmpsize-dvipdfmx.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bmpsize-dvips.def) = %{epoch}:20180414-%{release}
-Provides:       tex(bmpsize-test.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(bmpsize.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(bookmark.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(centernot.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(chemarr.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(classlist.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(colonequals.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(dtx-attach.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(dvipscol.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(enparen.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(epstopdf-base.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(epstopdf.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(flags.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(grfext.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(grffile.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(holtxdoc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hopatch.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hycolor.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hypbmsec.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hypcap.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hypdestopt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hypdoc.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(hypgotoe.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ifdraft.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(inputenx.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(ix-alias.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ix-math.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ix-name.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ix-slot.def) = %{epoch}:20180414-%{release}
-Provides:       tex(ix-uc.def) = %{epoch}:20180414-%{release}
-Provides:       tex(kvoptions-patch.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(kvoptions.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(letltxmacro.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(listingsutf8.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(luacolor.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(makerobust.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pagegrid.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pagesel.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcolfoot.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcolmk.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcolparallel.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcolparcolumns.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pdflscape.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(picture.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pmboxdraw.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(refcount.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(rerunfilecheck.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(resizegather.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(scrindex.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(selinput.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(settobox.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(stackrel.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(stampinclude.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(tabularht.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(tabularkv.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(transparent.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(twoopt.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(x-ascii.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-atarist.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp1250.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp1251.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp1252.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp1255.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp1257.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp437.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp850.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp852.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp855.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp858.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp865.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-cp866.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-dec-mcs.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-1.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-10.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-13.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-14.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-15.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-16.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-2.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-3.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-4.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-5.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-8.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-iso-8859-9.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-koi8-r.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-mac-centeuro.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-mac-cyrillic.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-mac-roman.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-nextstep.def) = %{epoch}:20180414-%{release}
-Provides:       tex(x-verbatim.def) = %{epoch}:20180414-%{release}
-Provides:       tex(xcolor-patch.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-abspage.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-abspos.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-base.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-counter.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-dotfill.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-env.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-hyperref.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-lastpage.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-marks.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-nextpage.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-pageattr.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-pagelayout.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-perpage.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-runs.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-savepos.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-thepage.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-titleref.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-totpages.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-user.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref-xr.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(zref.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(aliascnt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(bmpsize-base.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(bmpsize-dvipdfm.def) = %{epoch}:20210325-%{release}
+Provides:       tex(bmpsize-dvipdfmx.def) = %{epoch}:20210325-%{release}
+Provides:       tex(bmpsize-dvips.def) = %{epoch}:20210325-%{release}
+Provides:       tex(bmpsize.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(bmpsize-test.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(centernot.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(chemarr.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(classlist.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(colonequals.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(dvipscol.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(engord.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(enparen.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(eolgrab.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(fibnum.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(flags.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(holtxdoc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hopatch.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hypbmsec.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hypcap.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hypdestopt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hypdoc.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hypgotoe.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(hyphsubst.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(ifdraft.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(iflang.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pagegrid.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pagesel.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcolfoot.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcolparallel.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcolparcolumns.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcol.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcrypt.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfrender.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(protecteddef.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(resizegather.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(rotchiffre.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(scrindex.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(setouterhbox.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(settobox.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(stackrel.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(stampinclude.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(tabularht.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(tabularkv.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(telprint.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(thepdfnumber.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(twoopt.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-oberdiek
-The bundle comprises packages to provide: accsupp: better
-accessibility support for PDF files; aliascnt: 'alias
-counters'; alphalph: multiple-alphabetic counting
-(a...z,aa...zz,... -- up to the full extent of a TeX counter);
-askinclude: replaces \includeonly by an interactive user
-interface; atbegshi: a modern reimplementation of package
-everyshi; atenddvi: provides \AtEndDvi command; attachfile2:
-attach files to PDF files; atveryend: hooks the very end of a
-document; auxhook: stick stuff at the start of the .aux file;
-bigintcalc: expandable arithmetic operations with big integers
-that can exceed TeX's number limits; bitset: defines and
-implements the data type bit set, a vector of bits; bmpsize:
-get bitmap size and resolution data; bookmark: alternative
-bookmark (outline) organization for package hyperref;
-catchfile: collects the contents of a file and puts it in a
-macro; centernot: a horizontally-centred \not symbol; chemarr:
+The bundle comprises packages to provide: aliascnt: 'alias
+counters'; bmpsize: get bitmap size and resolution data;
+centernot: a horizontally-centred \not symbol; chemarr:
 extensible chemists' reaction arrows; classlist: record
 information about document class(es) used; colonequals: poor
 man's mathematical relation symbols; dvipscol: dvips colour
-stack management; embedfile: embed files in PDF documents;
-engord: define counter-printing operations producing English
-ordinals; eolgrab: collect arguments delimited by end of line;
-epstopdf: conversion to epstopdf on the fly; etexcmds: adds a
-prefix to eTeX's commands, to avoid conflicts with existing
-macros; flags: setting and clearing flags in bit fields and
-converting the bit field into a decimal number; gettitlestring:
-clean up the string containing the title of a section, etc.;
-grfext: macros for adding and reordering the list of graphics
-file extensions recognised by the graphics package; grffile:
-extend file name processing in the graphics bundle; hosub:
-build collections of packages; holtxdoc: extra documentation
-macros; hologo: bookmark-enabled logos; hopatch: safely apply
-package patches; hycolor: implements the color option stuff
-that is used by packages hyperref and bookmark; hypbmsec:
-bookmarks in sectioning commands; hypcap: anjusting anchors of
-captions; hypdestopt: optimising hyperref's pdftex driver
-destinations; hypdoc: hyper-references in the LaTeX standard
-doc package; hypgotoe: experimental package for links to
-embedded files; hyphsubst: substitute hyphenation patterns;
-ifdraft: switch for option draft; iflang: provides expandable
-checks for the current language; ifluatex: looks for LuaTeX
-regardless of its mode and provides the switch \ifluatex;
-ifpdf: provides the \ifpdf switch; ifvtex: provides the \ifvtex
-switch; infwarerr: provides a complete set of macros for
-informations, warnings and error messages with support for
-plain TeX; inputenx: enhanced handling of input encoding;
-intcalc: provides expandable arithmetic operations with
-integers; kvdefinekeys: define key-value keys in the same
-manner as keyval; kvoptions: use package options in key value
-format ; kvsetkeys: a variant of the \setkeys command;
-letltxmacro: Let assignment for LaTeX macros; listingsutf8:
-(partially) extends the listings package to UTF-8 encoding;
-ltxcmds: exports some utility macros from the LaTeX kernel into
-a separate namespace and also provides them for other formats
-such as plain-TeX; luacolor: implements colour support based on
-LuaTeX's node attributes; luatex: utilises new and extended
-features and resources that LuaTeX provides; magicnum: allows
-to access magic numbers by a hierarchical name system;
-makerobust: make a command robust; pagegrid: prints a page grid
-in the background; pagesel: select pages of a document for
-output; pdfcolfoot: using pdftex's color stack for footnotes;
-pdfcol: macros for setting and maintaining new color stacks;
-pdfcolmk: PDFTeX COLour MarK -- fake a PDFTeX colour stack
-using marks (not needed for PDFTeX 1.40.0 and later);
-pdfcolparallel: fixes colour problems in package parallel;
-pdfcolparcolumns: fixes colour problems in package parcolumns;
-pdfcrypt: setting PDF encryption; pdfescape: pdfTeX's escape
-features using TeX or e-TeX; pdflscape: landscape pages in PDF;
-pdfrender: control PDF rendering modes; pdftexcmds: provide
-PDFTeX primitives missing in LuaTeX; picture: dimens for
-picture macros; pmboxdraw: poor man's box drawing characters;
-protecteddef: define a command that protected against
-expansion; refcount: using the numeric values of references;
-rerunfilecheck: checksum based rerun checks on auxiliary files;
-resizegather: automatically resize overly large equations;
-rotchiffre: performs simple rotation cyphers; scrindex:
-redefines environment 'theindex' of package 'index', if a class
-from KOMA-Script is loaded; selinput: select the input encoding
-by specifying pairs of input characters and their glyph names;
+stack management; engord: define counter-printing operations
+producing English ordinals; eolgrab: collect arguments
+delimited by end of line; flags: setting and clearing flags in
+bit fields and converting the bit field into a decimal number;
+holtxdoc: extra documentation macros; hopatch: safely apply
+package patches; hypbmsec: bookmarks in sectioning commands;
+hypcap: anjusting anchors of captions; hypdestopt: optimising
+hyperref's pdfTeX driver destinations; hypdoc: hyper-references
+in the LaTeX standard doc package; hypgotoe: experimental
+package for links to embedded files; hyphsubst: substitute
+hyphenation patterns; ifdraft: switch for option draft; iflang:
+provides expandable checks for the current language; pagegrid:
+prints a page grid in the background; pagesel: select pages of
+a document for output; pdfcolfoot: using pdfTeX's color stack
+for footnotes; pdfcol: macros for setting and maintaining new
+color stacks; pdfcolparallel: fixes colour problems in package
+parallel; pdfcolparcolumns: fixes colour problems in package
+parcolumns; pdfcrypt: setting PDF encryption; pdfrender:
+control PDF rendering modes; protecteddef: define a command
+that protected against expansion; resizegather: automatically
+resize overly large equations; rotchiffre: performs simple
+rotation cyphers; scrindex: redefines environment 'theindex' of
+package 'index', if a class from KOMA-Script is loaded;
 setouterhbox: set \hbox in outer horizontal mode; settobox:
-getting box sizes; soulutf8: extends package soul and adds some
-support for UTF-8; stackrel: extensions of the \stackrel
-command; stampinclude: selects the files for \include by
-inspecting the timestamp of the .aux file(s); stringenc:
-provides \StringEncodingConvert for converting a string between
-different encodings; tabularht: tabulars with height
+getting box sizes; soul and adds some support for UTF-8;
+stackrel: extensions of the \stackrel command; stampinclude:
+selects the files for \include by inspecting the timestamp of
+the .aux file(s); tabularht: tabulars with height
 specification; tabularkv: key value interface for tabular
 parameters; telprint: print German telephone numbers;
 thepdfnumber: canonical numbers for use in PDF files and
-elsewhere; transparent: using a color stack for transparency
-with pdftex; twoopt: commands with two optional arguments;
-uniquecounter: provides unlimited unique counter; zref: a
-proposed new reference system. Each of the packages is
-represented by two files, a .dtx (documented source) and a PDF
-file; the .ins file necessary for installation is extracted by
-running the .dtx file with Plain TeX.
+elsewhere; twoopt: commands with two optional arguments; Each
+of the packages is represented by two files, a .dtx (documented
+source) and a PDF file; the .ins file necessary for
+installation is extracted by running the .dtx file with Plain
+TeX.
+
 
 %package -n texlive-omegaware
-Provides:       tex-omegaware = %{epoch}:20180414-%{release}
-Provides:       texlive-omegaware-bin = %{epoch}:20180414-%{release}
-Provides:       tex-omegaware-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-omegaware-bin < 7:20170520
-Provides:       tex-omegaware-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-omegaware-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-omegaware-doc < 7:20170520
+Provides:       tex-omegaware = %{epoch}:20210325-%{release}
+Provides:       texlive-omegaware-bin = %{epoch}:20210325-%{release}
+Provides:       tex-omegaware-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-omegaware-bin < 7:20180414
+Provides:       tex-omegaware-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-omegaware-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-omegaware-doc < 7:20180414
 License:        LPPL
 Summary:        Omegaware package
 Requires:       texlive-base texlive-kpathsea
@@ -4023,11 +4167,29 @@ Requires:       texlive-base texlive-kpathsea
 %description -n texlive-omegaware
 Omegaware package.
 
+%package -n texlive-optex
+License:        Public Domain
+Summary:        LuaTeX format based on Plain TeX and OPmac
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-amsfonts
+Requires:       texlive-cm
+Requires:       texlive-ec
+Requires:       texlive-hyphen-base
+Requires:       texlive-lm
+Requires:       texlive-luatex
+Requires:       texlive-rsfs
+
+%description -n texlive-optex
+OpTeX is a LuaTeX format based on Plain TeX macros with power
+from OPmac (fonts selection system, colors, external graphics,
+references, hyperlinks, ...) with unicode fonts.
+
 %package -n texlive-patgen
-Provides:       tex-patgen = %{epoch}:20180414-%{release}
-Provides:       texlive-patgen-bin = %{epoch}:20180414-%{release}
-Provides:       tex-patgen-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-patgen-bin < 7:20170520
+Provides:       tex-patgen = %{epoch}:20210325-%{release}
+Provides:       texlive-patgen-bin = %{epoch}:20210325-%{release}
+Provides:       tex-patgen-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-patgen-bin < 7:20180414
 License:        Knuth
 Summary:        Generate hyphenation patterns
 Requires:       texlive-base texlive-kpathsea
@@ -4039,12 +4201,12 @@ used in TeX", but, of course, the patterns used in modern
 distributions are Unicode-based.
 
 %package -n texlive-pax
-Provides:       tex-pax = %{epoch}:20180414-%{release} texlive-pax-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pax-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pax-bin < 7:20170520
-Provides:       tex-pax-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pax-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pax-doc < 7:20170520
+Provides:       tex-pax = %{epoch}:20210325-%{release} texlive-pax-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pax-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pax-bin < 7:20180414
+Provides:       tex-pax-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pax-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pax-doc < 7:20180414
 License:        GPLv2+
 Summary:        Extract and reinsert PDF annotations with pdfTeX
 Requires:       texlive-base texlive-kpathsea
@@ -4052,7 +4214,7 @@ Requires:       tex(ifpdf.sty) tex(graphicx.sty)
 Requires:       tex(ltxcmds.sty) tex(kvsetkeys.sty)
 Requires:       tex(kvoptions.sty) tex(auxhook.sty)
 Requires:       tex(etexcmds.sty)
-Provides:       tex(pax.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(pax.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-pax
@@ -4067,13 +4229,13 @@ the annotation data, reads them and puts the annotations in the
 right place.
 
 %package -n texlive-pdfbook2
-Provides:       tex-pdfbook2 = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfbook2-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pdfbook2-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfbook2-bin < 7:20170520
-Provides:       tex-pdfbook2-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfbook2-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfbook2-doc < 7:20170520
+Provides:       tex-pdfbook2 = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfbook2-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdfbook2-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfbook2-bin < 7:20180414
+Provides:       tex-pdfbook2-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfbook2-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfbook2-doc < 7:20180414
 License:        GPLv3+
 Summary:        Create booklets from PDF files
 Requires:       texlive-base texlive-kpathsea
@@ -4095,13 +4257,13 @@ Existing files will be overwritten. All input files are
 processed seperately.
 
 %package -n texlive-pdfcrop
-Provides:       tex-pdfcrop = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfcrop-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pdfcrop-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfcrop-bin < 7:20170520
-Provides:       tex-pdfcrop-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfcrop-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfcrop-doc < 7:20170520
+Provides:       tex-pdfcrop = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfcrop-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdfcrop-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfcrop-bin < 7:20180414
+Provides:       tex-pdfcrop-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfcrop-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfcrop-doc < 7:20180414
 License:        LPPL
 Summary:        Crop PDF graphics
 Requires:       texlive-base texlive-kpathsea
@@ -4112,13 +4274,13 @@ A Perl script that can either trim pages of any whitespace
 border, or trim them of a fixed border.
 
 %package -n texlive-pdfjam
-Provides:       tex-pdfjam = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfjam-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pdfjam-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfjam-bin < 7:20170520
-Provides:       tex-pdfjam-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfjam-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfjam-doc < 7:20170520
+Provides:       tex-pdfjam = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfjam-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdfjam-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfjam-bin < 7:20180414
+Provides:       tex-pdfjam-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfjam-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfjam-doc < 7:20180414
 License:        GPLv2+
 Summary:        Shell scripts interfacing to pdfpages
 Requires:       texlive-base texlive-collection-latex
@@ -4133,13 +4295,13 @@ selecting pages, concatenating files, doing n-up formatting,
 and so on.
 
 %package -n texlive-pdflatexpicscale
-Provides:       tex-pdflatexpicscale = %{epoch}:20180414-%{release}
-Provides:       texlive-pdflatexpicscale-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pdflatexpicscale-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdflatexpicscale-bin < 7:20170520
-Provides:       tex-pdflatexpicscale-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pdflatexpicscale-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdflatexpicscale-doc < 7:20170520
+Provides:       tex-pdflatexpicscale = %{epoch}:20210325-%{release}
+Provides:       texlive-pdflatexpicscale-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdflatexpicscale-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdflatexpicscale-bin < 7:20180414
+Provides:       tex-pdflatexpicscale-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pdflatexpicscale-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdflatexpicscale-doc < 7:20180414
 License:        LPPL
 Summary:        Support software for downscaling graphics to be included by pdfLaTeX
 Requires:       texlive-base texlive-kpathsea
@@ -4150,28 +4312,27 @@ The package provides a script to scale pictures down to a
 target resolution before creating a PDF document with pdfLaTeX.
 
 %package -n texlive-pdftex
-Provides:       tex-pdftex = %{epoch}:20180414-%{release}
-Provides:       texlive-pdftex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pdftex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdftex-bin < 7:20170520
-Provides:       tex-pdftex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pdftex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdftex-doc < 7:20170520
+Provides:       tex-pdftex = %{epoch}:20210325-%{release}
+Provides:       texlive-pdftex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdftex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdftex-bin < 7:20180414
+Provides:       tex-pdftex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pdftex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdftex-doc < 7:20180414
 License:        GPL+
 Summary:        A TeX extension for direct creation of PDF
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex
 Requires(post,postun): coreutils
 Requires:       tex-graphics-def texlive-cm
 Requires:       texlive-etex texlive-hyphen-base
 Requires:       texlive-knuth-lib texlive-plain
-Requires:       tex-tex-ini-files
-Provides:       tex(dummy-space.map) = %{epoch}:20180414-%{release}
-Provides:       tex(dummy-space.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dummy-space.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(pdftex-dvi.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(glyphtounicode.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pdfcolor.tex) = %{epoch}:20180414-%{release}
+Requires:       tex-tex-ini-files texlive-hyph-utf8
+Provides:       tex(dummy-space.map) = %{epoch}:20210325-%{release}
+Provides:       tex(dummy-space.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dummy-space.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(pdftex-dvi.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(glyphtounicode.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pdfcolor.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-pdftex
 An extension of TeX which can be configured to directly
@@ -4181,31 +4342,44 @@ pdfTeX (Plain TeX) and pdfLaTeX (LaTeX). ConTeXt was designed
 around use of pdfTeX (though it is now migrating towards
 LuaTeX).
 
-%package -n texlive-pdftools
-Provides:       tex-pdftools = %{epoch}:20180414-%{release}
-Provides:       texlive-pdftools = %{epoch}:20180414-%{release}
-Provides:       tex-pdftools-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdftools-bin < 7:20170520
-License:        Public Domain
-Summary:        PDF-related utilities, including PostScript-to-PDF conversion
-Requires:       texlive-base texlive-kpathsea
+%package -n texlive-pdftex-quiet
+Provides:       tex-pdftex-quiet = %{epoch}:20210325-%{release}
+Provides:       texlive-pdftex-quiet-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdftex-quiet-bin = %{epoch}:20210325-%{release}
+License:        GPLv3
+Summary:        Bash utility to reduce the output of the pdftex command
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-pdftex
+#bash
+BuildArch: noarch
 
-%description -n texlive-pdftools
-The command-line programs pdfopen and pdfclose allow you to
-control the X Window System version of Adobe's Acrobat Reader
-from the command line or from within a (shell) script. The
-programs work with Acrobat Reader 5, 7, 8 and 9 for Linux, xpdf
-and evince. This version derives from one written by Fabrice
-Popineau for Microsoft operating systems.
+%description -n texlive-pdftex-quiet
+This is a tool in BASH serving to reduce the output of `pdftex` command and see
+only relevant errors in red bold font to fight them ASAP.
+
+%package -n texlive-pdftosrc
+Provides:       tex-pdftosrc = %{epoch}:20210325-%{release}
+Provides:       tex-pdftosrc-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pdftosrc-bin = %{epoch}:20210325-%{release}
+License:        GPLv2+
+Summary:        Extract source file or stream from PDF file
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+
+%description -n texlive-pdftosrc
+Extracts an embedded source file, or extracts and uncompresses
+a PDF stream given by object number. Developed as part of the
+pdfTeX source tree.
 
 %package -n texlive-pdfxup
-Provides:       tex-pdfxup = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfxup-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pdfxup-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfxup-bin < 7:20170520
-Provides:       tex-pdfxup-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pdfxup-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pdfxup-doc < 7:20170520
+Provides:       tex-pdfxup = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfxup-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pdfxup-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfxup-bin < 7:20180414
+Provides:       tex-pdfxup-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pdfxup-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pdfxup-doc < 7:20180414
 License:        LPPL
 Summary:        Create n-up PDF pages with minimal margins
 Requires:       texlive-base texlive-kpathsea
@@ -4217,13 +4391,13 @@ where each page is obtained by combining several pages of a PDF
 file given as output.
 
 %package -n texlive-pedigree-perl
-Provides:       tex-pedigree-perl = %{epoch}:20180414-%{release}
-Provides:       texlive-pedigree-perl-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pedigree-perl-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pedigree-perl-bin < 7:20170520
-Provides:       tex-pedigree-perl-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pedigree-perl-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pedigree-perl-doc < 7:20170520
+Provides:       tex-pedigree-perl = %{epoch}:20210325-%{release}
+Provides:       texlive-pedigree-perl-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pedigree-perl-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pedigree-perl-bin < 7:20180414
+Provides:       tex-pedigree-perl-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pedigree-perl-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pedigree-perl-doc < 7:20180414
 License:        GPLv2+
 Summary:        Generate TeX pedigree files from CSV files
 Requires:       texlive-base texlive-kpathsea
@@ -4237,17 +4411,17 @@ multilanguage pedigrees (at the present moment the English and
 Russian languages are supported).
 
 %package -n texlive-perltex
-Provides:       tex-perltex = %{epoch}:20180414-%{release}
-Provides:       texlive-perltex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-perltex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-perltex-bin < 7:20170520
-Provides:       tex-perltex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-perltex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-perltex-doc < 7:20170520
+Provides:       tex-perltex = %{epoch}:20210325-%{release}
+Provides:       texlive-perltex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-perltex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-perltex-bin < 7:20180414
+Provides:       tex-perltex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-perltex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-perltex-doc < 7:20180414
 License:        LPPL
 Summary:        Define LaTeX macros in terms of Perl code
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(perltex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(perltex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-perltex
@@ -4264,23 +4438,23 @@ specific, noperltex.sty that is useful when distributing a
 document to places where PerlTeX is not available.
 
 %package -n texlive-petri-nets
-Provides:       tex-petri-nets = %{epoch}:20180414-%{release}
-Provides:       texlive-petri-nets-bin = %{epoch}:20180414-%{release}
-Provides:       tex-petri-nets-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-petri-nets-bin < 7:20170520
-Provides:       tex-petri-nets-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-petri-nets-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-petri-nets-doc < 7:20170520
+Provides:       tex-petri-nets = %{epoch}:20210325-%{release}
+Provides:       texlive-petri-nets-bin = %{epoch}:20210325-%{release}
+Provides:       tex-petri-nets-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-petri-nets-bin < 7:20180414
+Provides:       tex-petri-nets-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-petri-nets-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-petri-nets-doc < 7:20180414
 License:        GPL+
 Summary:        A set of TeX/LaTeX packages for drawing Petri nets
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(pndraw.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pndraw.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pnets.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pnets.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pntext.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(pntext.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pnversion.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(pndraw.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pndraw.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pnets.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pnets.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pntext.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(pntext.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pnversion.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-petri-nets
@@ -4291,20 +4465,20 @@ second defines macros related to PBC, M-nets and B(PN) models;
 and a third that combines the other two.
 
 %package -n texlive-pfarrei
-Provides:       tex-pfarrei = %{epoch}:20180414-%{release}
-Provides:       texlive-pfarrei-bin = %{epoch}:20180414-%{release}
-Provides:       tex-pfarrei-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pfarrei-bin < 7:20170520
-Provides:       tex-pfarrei-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pfarrei-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pfarrei-doc < 7:20170520
+Provides:       tex-pfarrei = %{epoch}:20210325-%{release}
+Provides:       texlive-pfarrei-bin = %{epoch}:20210325-%{release}
+Provides:       tex-pfarrei-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pfarrei-bin < 7:20180414
+Provides:       tex-pfarrei-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pfarrei-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pfarrei-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        LaTeX support of pastors' and priests' work
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(ifpdf.sty) tex(pdfpages.sty)
 Requires:       tex(keyval.sty)
-Provides:       tex(a5toa4.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(pfarrei.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(a5toa4.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(pfarrei.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-pfarrei
@@ -4317,13 +4491,13 @@ Justen made two bash scripts for this job; the package provides
 one texlua script for both requirements.
 
 %package -n texlive-pkfix
-Provides:       tex-pkfix = %{epoch}:20180414-%{release}
-Provides:       tex-pkfix-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pkfix-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pkfix-bin < 7:20170520
-Provides:       tex-pkfix-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pkfix-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pkfix-doc < 7:20170520
+Provides:       tex-pkfix = %{epoch}:20210325-%{release}
+Provides:       tex-pkfix-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pkfix-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pkfix-bin < 7:20180414
+Provides:       tex-pkfix-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pkfix-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pkfix-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Replace pk fonts in PostScript with Type 1 fonts
 Requires:       texlive-base texlive-kpathsea
@@ -4335,13 +4509,13 @@ PostScript files, generated by 'not too old' dvips, and
 replaces them by type 1 versions of the fonts, if possible.
 
 %package -n texlive-pkfix-helper
-Provides:       tex-pkfix-helper = %{epoch}:20180414-%{release}
-Provides:       tex-pkfix-helper-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pkfix-helper-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pkfix-helper-bin < 7:20170520
-Provides:       tex-pkfix-helper-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pkfix-helper-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pkfix-helper-doc < 7:20170520
+Provides:       tex-pkfix-helper = %{epoch}:20210325-%{release}
+Provides:       tex-pkfix-helper-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pkfix-helper-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pkfix-helper-bin < 7:20180414
+Provides:       tex-pkfix-helper-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pkfix-helper-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pkfix-helper-doc < 7:20180414
 License:        LPPL
 Summary:        Make PostScript files accessible to pkfix
 Requires:       texlive-base texlive-kpathsea
@@ -4362,16 +4536,16 @@ documents fully autonomously but does require the user to
 verify and, if needed, correct its decisions.
 
 %package -n texlive-pmx
-Provides:       tex-pmx = %{epoch}:20180414-%{release} tex-pmx-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pmx-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pmx-bin < 7:20170520
-Provides:       tex-pmx-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pmx-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pmx-doc < 7:20170520
+Provides:       tex-pmx = %{epoch}:20210325-%{release} tex-pmx-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pmx-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pmx-bin < 7:20180414
+Provides:       tex-pmx-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pmx-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pmx-doc < 7:20180414
 License:        GPLv2+
 Summary:        Preprocessor for MusiXTeX
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(pmx.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(pmx.tex) = %{epoch}:20210325-%{release}
 
 %description -n texlive-pmx
 PMX is a preprocessor for MusiXTeX. It builds the TeX input
@@ -4383,18 +4557,18 @@ requires at least version 1.15 of MusiXTeX, running on an e-tex-
 enhanced TeX system.
 
 %package -n texlive-pmxchords
-Provides:       tex-pmxchords = %{epoch}:20180414-%{release}
-Provides:       tex-pmxchords-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pmxchords-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pmxchords-bin < 7:20170520
-Provides:       tex-pmxchords-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pmxchords-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pmxchords-doc < 7:20170520
+Provides:       tex-pmxchords = %{epoch}:20210325-%{release}
+Provides:       tex-pmxchords-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pmxchords-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pmxchords-bin < 7:20180414
+Provides:       tex-pmxchords-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pmxchords-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pmxchords-doc < 7:20180414
 License:        GPLv2+
 Summary:        Produce chord information to go with pmx output
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(chords.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(chordsCZ.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(chords.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(chordsCZ.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-pmxchords
@@ -4404,43 +4578,34 @@ for typing the chords; a Lua script to transpose chord macros
 to the required key signature; and support scripts for common
 requirements.
 
-%package -n texlive-pstools
-Provides:       tex-pstools = %{epoch}:20180414-%{release}
-Provides:       tex-pstools-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pstools-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pstools-bin < 7:20170520
-Provides:       tex-pstools-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pstools-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pstools-doc < 7:20170520
-License:        GPL+
-Summary:        Produce Encapsulated PostScript from PostScript
-Requires:       texlive-base texlive-kpathsea
+# No psutils for you today!
+%if 0
+%package -n texlive-psutils
+Provides:       tex-psutils = %{epoch}:20210325-%{release}
+Provides:       tex-psutils-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-psutils-bin = %{epoch}:20210325-%{release}
+License:        psutils
+Summary:        The TeXLive fork of the PS Utilities
+Requires:       texlive-base
+Requires:       texlive-kpathsea
 
-%description -n texlive-pstools
-Produce Encapsulated PostScript Files (EPS/EPSF) from a one-
-page PostScript document, or any PostScript document. A correct
-Bounding Box is calculated for the EPS files and some
-PostScript command sequences that can produce errorneous
-results on printers are filtered. The input is cropped to
-include just the image contained in the PostScript file. The
-EPS files can then be included into TeX documents. Other
-programs like ps2epsi (a script distributed with ghostscript)
-don't always calculate the correct bounding box (because the
-values are put on the PostScript stack which may get corrupted
-by bad PostScript code) or they round it off, resulting in
-clipping the image. Therefore ps2eps uses a resolution of 144
-dpi to get the correct bounding box. Included in the
-distribution is the bbox program, an application to produce
-Bounding Box values for rawppm or rawpbm format files.
+%description -n texlive-psutils
+Utilities for manipulating PostScript documents.
+Page selection and rearrangement are supported, including arrangement into
+signatures for booklet printing, and page merging for n-up printing.
+
+This package contains a fork of the psutils binaries adjusted for TexLive.
+All of the standard binaries have been namespaced with a "tl-" prefix.
+%endif
 
 %package -n texlive-pst2pdf
-Provides:       tex-pst2pdf = %{epoch}:20180414-%{release}
-Provides:       tex-pst2pdf-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pst2pdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pst2pdf-bin < 7:20170520
-Provides:       tex-pst2pdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pst2pdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pst2pdf-doc < 7:20170520
+Provides:       tex-pst2pdf = %{epoch}:20210325-%{release}
+Provides:       tex-pst2pdf-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pst2pdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pst2pdf-bin < 7:20180414
+Provides:       tex-pst2pdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pst2pdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pst2pdf-doc < 7:20180414
 License:        GPLv2+
 Summary:        A script to compile pstricks documents via pdftex
 Requires:       texlive-base texlive-kpathsea
@@ -4457,19 +4622,19 @@ the script replaces the environments with \includegraphics to
 include the processed snippets.
 
 %package -n texlive-pst-pdf
-Provides:       tex-pst-pdf = %{epoch}:20180414-%{release}
-Provides:       tex-pst-pdf-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pst-pdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pst-pdf-bin < 7:20170520
-Provides:       tex-pst-pdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pst-pdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pst-pdf-doc < 7:20170520
+Provides:       tex-pst-pdf = %{epoch}:20210325-%{release}
+Provides:       tex-pst-pdf-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pst-pdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pst-pdf-bin < 7:20180414
+Provides:       tex-pst-pdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pst-pdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pst-pdf-doc < 7:20180414
 License:        LPPL
 Summary:        Make PDF versions of graphics by processing between runs
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(graphicx.sty) tex(pstricks.sty)
 Requires:       tex(environ.sty)
-Provides:       tex(pst-pdf.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(pst-pdf.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-pst-pdf
@@ -4482,15 +4647,39 @@ material. In the final document these contents will be inserted
 instead of the original PostScript code. The package works with
 pstricks and requires a recent version of the preview package.
 
+%package -n texlive-ps2eps
+Provides:       tex-ps2eps = %{epoch}:20210325-%{release}
+License:        GPL+
+Summary:        Produce Encapsulated PostScript from PostScript
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+
+%description -n texlive-ps2eps
+Produce Encapsulated PostScript Files (EPS/EPSF) from a
+one-page PostScript document, or any PostScript document. A
+correct Bounding Box is calculated for the EPS files and some
+PostScript command sequences that can produce erroneous
+results on printers are filtered. The input is cropped to
+include just the image contained in the PostScript file. The
+EPS files can then be included into TeX documents. Other
+programs like ps2epsi (a script distributed with ghostscript)
+don't always calculate the correct bounding box (because the
+values are put on the PostScript stack which may get corrupted
+by bad PostScript code) or they round it off, resulting in
+clipping the image. Therefore ps2eps uses a resolution of 144
+dpi to get the correct bounding box. Included in the distribution
+is the bbox program, an application to produce Bounding Box values
+for rawppm or rawpbm format files.
+
 %package -n texlive-ps2pk
-Provides:       tex-ps2pk = %{epoch}:20180414-%{release}
-Provides:       tex-ps2pk-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-ps2pk-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ps2pk-bin < 7:20170520
-Provides:       texlive-ps2pkm = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ps2pkm < 7:20170520
-Provides:       texlive-ps2pkm-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ps2pkm-bin < 7:20170520
+Provides:       tex-ps2pk = %{epoch}:20210325-%{release}
+Provides:       tex-ps2pk-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-ps2pk-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ps2pk-bin < 7:20180414
+Provides:       texlive-ps2pkm = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ps2pkm < 7:20180414
+Provides:       texlive-ps2pkm-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ps2pkm-bin < 7:20180414
 License:        MIT
 Summary:        Generate a PK font from an Adobe Type 1 font
 Requires:       texlive-base texlive-kpathsea
@@ -4502,25 +4691,25 @@ generated that use Type 1 fonts. The program makes use of code
 donated to the X consortium by IBM.
 
 %package -n texlive-ptex
-Provides:       tex-ptex = %{epoch}:20180414-%{release} tex-ptex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-ptex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ptex-bin < 7:20170520
-Provides:       tex-ptex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ptex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ptex-doc < 7:20170520
-Provides:       texlive-platex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-platex-bin < 7:20170520
+Provides:       tex-ptex = %{epoch}:20210325-%{release} tex-ptex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-ptex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ptex-bin < 7:20180414
+Provides:       tex-ptex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ptex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ptex-doc < 7:20180414
+Provides:       texlive-platex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-platex-bin < 7:20180414
 License:        BSD
 Summary:        A TeX system for publishing in Japanese
-Requires:       texlive-adobemapping texlive-base
-Requires:       texlive-hyph-utf8 texlive-ipaex
-Requires:       texlive-japanese texlive-japanese-otf
+Requires:       texlive-adobemapping texlive-base texlive-cm
+Requires:       texlive-hyph-utf8 texlive-ipaex texlive-etex
+Requires:       texlive-japanese texlive-japanese-otf texlive-hyphen-base
 Requires:       texlive-kpathsea texlive-latex
 Requires:       texlive-ptex-base texlive-ptex-fonts
-Requires:       texlive-tetex texlive-tex
+Requires:       texlive-plain texlive-tex
 Requires:       tex(oldlfont.sty) tex(shortvrb.sty)
 Requires(post,postun): coreutils
-Provides:       tex(morisawa.map) = %{epoch}:20180414-%{release}
+Provides:       tex(morisawa.map) = %{epoch}:20210325-%{release}
 
 %description -n texlive-ptex
 PTeX adds features related to vertical writing, and deals with
@@ -4529,21 +4718,21 @@ TEXMF tree, for use with PTeX, may be found in package PTeX-
 texmf. PTeX is distributed as WEB change files.
 
 %package -n texlive-ptex-fontmaps
-Provides:       tex-ptex-fontmaps = %{epoch}:20180414-%{release}
-Provides:       tex-ptex-fontmaps = %{epoch}:20180414-%{release}
-Provides:       texlive-ptex-fontmaps-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ptex-fontmaps-bin < 7:20170520
-Provides:       tex-ptex-fontmaps-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ptex-fontmaps-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ptex-fontmaps-doc < 7:20170520
-Provides:       tex-jfontmaps = %{epoch}:20180414-%{release}
-Provides:       texlive-jfontmaps = %{epoch}:20180414-%{release}
+Provides:       tex-ptex-fontmaps = %{epoch}:20210325-%{release}
+Provides:       tex-ptex-fontmaps = %{epoch}:20210325-%{release}
+Provides:       texlive-ptex-fontmaps-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ptex-fontmaps-bin < 7:20180414
+Provides:       tex-ptex-fontmaps-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ptex-fontmaps-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ptex-fontmaps-doc < 7:20180414
+Provides:       tex-jfontmaps = %{epoch}:20210325-%{release}
+Provides:       texlive-jfontmaps = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-jfontmaps <= 6:svn40613
-Provides:       tex-jfontmaps-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-jfontmaps-bin = %{epoch}:20180414-%{release}
+Provides:       tex-jfontmaps-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-jfontmaps-bin = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-jfontmaps-bin <= 6:svn29848.0
-Provides:       tex-jfontmaps-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-jfontmaps-doc = %{epoch}:20180414-%{release}
+Provides:       tex-jfontmaps-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-jfontmaps-doc = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-jfontmaps-doc <= 6:svn40613
 License:        GPLv3
 Summary:        Font maps and configuration tools for Japanese/Chinese/Korean fonts with (u)ptex
@@ -4561,13 +4750,13 @@ Japanese/Chinese/Korean fonts available for (u)ptex and related
 programs and formats.
 
 %package -n texlive-ptex2pdf
-Provides:       tex-ptex2pdf = %{epoch}:20180414-%{release}
-Provides:       tex-ptex2pdf-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-ptex2pdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ptex2pdf-bin < 7:20170520
-Provides:       tex-ptex2pdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ptex2pdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ptex2pdf-doc < 7:20170520
+Provides:       tex-ptex2pdf = %{epoch}:20210325-%{release}
+Provides:       tex-ptex2pdf-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-ptex2pdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ptex2pdf-bin < 7:20180414
+Provides:       tex-ptex2pdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ptex2pdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ptex2pdf-doc < 7:20180414
 License:        GPLv2+
 Summary:        Convert Japanese TeX documents to PDF
 Requires:       texlive-base texlive-kpathsea
@@ -4581,13 +4770,13 @@ of the ptex-based programs (ptex, uptex, eptex, platex,
 uplatex) followed by dvipdfmx.
 
 %package -n texlive-purifyeps
-Provides:       tex-purifyeps = %{epoch}:20180414-%{release}
-Provides:       tex-purifyeps-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-purifyeps-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-purifyeps-bin < 7:20170520
-Provides:       tex-purifyeps-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-purifyeps-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-purifyeps-doc < 7:20170520
+Provides:       tex-purifyeps = %{epoch}:20210325-%{release}
+Provides:       tex-purifyeps-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-purifyeps-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-purifyeps-bin < 7:20180414
+Provides:       tex-purifyeps-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-purifyeps-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-purifyeps-doc < 7:20180414
 License:        LPPL
 Summary:        Make EPS work with both LaTeX/dvips and pdfLaTeX
 Requires:       texlive-base texlive-kpathsea
@@ -4605,13 +4794,13 @@ directly. Hence, purifyeps need only convert an arbitrary EPS
 file into the same stylized format that MetaPost outputs.
 
 %package -n texlive-pygmentex
-Provides:       tex-pygmentex = %{epoch}:20180414-%{release}
-Provides:       tex-pygmentex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pygmentex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pygmentex-bin < 7:20170520
-Provides:       tex-pygmentex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pygmentex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pythontex-doc < 7:20170520
+Provides:       tex-pygmentex = %{epoch}:20210325-%{release}
+Provides:       tex-pygmentex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pygmentex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pygmentex-bin < 7:20180414
+Provides:       tex-pygmentex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pygmentex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pythontex-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Use Pygments to format code listings in documents
 Requires:       texlive-base texlive-kpathsea
@@ -4619,7 +4808,7 @@ Requires:       tex(fancyvrb.sty) tex(color.sty)
 Requires:       tex(ifthen.sty) tex(caption.sty)
 Requires:       tex(pgfkeys.sty) tex(efbox.sty)
 Requires:       tex(mdframed.sty) tex(fvextra.sty)
-Provides:       tex(pygmentex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(pygmentex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-pygmentex
@@ -4630,13 +4819,13 @@ kinds of software such as forum systems, wikis or other
 applications that need to prettify source code.
 
 %package -n texlive-pythontex
-Provides:       tex-pythontex = %{epoch}:20180414-%{release}
-Provides:       tex-pythontex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-pythontex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pythontex-bin < 7:20170520
-Provides:       tex-pythontex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-pythontex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-pythontex-doc < 7:20170520
+Provides:       tex-pythontex = %{epoch}:20210325-%{release}
+Provides:       tex-pythontex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-pythontex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pythontex-bin < 7:20180414
+Provides:       tex-pythontex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-pythontex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-pythontex-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Run Python from within a document, typesetting the results
 Requires:       texlive-base texlive-kpathsea
@@ -4645,7 +4834,7 @@ Requires:       tex(etoolbox.sty) tex(xstring.sty)
 Requires:       tex(pgfopts.sty) tex(newfloat.sty)
 Requires:       tex(currfile.sty) tex(xcolor.sty)
 Requires:       tex(upquote.sty)
-Provides:       tex(pythontex.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(pythontex.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-pythontex
@@ -4666,19 +4855,19 @@ useful for journal submissions, sharing documents, and
 conversion to other formats.
 
 %package -n texlive-rubik
-Provides:       tex-rubik = %{epoch}:20180414-%{release}
-Provides:       tex-rubik-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-rubik-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-rubik-bin < 7:20170520
-Provides:       tex-rubik-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-rubik-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-rubik-doc < 7:20170520
+Provides:       tex-rubik = %{epoch}:20210325-%{release}
+Provides:       tex-rubik-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-rubik-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-rubik-bin < 7:20180414
+Provides:       tex-rubik-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-rubik-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-rubik-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Document Rubik cube configurations and rotation sequences
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(tikz.sty) tex(fancyvrb.sty)
-Provides:       tex(rubikcube.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(rubikrotation.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(rubikcube.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(rubikrotation.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-rubik
@@ -4689,10 +4878,10 @@ moves, with the help of a Perl package executed via \write18
 (shell escape) commands.
 
 %package -n texlive-seetexk
-Provides:       tex-seetexk = %{epoch}:20180414-%{release}
-Provides:       tex-seetexk-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-seetexk-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-seetexk-bin < 7:20170520
+Provides:       tex-seetexk = %{epoch}:20210325-%{release}
+Provides:       tex-seetexk-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-seetexk-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-seetexk-bin < 7:20180414
 License:        MIT
 Summary:        Utilities for manipulating DVI files
 Requires:       texlive-base texlive-kpathsea
@@ -4708,19 +4897,33 @@ manipulating the files, from the old SeeTeX project. The
 utilities are provided as C source with Imakefiles, and an MS-
 DOS version of dvibook is also provided.
 
+%package -n texlive-spix
+Summary:        Yet another TeX compilation tool: simple, human readable, no option, no magic
+License:        GPLv3+
+Requires:       texlive-base texlive-kpathsea
+
+%description -n texlive-spix
+SpiX offers a way to store information about the compilation
+process for a tex file inside the tex file itself. Just write
+the commands as comments in the tex files, and SpiX will
+extract and run those commands. Everything is stored in the tex
+file (so that you are not missing some piece of information
+that is located somewhere else), in a human-readable format (no
+need to know SpiX to understand it).
+
 %package -n texlive-splitindex
-Provides:       tex-splitindex = %{epoch}:20180414-%{release}
-Provides:       tex-splitindex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-splitindex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-splitindex-bin < 7:20170520
-Provides:       tex-splitindex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-splitindex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-splitindex-doc < 7:20170520
+Provides:       tex-splitindex = %{epoch}:20210325-%{release}
+Provides:       tex-splitindex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-splitindex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-splitindex-bin < 7:20180414
+Provides:       tex-splitindex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-splitindex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-splitindex-doc < 7:20180414
 License:        LPPL
 Summary:        Unlimited number of indexes
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(splitindex.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(splitidx.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(splitindex.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(splitidx.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-splitindex
@@ -4735,13 +4938,13 @@ several raw index files and calls your favorite index processor
 for each of the files.
 
 %package -n texlive-srcredact
-Provides:       tex-srcredact = %{epoch}:20180414-%{release}
-Provides:       tex-srcredact-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-srcredact-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-srcredact-bin < 7:20170520
-Provides:       tex-srcredact-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-srcredact-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-srcredact-doc < 7:20170520
+Provides:       tex-srcredact = %{epoch}:20210325-%{release}
+Provides:       tex-srcredact-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-srcredact-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-srcredact-bin < 7:20180414
+Provides:       tex-srcredact-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-srcredact-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-srcredact-doc < 7:20180414
 License:        GPLv2+
 Summary:        A tool for redacting sources
 Requires:       texlive-base texlive-kpathsea
@@ -4757,13 +4960,13 @@ commissioned by the Consumer Financial Protection Bureau,
 United States Treasury.
 
 %package -n texlive-sty2dtx
-Provides:       tex-sty2dtx = %{epoch}:20180414-%{release}
-Provides:       tex-sty2dtx-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-sty2dtx-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-sty2dtx-bin < 7:20170520
-Provides:       tex-sty2dtx-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-sty2dtx-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-sty2dtx-doc < 7:20170520
+Provides:       tex-sty2dtx = %{epoch}:20210325-%{release}
+Provides:       tex-sty2dtx-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-sty2dtx-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-sty2dtx-bin < 7:20180414
+Provides:       tex-sty2dtx-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-sty2dtx-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-sty2dtx-doc < 7:20180414
 License:        GPLv3+
 Summary:        Create a .dtx file from a .sty file
 Requires:       texlive-base texlive-kpathsea
@@ -4785,21 +4988,21 @@ automatically to the 'Usage' section of the .dtx file. A
 corresponding .ins file can be generated as well.
 
 %package -n texlive-svn-multi
-Provides:       tex-svn-multi = %{epoch}:20180414-%{release}
-Provides:       tex-svn-multi-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-svn-multi-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-svn-multi-bin < 7:20170520
-Provides:       tex-svn-multi-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-svn-multi-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-svn-multi-doc < 7:20170520
+Provides:       tex-svn-multi = %{epoch}:20210325-%{release}
+Provides:       tex-svn-multi-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-svn-multi-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-svn-multi-bin < 7:20180414
+Provides:       tex-svn-multi-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-svn-multi-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-svn-multi-doc < 7:20180414
 License:        LPPL
 Summary:        Subversion keywords in multi-file LaTeX documents
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(kvoptions.sty) tex(filehook.sty)
 Requires:       tex(currfile.sty) tex(graphics.sty)
 Requires:       tex(pgf.sty)
-Provides:       tex(svn-multi.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(svnkw.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(svn-multi.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(svnkw.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-svn-multi
@@ -4812,10 +5015,10 @@ interacts with an external Perl script, to retrieve information
 necessary for the required output.
 
 %package -n texlive-synctex
-Provides:       tex-synctex = %{epoch}:20180414-%{release}
-Provides:       tex-synctex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-synctex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-synctex-bin < 7:20170520
+Provides:       tex-synctex = %{epoch}:20210325-%{release}
+Provides:       tex-synctex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-synctex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-synctex-bin < 7:20180414
 License:        LPPL
 Summary:        synctex package
 Requires:       texlive-base texlive-kpathsea
@@ -4823,61 +5026,15 @@ Requires:       texlive-base texlive-kpathsea
 %description -n texlive-synctex
 synctex package.
 
-%package -n texlive-tetex
-License:        GPL+ and GPLv2+ and LPPL
-Summary:        scripts and files originally written for or included in teTeX
-Provides:       tex-tetex = %{epoch}:20180414-%{release}
-Provides:       tex-tetex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-tetex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tetex-bin < 7:20170520
-Provides:       tex-tetex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-tetex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tetex-doc < 7:20170520
-Requires:       texlive-base texlive-kpathsea-bin
-Requires:       texlive-texlive.infra
-Provides:       tex(09fbbfac.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(0ef0afca.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(10037936.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(1b6d048e.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(71414f53.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(74afc74c.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(aae443f0.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(b6a4d7c7.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(bbad153f.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(d9b29452.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(f7b6d320.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(mtex.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(base14flags.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(dvipdfm35.map) = %{epoch}:20180414-%{release}
-Provides:       tex(dvips35.map) = %{epoch}:20180414-%{release}
-Provides:       tex(mathpple.map) = %{epoch}:20180414-%{release}
-Provides:       tex(pdftex35.map) = %{epoch}:20180414-%{release}
-Provides:       tex(ps2pk35.map) = %{epoch}:20180414-%{release}
-Provides:       tex(updmap.cfg) = %{epoch}:20180414-%{release}
-BuildArch:      noarch
-
-%description -n texlive-tetex
-teTeX was a comprehensive distribution of TeX, LaTeX and
-family, designed for ease of compilation, installation and
-customisation. In 2006, Thomas Esser announced he would no
-longer be able to support, or to produce new versions of,
-teTeX. With the appearance of TeX live 2007 (whose Unix-system
-TeX support originally derived from teTeX), no-one should be
-using teTeX at all, in new applications. One of the "schemes"
-available when installing TeX live provides a configuration
-very close to that of the old teTeX, but using modern versions
-of programs and packages.
-
 %package -n texlive-tex
-Provides:       tex-tex = %{epoch}:20180414-%{release} tex-tex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-tex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tex-bin < 7:20170520
+Provides:       tex-tex = %{epoch}:20210325-%{release} tex-tex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-tex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tex-bin < 7:20180414
 License:        Knuth
 Summary:        A sophisticated typesetting engine
 Requires:       texlive-base texlive-cm
 Requires:       texlive-hyphen-base texlive-knuth-lib
 Requires:       texlive-kpathsea texlive-plain
-Requires:       texlive-tetex
 Requires(post,postun): coreutils
 
 %description -n texlive-tex
@@ -4892,19 +5049,19 @@ inspiration for several other programs, including e-TeX and
 PDFTeX.
 
 %package -n texlive-tex4ebook
-Provides:       tex-tex4ebook = %{epoch}:20180414-%{release}
-Provides:       tex-tex4ebook-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-tex4ebook-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tex4ebook-bin < 7:20170520
-Provides:       tex-tex4ebook-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-tex4ebook-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tex4ebook-doc < 7:20170520
+Provides:       tex-tex4ebook = %{epoch}:20210325-%{release}
+Provides:       tex-tex4ebook-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-tex4ebook-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tex4ebook-bin < 7:20180414
+Provides:       tex-tex4ebook-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-tex4ebook-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tex4ebook-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Convertor from LaTeX to ebook formats
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(etoolbox.sty) tex(kvoptions.sty)
 Requires:       tex(graphicx.sty)
-Provides:       tex(tex4ebook.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(tex4ebook.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-tex4ebook
@@ -4913,18 +5070,18 @@ conversion of LaTeX files to ebook formats such as epub, mobi
 and epub3. tex4ht is used as conversion engine.
 
 %package -n texlive-tex4ht
-Provides:       tex-tex4ht = %{epoch}:20180414-%{release}
-Provides:       tex-tex4ht-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-tex4ht-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tex4ht-bin < 7:20170520
-Provides:       tex-tex4ht-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-tex4ht-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tex4ht-doc < 7:20170520
+Provides:       tex-tex4ht = %{epoch}:20210325-%{release}
+Provides:       tex-tex4ht-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-tex4ht-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tex4ht-bin < 7:20180414
+Provides:       tex-tex4ht-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-tex4ht-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tex4ht-doc < 7:20180414
 License:        LPPL
 Summary:        Convert (La)TeX to HTML/XML
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(m-tex4ht.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(tex4ht.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(m-tex4ht.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(tex4ht.sty) = %{epoch}:20210325-%{release}
 
 %description -n texlive-tex4ht
 A converter from TeX and LaTeX to SGML-based formats such as
@@ -4938,31 +5095,14 @@ standard DVI file that it can then process. This technique
 allows TeX4ht to approach the robustness characteristic of
 restricted-syntax systems such as hyperlatex and gellmu.
 
-%package -n texlive-texconfig
-Provides:       tex-texconfig = %{epoch}:20180414-%{release}
-Provides:       tex-texconfig-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texconfig-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texconfig-bin < 7:20170520
-License:        LPPL
-Summary:        Tool to configure teTeX or TeX Live
-Requires:       texlive-base texlive-kpathsea
-Provides:       tex(tcfmgr.map) = %{epoch}:20180414-%{release}
-BuildArch:      noarch
-
-%description -n texlive-texconfig
-texconfig allows one to configure and maintain TeX in an easy
-and convenient manner, offering a series of dialog boxes to
-the user. The directory in which texconfig is found is also
-preferentially used to find subprograms.
-
 %package -n texlive-texcount
-Provides:       tex-texcount = %{epoch}:20180414-%{release}
-Provides:       tex-texcount-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texcount-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texcount-bin < 7:20170520
-Provides:       tex-texcount-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texcount-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texcount-doc < 7:20170520
+Provides:       tex-texcount = %{epoch}:20210325-%{release}
+Provides:       tex-texcount-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texcount-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texcount-bin < 7:20180414
+Provides:       tex-texcount-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texcount-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texcount-doc < 7:20180414
 License:        LPPL
 Summary:        Count words in a LaTeX document
 Requires:       texlive-base texlive-kpathsea
@@ -4976,13 +5116,13 @@ of the text have been counted. The package script is available
 as a Web service via its home page.
 
 %package -n texlive-texdef
-Provides:       tex-texdef = %{epoch}:20180414-%{release}
-Provides:       tex-texdef-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texdef-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdef-bin < 7:20170520
-Provides:       tex-texdef-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texdef-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdef-doc < 7:20170520
+Provides:       tex-texdef = %{epoch}:20210325-%{release}
+Provides:       tex-texdef-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texdef-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdef-bin < 7:20180414
+Provides:       tex-texdef-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texdef-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdef-doc < 7:20180414
 License:        GPLv3+
 Summary:        Display the definitions of TeX commands
 Requires:       texlive-base texlive-kpathsea
@@ -5007,13 +5147,13 @@ The flavour can be selected using an command line option or
 over the script name: latexdef will use LaTeX as default, etc.
 
 %package -n texlive-texdiff
-Provides:       tex-texdiff = %{epoch}:20180414-%{release}
-Provides:       tex-texdiff-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texdiff-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdiff-bin < 7:20170520
-Provides:       tex-texdiff-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texdiff-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdiff-doc < 7:20170520
+Provides:       tex-texdiff = %{epoch}:20210325-%{release}
+Provides:       tex-texdiff-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texdiff-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdiff-bin < 7:20180414
+Provides:       tex-texdiff-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texdiff-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdiff-doc < 7:20180414
 License:        GPL+ or Artistic
 Summary:        Compares two (La)TeX documents to create a merged version showing changes
 Requires:       texlive-base texlive-kpathsea
@@ -5024,10 +5164,10 @@ Texdiff compares two (La)TeX documents to create a merged version showing
 changes, similar to that of 'Change Tracking' in some word processors.
 
 %package -n texlive-texdirflatten
-Provides:       tex-texdirflatten = %{epoch}:20180414-%{release}
-Provides:       tex-texdirflatten-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texdirflatten-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdirflatten-bin < 7:20170520
+Provides:       tex-texdirflatten = %{epoch}:20210325-%{release}
+Provides:       tex-texdirflatten-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texdirflatten-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdirflatten-bin < 7:20180414
 License:        GPL+ or Artistic
 Summary:        Collect files related to a LaTeX job in a single directory
 Requires:       texlive-base texlive-kpathsea
@@ -5041,17 +5181,17 @@ single directory (thus "flattening" the document's directory
 tree).
 
 %package -n texlive-texdoc
-Provides:       tex-texdoc = %{epoch}:20180414-%{release}
-Provides:       tex-texdoc-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texdoc-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdoc-bin < 7:20170520
-Provides:       tex-texdoc-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texdoc-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texdoc-doc < 7:20170520
+Provides:       tex-texdoc = %{epoch}:20210325-%{release}
+Provides:       tex-texdoc-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texdoc-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdoc-bin < 7:20180414
+Provides:       tex-texdoc-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texdoc-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texdoc-doc < 7:20180414
 License:        GPL+
 Summary:        Documentation access for TeX distributions
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(texdoc.cnf) = %{epoch}:20180414-%{release}
+Provides:       tex(texdoc.cnf) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-texdoc
@@ -5061,15 +5201,15 @@ files on the $TEXDOCS tree). It is distributed with TeX-Live
 and a derivative is distributed with miktex.
 
 %package -n texlive-texdoctk
-Provides:       tex-texdoctk = %{epoch}:20180414-%{release}
-Provides:       tex-texdoctk-bin = %{epoch}:20180414-%{release}
-Provides:       tex-texdoctk-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texdoctk-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texdoctk-doc = %{epoch}:20180414-%{release}
+Provides:       tex-texdoctk = %{epoch}:20210325-%{release}
+Provides:       tex-texdoctk-bin = %{epoch}:20210325-%{release}
+Provides:       tex-texdoctk-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texdoctk-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texdoctk-doc = %{epoch}:20210325-%{release}
 License:        GPL+
 Summary:        Easy access to package documentation
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(texdoctk.dat) = %{epoch}:20180414-%{release}
+Provides:       tex(texdoctk.dat) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-texdoctk
@@ -5086,13 +5226,13 @@ only distributed as part of TeX Live, which includes a Windows
 executable.
 
 %package -n texlive-texfot
-Provides:       tex-texfot = %{epoch}:20180414-%{release}
-Provides:       tex-texfot-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texfot-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texfot-bin < 7:20170520
-Provides:       tex-texfot-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texfot-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texfot-doc < 7:20170520
+Provides:       tex-texfot = %{epoch}:20210325-%{release}
+Provides:       tex-texfot-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texfot-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texfot-bin < 7:20180414
+Provides:       tex-texfot-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texfot-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texfot-doc < 7:20180414
 License:        Public Domain
 Summary:        Filter clutter from the output of a TeX run
 Requires:       texlive-base texlive-kpathsea
@@ -5105,13 +5245,13 @@ which probably deserve some change in the source. The TeX
 invocation itself need not change.
 
 %package -n texlive-texliveonfly
-Provides:       tex-texliveonfly = %{epoch}:20180414-%{release}
-Provides:       tex-texliveonfly-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texliveonfly-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texliveonfly-bin < 7:20170520
-Provides:       tex-texliveonfly-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texliveonfly-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texliveonfly-doc < 7:20170520
+Provides:       tex-texliveonfly = %{epoch}:20210325-%{release}
+Provides:       tex-texliveonfly-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texliveonfly-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texliveonfly-bin < 7:20180414
+Provides:       tex-texliveonfly-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texliveonfly-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texliveonfly-doc < 7:20180414
 License:        GPLv3+
 Summary:        On-the-fly download of missing TeX live packages
 Requires:       texlive-base texlive-kpathsea
@@ -5128,10 +5268,10 @@ synctex=1 -interaction=nonstopmode", which may all be changed).
 The script is designed to work on Linux distributions.
 
 %package -n texlive-texlive-en
-Provides:       tex-texlive-en = %{epoch}:20180414-%{release}
-Provides:       tex-texlive-en-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texlive-en-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texlive-en-doc < 7:20170520
+Provides:       tex-texlive-en = %{epoch}:20210325-%{release}
+Provides:       tex-texlive-en-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texlive-en-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texlive-en-doc < 7:20180414
 License:        LPPL
 Summary:        TeX Live manual (English)
 Requires:       texlive-base texlive-kpathsea
@@ -5141,32 +5281,54 @@ BuildArch:      noarch
 TeX Live manual (English).
 
 %package -n texlive-texlive-scripts
-Provides:       tex-texlive-scripts = %{epoch}:20180414-%{release}
-Provides:       texlive-texlive-scripts-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texlive-scripts-bin < 7:20170520
+Provides:       tex-texlive-scripts = %{epoch}:20210325-%{release}
+Provides:       texlive-texlive-scripts-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texlive-scripts-bin < 7:20180414
 License:        LPPL
 Summary:        TeX Live infrastructure programs
 Requires:       texlive-base texlive-kpathsea
 Requires:       texlive-texlive.infra
+Requires:       texlive-gsftopk
+Provides:       texlive-tetex = %{epoch}:20210325-%{release}
+# oe latest version is 20180414
+Obsoletes:      texlive-tetex < 7:20200327
 BuildArch:      noarch
 
 %description -n texlive-texlive-scripts
 Includes install-tl, tl-portable, rungs, etc.; not needed for
 tlmgr to run but still ours.  Not included in tlcritical.
 
+%package -n texlive-texlive-scripts-extra
+Provides:       tex-texlive-scripts-extra = %{epoch}:20210325-%{release}
+Provides:       texlive-texlive-scripts-extra-bin = %{epoch}:20210325-%{release}
+License:        GPL+ and LPPL and Public Domain
+Summary:        TeX Live scripts
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-texlive.infra
+Obsoletes:      texlive-texconfig < 7:20180414
+Obsoletes:      texlive-pstools < 7:20180414
+Obsoletes:      texlive-pdftools < 7:20180414
+BuildArch: noarch
+
+%description -n texlive-texlive-scripts-extra
+Miscellaneous scripts maintained as part of TeX Live, but not important for
+the infrastructure. Thus, this is not part of scheme-infraonly or tlcritical,
+just a normal package.
+
 %package -n texlive-texlive.infra
-Provides:       tex-texlive.infra = %{epoch}:20180414-%{release}
-Provides:       tex-texlive.infra-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texlive.infra-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texlive.infra-bin < 7:20170520
-Provides:       tex-texlive.infra-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texlive.infra-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texlive.infra-doc < 7:20170520
+Provides:       tex-texlive.infra = %{epoch}:20210325-%{release}
+Provides:       tex-texlive.infra-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texlive.infra-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texlive.infra-bin < 7:20180414
+Provides:       tex-texlive.infra-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texlive.infra-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texlive.infra-doc < 7:20180414
 License:        LPPL
 Summary:        Basic TeX Live infrastructure
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(fmtutil-hdr.cnf) = %{epoch}:20180414-%{release}
-Provides:       tex(updmap-hdr.cfg) = %{epoch}:20180414-%{release}
+Provides:       tex(fmtutil-hdr.cnf) = %{epoch}:20210325-%{release}
+Provides:       tex(updmap-hdr.cfg) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-texlive.infra
@@ -5176,13 +5338,13 @@ tools (notably tlmgr) running: perl modules, xz binaries, plus
 install packages, and in the tlcritical repository.
 
 %package -n texlive-texloganalyser
-Provides:       tex-texloganalyser = %{epoch}:20180414-%{release}
-Provides:       tex-texloganalyser-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texloganalyser-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texloganalyser-bin < 7:20170520
-Provides:       tex-texloganalyser-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texloganalyser-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texloganalyser-doc < 7:20170520
+Provides:       tex-texloganalyser = %{epoch}:20210325-%{release}
+Provides:       tex-texloganalyser-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texloganalyser-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texloganalyser-bin < 7:20180414
+Provides:       tex-texloganalyser-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texloganalyser-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texloganalyser-doc < 7:20180414
 License:        BSD
 Summary:        Analyse TeX logs
 Requires:       texlive-base texlive-kpathsea
@@ -5193,13 +5355,13 @@ The perl script allows the user to extract (and display)
 elements of the log file.
 
 %package -n texlive-texosquery
-Provides:       tex-texosquery = %{epoch}:20180414-%{release}
-Provides:       tex-texosquery-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texosquery-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texosquery-bin < 7:20170520
-Provides:       tex-texosquery-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texosquery-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texosquery-doc < 7:20170520
+Provides:       tex-texosquery = %{epoch}:20210325-%{release}
+Provides:       tex-texosquery-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texosquery-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texosquery-bin < 7:20180414
+Provides:       tex-texosquery-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texosquery-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texosquery-doc < 7:20180414
 License:        LPPL
 Summary:        Cross-platform Java application to query OS information
 Requires:       texlive-base texlive-kpathsea
@@ -5229,40 +5391,67 @@ TeX's default special characters (and some other potentially
 problematic characters) is temporarily changed to 12 while
 reading the result.
 
+%package -n texlive-texplate
+Provides:       tex-texplate = %{epoch}:20210325-%{release}
+Provides:       tex-texplate-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texplate-bin = %{epoch}:20210325-%{release}
+License:        BSD
+Summary:        A tool for creating document structures based on templates
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+# So much java
+BuildArch: noarch
+
+%description -n texlive-texplate
+TeXplate is a tool for creating document structures based on
+templates. The application name is a word play on TeX and
+template, so the purpose seems quite obvious: we want to
+provide an easy and straightforward framework for reducing the
+typical code boilerplate when writing TeX documents. Also note
+that one can easily extrapolate the use beyond articles and
+theses: the application is powerful enough to generate any
+text-based structure, given that a corresponding template
+exists.
+
 %package -n texlive-texsis
-Provides:       tex-texsis = %{epoch}:20180414-%{release}
-Provides:       tex-texsis-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texsis-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texsis-bin < 7:20170520
-Provides:       tex-texsis-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-texsis-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texsis-doc < 7:20170520
+Provides:       tex-texsis = %{epoch}:20210325-%{release}
+Provides:       tex-texsis-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texsis-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texsis-bin < 7:20180414
+Provides:       tex-texsis-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-texsis-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texsis-doc < 7:20180414
 License:        LPPL
-Summary:        Plain TeX macros for PhysicistsRequires:       texlive-base
+Summary:        Plain TeX macros for Physicist
+Requires:       texlive-base
 Requires:       texlive-kpathsea texlive-pdftex
-Requires:       texlive-tetex texlive-tex
+Requires:       texlive-tex
+Requires:       texlive-cm
+Requires:       texlive-hyphen-base
+Requires:       texlive-knuth-lib
+Requires:       texlive-plain
 Requires(post,postun): coreutils
-Provides:       tex(TXSconts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSdcol.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSenvmt.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSeqns.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSfigs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSfmts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSfonts.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXShead.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSinit.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSletr.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSmacs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSmemo.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSprns.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSrefs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSruled.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSsects.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSsite.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXSsymb.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXStags.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(TXStitle.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(texsis.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(TXSconts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSdcol.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSenvmt.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSeqns.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSfigs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSfmts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSfonts.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXShead.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSinit.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSletr.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSmacs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSmemo.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSprns.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSrefs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSruled.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSsects.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSsite.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXSsymb.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXStags.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(TXStitle.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(texsis.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-texsis
@@ -5284,10 +5473,10 @@ physicists, but others may also find it useful. It is
 completely compatible with Plain TeX.
 
 %package -n texlive-texware
-Provides:       tex-texware = %{epoch}:20180414-%{release}
-Provides:       tex-texware-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-texware-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-texware-bin < 7:20170520
+Provides:       tex-texware = %{epoch}:20210325-%{release}
+Provides:       tex-texware-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-texware-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-texware-bin < 7:20180414
 License:        Knuth
 Summary:        Utility programs for use with TeX
 Requires:       texlive-base texlive-kpathsea
@@ -5301,19 +5490,19 @@ tftopl and pltotf, which convert TeX Font Metric (TFM) file to
 human readable Property List (PL) files and vice versa.
 
 %package -n texlive-thumbpdf
-Provides:       tex-thumbpdf = %{epoch}:20180414-%{release}
-Provides:       tex-thumbpdf-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-thumbpdf-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-thumbpdf-bin < 7:20170520
-Provides:       tex-thumbpdf-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-thumbpdf-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-thumbpdf-doc < 7:20170520
+Provides:       tex-thumbpdf = %{epoch}:20210325-%{release}
+Provides:       tex-thumbpdf-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-thumbpdf-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-thumbpdf-bin < 7:20180414
+Provides:       tex-thumbpdf-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-thumbpdf-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-thumbpdf-doc < 7:20180414
 License:        LPPL
 Summary:        Thumbnails for pdfTeX and dvips/ps2pdf
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(ifluatex.sty) ghostscript
-Provides:       tex(thumbpdf.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(thumbpdf.tex) = %{epoch}:20180414-%{release}
+Provides:       tex(thumbpdf.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(thumbpdf.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-thumbpdf
@@ -5325,9 +5514,9 @@ thumbnails. This arrangement works with both plain TeX and
 LaTeX.
 
 %package -n texlive-tie
-Provides:       tex-tie = %{epoch}:20180414-%{release} tex-tie-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-tie-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tie-bin < 7:20170520
+Provides:       tex-tie = %{epoch}:20210325-%{release} tex-tie-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-tie-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tie-bin < 7:20180414
 License:        Latex2e
 Summary:        Allow multiple web change files
 Requires:       texlive-base texlive-kpathsea
@@ -5338,14 +5527,23 @@ more than one change file to their source. The program may also
 be used to create a new version of a .web file that
 incorporates existing changes.
 
+%package -n texlive-tikztosvg
+Summary:        A utility for rendering TikZ diagrams to SVG
+License:        GPLv3
+Requires:       texlive-base texlive-kpathsea
+
+%description -n texlive-tikztosvg
+This package provides a shell script that calls XeTeX and
+pdf2svg to convert TikZ environments to SVG files.
+
 %package -n texlive-tpic2pdftex
-Provides:       tex-tpic2pdftex = %{epoch}:20180414-%{release}
-Provides:       tex-tpic2pdftex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-tpic2pdftex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tpic2pdftex-bin < 7:20170520
-Provides:       tex-tpic2pdftex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-tpic2pdftex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-tpic2pdftex-doc < 7:20170520
+Provides:       tex-tpic2pdftex = %{epoch}:20210325-%{release}
+Provides:       tex-tpic2pdftex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-tpic2pdftex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tpic2pdftex-bin < 7:20180414
+Provides:       tex-tpic2pdftex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-tpic2pdftex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-tpic2pdftex-doc < 7:20180414
 License:        GPL+
 Summary:        Use tpic commands in PDFTeX
 Requires:       texlive-base texlive-kpathsea
@@ -5356,30 +5554,30 @@ The AWK script converts pic language, embedded inline
 (delimited by .PS and .PE markers), to \pdfliteral commands.
 
 %package -n texlive-ttfutils
-Provides:       tex-ttfutils = %{epoch}:20180414-%{release}
-Provides:       tex-ttfutils-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-ttfutils-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ttfutils-bin < 7:20170520
-Provides:       tex-ttfutils-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ttfutils-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ttfutils-doc < 7:20170520
+Provides:       tex-ttfutils = %{epoch}:20210325-%{release}
+Provides:       tex-ttfutils-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-ttfutils-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ttfutils-bin < 7:20180414
+Provides:       tex-ttfutils-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ttfutils-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ttfutils-doc < 7:20180414
 License:        LPPL
 Summary:        Linux TrueType utilities
 Requires:       texlive-base texlive-kpathsea
-Provides:       tex(T1-WGL4.enc) = %{epoch}:20180414-%{release}
-Provides:       tex(ttf2pk.cfg) = %{epoch}:20180414-%{release}
+Provides:       tex(T1-WGL4.enc) = %{epoch}:20210325-%{release}
+Provides:       tex(ttf2pk.cfg) = %{epoch}:20210325-%{release}
 
 %description -n texlive-ttfutils
 Linux TrueType utilities.
 
 %package -n texlive-typeoutfileinfo
-Provides:       tex-typeoutfileinfo = %{epoch}:20180414-%{release}
-Provides:       tex-typeoutfileinfo-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-typeoutfileinfo-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-typeoutfileinfo-bin < 7:20170520
-Provides:       tex-typeoutfileinfo-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-typeoutfileinfo-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-typeoutfileinfo-doc < 7:20170520
+Provides:       tex-typeoutfileinfo = %{epoch}:20210325-%{release}
+Provides:       tex-typeoutfileinfo-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-typeoutfileinfo-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-typeoutfileinfo-bin < 7:20180414
+Provides:       tex-typeoutfileinfo-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-typeoutfileinfo-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-typeoutfileinfo-doc < 7:20180414
 License:        LPPL 1.3
 Summary:        Display class/package/file information
 Requires:       texlive-base texlive-kpathsea
@@ -5394,19 +5592,19 @@ LaTeX source file. The package requires that the readprov
 package is available.
 
 %package -n texlive-ulqda
-Provides:       tex-ulqda = %{epoch}:20180414-%{release}
-Provides:       tex-ulqda-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-ulqda-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ulqda-bin < 7:20170520
-Provides:       tex-ulqda-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-ulqda-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-ulqda-doc < 7:20170520
+Provides:       tex-ulqda = %{epoch}:20210325-%{release}
+Provides:       tex-ulqda-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-ulqda-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ulqda-bin < 7:20180414
+Provides:       tex-ulqda-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-ulqda-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-ulqda-doc < 7:20180414
 License:        LPPL
 Summary:        Support of Qualitative Data Analysis
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(multicol.sty) tex(tikz.sty)
 Requires:       tex(dot2texi.sty) tex(soul.sty)
-Provides:       tex(ulqda.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(ulqda.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-ulqda
@@ -5419,26 +5617,26 @@ LaTeX user with macros which are used to markup textual
 information -- for example, in-depth interviews.
 
 %package -n texlive-uptex
-Provides:       tex-uptex = %{epoch}:20180414-%{release}
-Provides:       tex-uptex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-uptex-doc = %{epoch}:20180414-%{release}
-Provides:       tex-uplatex = %{epoch}:20180414-%{release}
-Provides:       tex-uplatex-bin = %{epoch}:20180414-%{release}
-Provides:       tex-uplatex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-uptex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-uptex-bin < 7:20170520
-Provides:       texlive-uplatex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-uplatex-bin < 7:20170520
-Provides:       texlive-uplatex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-uplatex-doc < 7:20170520
-Provides:       texlive-uptex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-uptex-doc < 7:20170520
+Provides:       tex-uptex = %{epoch}:20210325-%{release}
+Provides:       tex-uptex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-uptex-doc = %{epoch}:20210325-%{release}
+Provides:       tex-uplatex = %{epoch}:20210325-%{release}
+Provides:       tex-uplatex-bin = %{epoch}:20210325-%{release}
+Provides:       tex-uplatex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-uptex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-uptex-bin < 7:20180414
+Provides:       texlive-uplatex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-uplatex-bin < 7:20180414
+Provides:       texlive-uplatex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-uplatex-doc < 7:20180414
+Provides:       texlive-uptex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-uptex-doc < 7:20180414
 License:        BSD
 Summary:        Binaries for uptex
-Requires:       texlive-base texlive-convbkmk
-Requires:       texlive-hyph-utf8 texlive-ipaex
-Requires:       texlive-japanese texlive-japanese-otf
-Requires:       texlive-kpathsea texlive-ptex
+Requires:       texlive-base texlive-convbkmk texlive-etex texlive-hyphen-base
+Requires:       texlive-hyph-utf8 texlive-ipaex texlive-knuth-lib
+Requires:       texlive-japanese texlive-japanese-otf texlive-uptex-fonts
+Requires:       texlive-kpathsea texlive-ptex texlive-ptex-base texlive-uptex-base
 
 %description -n texlive-uptex
 upTeX is an extension of pTeX, using UTF-8 input and producing UTF-8
@@ -5450,13 +5648,13 @@ and Babel (Latin/Cyrillic/Greek etc.) by switching its \kcatcode
 tables.
 
 %package -n texlive-urlbst
-Provides:       tex-urlbst = %{epoch}:20180414-%{release}
-Provides:       tex-urlbst-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-urlbst-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-urlbst-bin < 7:20170520
-Provides:       tex-urlbst-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-urlbst-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-urlbst-doc < 7:20170520
+Provides:       tex-urlbst = %{epoch}:20210325-%{release}
+Provides:       tex-urlbst-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-urlbst-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-urlbst-bin < 7:20180414
+Provides:       tex-urlbst-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-urlbst-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-urlbst-doc < 7:20180414
 License:        GPL+
 Summary:        Web support for BibTeX
 Requires:       texlive-base texlive-kpathsea
@@ -5470,160 +5668,160 @@ file which has a reasonably conventional structure. The result
 is meant to be robust rather than pretty.
 
 %package -n texlive-velthuis
-Provides:       tex-velthuis = %{epoch}:20180414-%{release}
-Provides:       tex-velthuis-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-velthuis-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-velthuis-bin < 7:20170520
-Provides:       tex-velthuis-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-velthuis-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-velthuis-doc < 7:20170520
-Provides:       texlive-devnag = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-devnag < 7:20170520
-Provides:       texlive-devnag-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-devnag-bin < 7:20170520
+Provides:       tex-velthuis = %{epoch}:20210325-%{release}
+Provides:       tex-velthuis-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-velthuis-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-velthuis-bin < 7:20180414
+Provides:       tex-velthuis-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-velthuis-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-velthuis-doc < 7:20180414
+Provides:       texlive-devnag = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-devnag < 7:20180414
+Provides:       texlive-devnag-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-devnag-bin < 7:20180414
 License:        GPL+
 Summary:        Typeset Devanagari
 Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex tex-xetex-devanagari
+Requires:       tex-xetex-devanagari
 Requires:       tex(hindicaptions.sty) tex(cite.sty)
 Requires:       tex(ifxetex.sty)
-Provides:       tex(dvng.map) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnb10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnb8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnb9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbb10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbb8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbb9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbbi10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbbi8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbbi9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbi10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbi8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbi9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnc10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnc8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnc9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncb10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncb8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncb9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncbi10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncbi8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncbi9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnci10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnci8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnci9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvng10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvng8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvng9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngb10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngb8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngb9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngbi10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngbi8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngbi9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngi10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngi8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngi9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnn10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnn8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnn9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnb10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnb8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnb9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnbi10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnbi8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnbi9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnni10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnni8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnni9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpb10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpb8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpb9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpc10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpc8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpc9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpn10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpn8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpn9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpnn10.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpnn8.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpnn9.tfm) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnb10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnb8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnb9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbb10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbb8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbb9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbbi10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbbi8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbbi9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbi10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbi8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnbi9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnc10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnc8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnc9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncb10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncb8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncb9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncbi10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncbi8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvncbi9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnci10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnci8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnci9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvng10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvng8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvng9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngb10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngb8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngb9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngbi10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngbi8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngbi9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngi10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngi8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngi9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnn10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnn8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnn9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnb10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnb8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnb9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnbi10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnbi8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnnbi9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnni10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnni8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvnni9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpb10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpb8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpb9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpc10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpc8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpc9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpn10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpn8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpn9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpnn10.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpnn8.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(dvpnn9.pfb) = %{epoch}:20180414-%{release}
-Provides:       tex(hindi.ldf) = %{epoch}:20180414-%{release}
-Provides:       tex(hindi.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(dev.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(dev209.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(devanagari.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(dvngcite.sty) = %{epoch}:20180414-%{release}
-Provides:       tex(udn.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnb.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnc.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnn.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnp.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnpb.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnpc.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(udnpn.fd) = %{epoch}:20180414-%{release}
-Provides:       tex(dnmacs.tex) = %{epoch}:20180414-%{release}
-Provides:       tex(hindicaptions.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(dvng.map) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnb10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnb8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnb9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbb10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbb8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbb9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbbi10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbbi8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbbi9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbi10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbi8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbi9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnc10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnc8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnc9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncb10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncb8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncb9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncbi10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncbi8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncbi9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnci10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnci8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnci9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvng10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvng8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvng9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngb10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngb8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngb9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngbi10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngbi8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngbi9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngi10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngi8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngi9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnn10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnn8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnn9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnb10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnb8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnb9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnbi10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnbi8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnbi9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnni10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnni8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnni9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpb10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpb8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpb9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpc10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpc8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpc9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpn10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpn8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpn9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpnn10.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpnn8.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpnn9.tfm) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnb10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnb8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnb9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbb10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbb8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbb9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbbi10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbbi8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbbi9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbi10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbi8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnbi9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnc10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnc8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnc9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncb10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncb8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncb9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncbi10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncbi8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvncbi9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnci10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnci8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnci9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvng10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvng8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvng9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngb10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngb8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngb9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngbi10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngbi8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngbi9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngi10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngi8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngi9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnn10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnn8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnn9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnb10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnb8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnb9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnbi10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnbi8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnnbi9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnni10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnni8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvnni9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpb10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpb8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpb9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpc10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpc8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpc9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpn10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpn8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpn9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpnn10.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpnn8.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(dvpnn9.pfb) = %{epoch}:20210325-%{release}
+Provides:       tex(hindi.ldf) = %{epoch}:20210325-%{release}
+Provides:       tex(hindi.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(dev.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(dev209.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(devanagari.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(dvngcite.sty) = %{epoch}:20210325-%{release}
+Provides:       tex(udn.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnb.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnc.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnn.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnp.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnpb.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnpc.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(udnpn.fd) = %{epoch}:20210325-%{release}
+Provides:       tex(dnmacs.tex) = %{epoch}:20210325-%{release}
+Provides:       tex(hindicaptions.sty) = %{epoch}:20210325-%{release}
 
 %description -n texlive-velthuis
 Frans Velthuis' preprocessor for Devanagari text, and fonts and
@@ -5636,12 +5834,12 @@ XeTeX based package, which is far preferable for users who can
 type Unicode text.
 
 %package -n texlive-vlna
-Provides:       tex-vlna = %{epoch}:20180414-%{release} tex-vlna-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-vlna-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-vlna-bin < 7:20170520
-Provides:       tex-vlna-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-vlna-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-vlna-doc < 7:20170520
+Provides:       tex-vlna = %{epoch}:20210325-%{release} tex-vlna-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-vlna-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-vlna-bin < 7:20180414
+Provides:       tex-vlna-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-vlna-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-vlna-doc < 7:20180414
 License:        LPPL
 Summary:        Adds tilde after each non-syllabic preposition
 Requires:       texlive-base texlive-kpathsea
@@ -5659,18 +5857,18 @@ TeXing. Moreower, you can set another sequence to store instead
 asciitilte (see the -x option).
 
 %package -n texlive-vpe
-Provides:       tex-vpe = %{epoch}:20180414-%{release} tex-vpe-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-vpe-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-vpe-bin < 7:20170520
-Provides:       tex-vpe-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-vpe-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-vpe-doc < 7:20170520
+Provides:       tex-vpe = %{epoch}:20210325-%{release} tex-vpe-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-vpe-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-vpe-bin < 7:20180414
+Provides:       tex-vpe-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-vpe-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-vpe-doc < 7:20180414
 License:        LPPL
 Summary:        Source specials for PDF output
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(keyval.sty) tex(color.sty)
 Requires:       tex(pifont.sty)
-Provides:       tex(vpe.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(vpe.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-vpe
@@ -5684,9 +5882,9 @@ LaTeX/VTeX. Using the LaTeX/dvips or pdfLaTeX routes, the
 (pdf)TeX processor should be run with shell escapes enabled.
 
 %package -n texlive-web
-Provides:       tex-web = %{epoch}:20180414-%{release} tex-web-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-web-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-web-bin < 7:20170520
+Provides:       tex-web = %{epoch}:20210325-%{release} tex-web-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-web-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-web-bin < 7:20180414
 License:        Knuth
 Summary:        Original web programs tangle and weave
 Requires:       texlive-base texlive-kpathsea
@@ -5697,13 +5895,37 @@ rearrange them to produce compilable code (using the program
 tangle), and secondly to produce a TeX source (using the
 program weave) that may be typeset for comfortable reading.
 
+%package -n texlive-webquiz
+Provides:       tex-webquiz = %{epoch}:20210325-%{release}
+Provides:       tex-webquiz-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-webquiz-bin = %{epoch}:20210325-%{release}
+License:        GPLv3+
+Summary:        A LaTeX package for writing online quizzes
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-tex4ht
+Requires:       texlive-make4ht
+Requires:       tex(tikz.sty)
+Requires:       tex(pstricks.sty)
+Requires:       texlive-dvisvgm
+Requires:       ghostscript
+Requires:       python3
+BuildArch: noarch
+
+%description -n texlive-webquiz
+WebQuiz makes it possible to use LaTeX to write interactive online quizzes.
+The quizzes are first written in LaTeX and then converted into HTML using
+WebQuiz, which is written in python. The conversion from LaTeX to HTML is
+done behind the scenes using TeX4ht. The idea is that you should be able to
+produce nice online quizzes using WebQuiz and basic knowledge of LaTeX.
+
 %package -n texlive-wordcount
-Provides:       tex-wordcount = %{epoch}:20180414-%{release}
-Provides:       texlive-wordcount-bin = %{epoch}:20180414-%{release}
-Provides:       tex-wordcount-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-wordcount-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-wordcount-doc < 7:20180414
-Provides:       tex(wordcount.tex) = %{epoch}:20180414-%{release}
+Provides:       tex-wordcount = %{epoch}:20210325-%{release}
+Provides:       texlive-wordcount-bin = %{epoch}:20210325-%{release}
+Provides:       tex-wordcount-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-wordcount-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-wordcount-doc < 7:20210325
+Provides:       tex(wordcount.tex) = %{epoch}:20210325-%{release}
 License:        LPPL
 Summary:        Estimate the number of words in a LaTeX document
 Requires:       texlive-base texlive-kpathsea
@@ -5721,10 +5943,10 @@ information in its comments.
 %package -n texlive-xdvi
 License:        MIT
 Summary:        A DVI previewer for the X Window System
-Provides:       tex-xdvi = %{epoch}:20180414-%{release} tex-xdvi-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-xdvi-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-xdvi-bin < 7:20170520
-Provides:       xdvi = %{epoch}:20180414-%{release} xdvik = %{epoch}:20180414-%{release}
+Provides:       tex-xdvi = %{epoch}:20210325-%{release} tex-xdvi-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-xdvi-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-xdvi-bin < 7:20180414
+Provides:       xdvi = %{epoch}:20210325-%{release} xdvik = %{epoch}:20210325-%{release}
 Requires:       texlive-kpathsea texlive-base
 
 %description -n texlive-xdvi
@@ -5732,21 +5954,35 @@ The canonical previewer for use on Unix and other X-windows
 based systems.
 
 %package -n texlive-xetex
-Provides:       tex-xetex = %{epoch}:20180414-%{release}
-Provides:       tex-xetex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-xetex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-xetex-bin < 7:20170520
-Provides:       tex-xetex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-xetex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-xetex-doc < 7:20170520
+Provides:       tex-xetex = %{epoch}:20210325-%{release}
+Provides:       tex-xetex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-xetex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-xetex-bin < 7:20180414
+Provides:       tex-xetex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-xetex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-xetex-doc < 7:20180414
 License:        MIT
 Summary:        Unicode and OpenType-enabled TeX engine
-Requires:       texlive-base texlive-kpathsea
-Requires:       texlive-tetex texlive-xetexconfig
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-xetexconfig
+Requires:       texlive-latex
+Requires:       texlive-dvipdfmx
+Requires:       texlive-cm
+Requires:       texlive-hyphen-base
+Requires:       texlive-tex-ini-files
+Requires:       texlive-unicode-data
+Requires:       texlive-etex
+Requires:       texlive-plain
+Requires:       texlive-babel
+Requires:       texlive-l3kernel
+Requires:       texlive-latex-fonts
+Requires:       texlive-lm
+Requires:       teckit
 Requires(post,postun): coreutils
 Requires:       tex(xetex.def)
-Provides:       tex(qx-unicode.map) = %{epoch}:20180414-%{release}
-Provides:       tex(tex-text.map) = %{epoch}:20180414-%{release}
+Provides:       tex(qx-unicode.map) = %{epoch}:20210325-%{release}
+Provides:       tex(tex-text.map) = %{epoch}:20210325-%{release}
 
 %description -n texlive-xetex
 XeTeX is an extension of TeX that integrates TeX's typesetting capabilities
@@ -5761,19 +5997,37 @@ XeTeX also eliminates the complex task of managing a TeX font installation.
 XeTeX is now part of the standard TeX distribution TeXLive and works well with
 TeX macro packages like LaTeX and ConTeXt.
 
+%package -n texlive-xindex
+Provides:       tex-xindex = %{epoch}:20210325-%{release}
+Provides:       tex-xindex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-xindex-bin = %{epoch}:20210325-%{release}
+License:        LPPL 1.3
+Summary:        Unicode compatible index program for LaTeX
+Requires:       lua >= 5.3
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+Requires:       texlive-luatex
+Provides:       tex(xindex.lua) = %{epoch}:20210325-%{release}
+Provides:       tex(xindex.sty) = %{epoch}:20210325-%{release}
+BuildArch: noarch
+
+%description -n texlive-xindex
+Unicode compatible index program for LaTeX.
+
 %ifarch empty
 %package -n texlive-xindy
-Provides:       tex-xindy = %{epoch}:20180414-%{release}
-Provides:       tex-xindy-bin = %{epoch}:20180414-%{release}
-Provides:       tex-xindy-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-xindy-bin = %{epoch}:20180414-%{release}
+Provides:       tex-xindy = %{epoch}:20210325-%{release}
+Provides:       tex-xindy-bin = %{epoch}:20210325-%{release}
+Provides:       tex-xindy-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-xindy-bin = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-xindy-bin <= 6:svn41316
-Provides:       tex-xindy-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-xindy-doc = %{epoch}:20180414-%{release}
+Provides:       tex-xindy-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-xindy-doc = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-xindy-doc <= 6:svn41316
 License:        GPLv2+
 Summary:        A general-purpose index processor
 Requires:       texlive-base texlive-kpathsea
+Requires:       clisp
 
 %description -n texlive-xindy
 Xindy was deceloped after an impasse had been encountered in
@@ -5784,23 +6038,47 @@ highly configurable, both in markup terms and in terms of the
 collating order of the text being processed.
 %endif
 
+%package -n texlive-xml2pmx
+Summary:        Convert MusicXML to PMX and MusiXTeX
+License:        GPLv3+
+Requires:       texlive-base texlive-kpathsea
+
+%description -n texlive-xml2pmx
+This program translates MusicXML files to input suitable for
+PMX and MusiXTeX processing. This package supports Windows,
+MacOS and Linux systems.
+
 %package -n texlive-xmltex
-Provides:       tex-xmltex = %{epoch}:20180414-%{release}
-Provides:       tex-xmltex-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-xmltex-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-xmltex-bin < 7:20170520
-Provides:       tex-xmltex-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-xmltex-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-xmltex-doc < 7:20170520
-Provides:       xmltex = %{epoch}:20180414-%{release}
+Provides:       tex-xmltex = %{epoch}:20210325-%{release}
+Provides:       tex-xmltex-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-xmltex-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-xmltex-bin < 7:20180414
+Provides:       tex-xmltex-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-xmltex-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-xmltex-doc < 7:20180414
+Provides:       xmltex = %{epoch}:20210325-%{release}
 License:        LPPL
 Summary:        Support for parsing XML documents
-Requires:       texlive-base texlive-kpathsea-bin, tex-kpathsea
-Requires:       texlive-latex texlive-pdftex
-Requires:       texlive-tetex texlive-tex
+Requires:       texlive-base
+Requires:       texlive-kpathsea-bin, tex-kpathsea
+Requires:       texlive-latex
+Requires:       texlive-pdftex
+Requires:       texlive-tex
 Requires:       texlive-xmltexconfig
-Provides:       tex(xmltex.cfg) = %{epoch}:20180414-%{release}
-Provides:       tex(xmltex.tex) = %{epoch}:20180414-%{release}
+Requires:       texlive-babel
+Requires:       texlive-cm
+Requires:       texlive-hyphen-base
+Requires:       texlive-latex-fonts
+Requires:       texlive-l3backend
+Requires:       texlive-l3kernel
+Requires:       texlive-l3packages
+Requires:       texlive-tex-ini-files
+Requires:       texlive-unicode-data
+Requires:       texlive-dehyph
+Requires:       texlive-hyph-utf8
+Requires:       texlive-latexconfig
+Provides:       tex(xmltex.cfg) = %{epoch}:20210325-%{release}
+Provides:       tex(xmltex.tex) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-xmltex
@@ -5813,19 +6091,36 @@ subset of TEI, MathML, are included. Element and Attribute
 names, as well as character data, may use any characters
 allowed in XML, using UTF-8 or a suitable 8-bit encoding.
 
+%package -n texlive-xpdfopen
+Provides:       tex-xpdfopen = %{epoch}:20210325-%{release}
+Provides:       tex-xpdfopen-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-xpdfopen-bin = %{epoch}:20210325-%{release}
+License:        Public Domain
+Summary:        Commands to control PDF readers, under X11
+Requires:       texlive-base
+Requires:       texlive-kpathsea
+
+%description -n texlive-xpdfopen
+The command-line programs pdfopen and pdfclose allow you to
+control the X Window System version of Adobe's Acrobat Reader
+from the command line or from within a (shell) script. The
+programs work with Acrobat Reader 5, 7, 8 and 9 for Linux, xpdf
+and evince. This version derives from one written by Fabrice
+Popineau for Microsoft operating systems.
+
 %package -n texlive-yplan
-Provides:       tex-yplan = %{epoch}:20180414-%{release}
-Provides:       tex-yplan-bin = %{epoch}:20180414-%{release}
-Provides:       texlive-yplan-bin = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-yplan-bin < 7:20170520
-Provides:       tex-yplan-doc = %{epoch}:20180414-%{release}
-Provides:       texlive-yplan-doc = %{epoch}:20180414-%{release}
-Obsoletes:      texlive-yplan-doc < 7:20170520
+Provides:       tex-yplan = %{epoch}:20210325-%{release}
+Provides:       tex-yplan-bin = %{epoch}:20210325-%{release}
+Provides:       texlive-yplan-bin = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-yplan-bin < 7:20180414
+Provides:       tex-yplan-doc = %{epoch}:20210325-%{release}
+Provides:       texlive-yplan-doc = %{epoch}:20210325-%{release}
+Obsoletes:      texlive-yplan-doc < 7:20180414
 License:        LPPL
 Summary:        Daily planner type calendar
 Requires:       texlive-base texlive-kpathsea
 Requires:       tex(ifthen.sty)
-Provides:       tex(yplan.sty) = %{epoch}:20180414-%{release}
+Provides:       tex(yplan.sty) = %{epoch}:20210325-%{release}
 BuildArch:      noarch
 
 %description -n texlive-yplan
@@ -5839,8 +6134,9 @@ year's planner automatically. (The last manually-generated
 LaTeX file remains on the archive.)
 
 %prep
-%autosetup -c -n texlive-20180414-source -p1
-[ -e texlive-20180414-source ] && mv texlive-20180414-source source
+%autosetup -c -n texlive-20210325-source -p1
+[ -e texlive-20210325-source ] && mv texlive-20210325-source source
+
 
 for l in `unxz -c %{SOURCE3} | tar t`; do
 ln -s %{_datadir}/texlive/licenses/$l $l
@@ -5859,15 +6155,15 @@ install -d work
 cd work
 %configure \
 --prefix=$PREF --datadir=$PREF --libdir=$PREF/lib --includedir=$PREF/include --datarootdir=$PREF/share --mandir=$PREF/share/man \
---infodir=$PREF/share/info --exec_prefix=$PREF --bindir=$PREF/bin --with-system-zlib --with-system-libpng \
---with-system-gd --without-system-t1lib --without-system-teckit --with-system-freetype2 --with-system-zziplib \
+--infodir=$PREF/share/info --exec_prefix=$PREF --bindir=$PREF/bin --with-system-zlib --with-system-libpng --without-system-xpdf \
+--with-system-gd --without-system-t1lib --without-system-teckit --with-system-freetype2 --with-system-poppler --with-system-zziplib \
 --with-system-cairo --with-system-icu --with-system-harfbuzz --with-system-graphite2 --with-system-libgs --with-system-pixman \
 --with-system-libpaper --without-system-potrace --with-pic --with-xdvi-x-toolkit=xaw --with-system-mpfr --with-system-gmp \
 --enable-shared --enable-compiler-warnings=max --without-cxx-runtime-hack \
 --disable-native-texlive-build --disable-t1utils --disable-psutils --disable-biber --disable-ptexenc --disable-largefile \
 --disable-xindy --disable-xindy-docs --disable-xindy-make-rules \
-%ifarch aarch64
---disable-luajittex --disable-mfluajit \
+%ifarch aarch64 riscv64
+--disable-luajittex --disable-mfluajit --disable-luajithbtex --disable-mfluajit-nowin \
 %endif
 --disable-rpath
 
@@ -5992,12 +6288,6 @@ cd %{buildroot}%{_datadir}/texlive/licenses
 xz -dc %{SOURCE3} | tar x
 cd -
 
-rm -rf %{buildroot}%{_datadir}/texlive/texmf-dist/doc/man/man*/*.pdf
-rm -rf %{buildroot}%{_datadir}/texlive/texmf-dist/doc/man/Makefile
-rm -rf %{buildroot}%{_datadir}/texlive/texmf-dist/doc/man/man*/Makefile
-rm -rf %{buildroot}%{_datadir}/texlive/texmf-dist/doc/info/dir
-rm -rf %{buildroot}%{_datadir}/texlive/texmf-dist/doc/man/man1/tlmgr.1
-
 cd %{buildroot}%{_datadir}/texlive
 rm -rf texmf-var
 ln -s %{_var}/lib/texmf texmf-var
@@ -6018,6 +6308,10 @@ rm -f bibexport.sh
 ln -s /usr/share/texlive/texmf-dist/scripts/bibexport/bibexport.sh bibexport.sh
 rm -f texmfstart
 ln -s /usr/share/texlive/texmf-dist/scripts/context/ruby/texmfstart.rb texmfstart
+rm -rf mktexmf
+ln -s /usr/share/texlive/texmf-dist/scripts/texlive/mktexmf mktexmf
+rm -rf mkjobtexmf
+ln -s /usr/share/texlive/texmf-dist/scripts/mkjobtexmf/mkjobtexmf.pl mkjobtexmf
 rm -f context
 cat > context << EOF
 export TEXMF=/usr/share/texlive/texmf-dist;
@@ -6044,18 +6338,6 @@ find -type f -exec sed -i '1s|^#!/usr/bin/python$|#!%{__python3}|' {} +
 find -type f -exec sed -i '1s|^#!/usr/bin/env python$|#!%{__python3}|' {} +
 sed -i '1s|^#!/usr/bin/python |#!%{__python3} |' ./%{_datadir}/texlive/texmf-dist/scripts/de-macro/de-macro
 cd -
-
-file `find %{buildroot}/%{_bindir} -type f` | grep -w ELF | awk -F: '{print $1}' | xargs chrpath -d
-file `find %{buildroot}/%{_libdir} -type f` | grep -w ELF | awk -F: '{print $1}' | xargs chrpath -d
-
-mkdir -p %{buildroot}/etc/ld.so.conf.d
-echo "/home/abuild/rpmbuild/BUILD/texlive-20180414-source/source/inst/lib" > %{buildroot}/etc/ld.so.conf.d/%{name}-%{_arch}.conf
-
-%post
-/sbin/ldconfig
-
-%postun
-/sbin/ldconfig
 
 %pretrans -p <lua>
 path = "/usr/share/texmf"
@@ -6099,10 +6381,12 @@ list=`grep "\.map" | sort -n | uniq`
 while read -r line; do
         [ -z "$line" ] && continue
         shortfile=`basename "$line"`
-        if `echo $shortfile | grep -Eq 'allrunes.map|arabtex.map|arss.map|artm.map|bbold.map|cbgreek-full.map|ccpl.map|cmextra.map|cmll.map|cm.map|cm-super-t1.map|cm-super-t2a.map|cm-super-t2b.map|cm-super-t2c.map|cm-super-ts1.map|cm-super-x2.map|cmtext-bsr-interpolated.map|cyrillic.map|dvng.map|esint.map|ethiop.map|eurosym.map|hfbright.map|iby.map|latxfont.map|lxfonts.map|manfnt.map|mflogo.map|mongolian.map|musix.map|pigpen.map|plother.map|pltext.map|rsfs.map|semaf.map|stmaryrd.map|symbols.map|tipa.map|trajan.map|vnrother.map|vnrtext.map|wasy.map|xypic.map|yhmath.map'`; then
+        if `echo $shortfile | grep -Eq 'allrunes.map|arabtex.map|arss.map|artm.map|bbold.map|cbgreek-full.map|ccpl.map|cmextra.map|cmll.map|cm.map|cm-super-t1.map|cm-super-t2a.map|cm-super-t2b.map|cm-super-t2c.map|cm-super-ts1.map|cm-super-x2.map|cmtext-bsr-interpolated.map|cmupint.map|cyrillic.map|esint.map|ethiop.map|eurosym.map|hfbright.map|iby.map|latxfont.map|lxfonts.map|manfnt.map|mflogo.map|mongolian.map|musix.map|pigpen.map|plother.map|pltext.map|rsfs.map|semaf.map|stmaryrd.map|symbols.map|tipa.map|trajan.map|vnrother.map|vnrtext.map|wasy.map|xypic.map|yhmath.map'`; then
                 %{_bindir}/updmap-sys --nomkmap --enable MixedMap=$shortfile >/dev/null 2>&1 || :
         else
-                %{_bindir}/updmap-sys --nomkmap --enable Map=$shortfile >/dev/null 2>&1 || :
+                if `echo $shortfile | grep -Eq 'accanthis.map|Acorn.map|aesupp.map|Alegreya.map|AlgolRevived.map|almendra.map|AnnSton.map|AnonymousPro.map|antt.map|ap.map|arabi.map|archaicprw.map|arev.map|arevvn.map|arimo.map|ArrowsADF.map|ArtNouvc.map|ArtNouv.map|ascii.map|ascmac.map|aspectratio.map|atkinson.map|augie.map|auncial.map|aurical.map|Baskervaldx.map|BaskervilleF.map|belleek.map|bera.map|beuron.map|bguq.map|bitter.map|bkaiu.map|boondox.map|bsmiu.map|BulletsADF.map|burmese.map|cabin.map|caladea.map|calligra.map|cantarell.map|carlito.map|Carrickc.map|CascadiaCodThree.map|ccicons.map|charter.map|chartervn.map|chemarrow.map|cherokee.map|Chivo.map|cinzel.map|cjhebrew.map|Clara.map|ClearSans.map|clm.map|cmathbb.map|cmbrightvn.map|cmcyr.map|cmexb.map|cmin.map|cm-lgc.map|cmsrb.map|Cochineal.map|Coelacanth.map|comfortaa.map|ComicNeueAngular.map|ComicNeue.map|concretevn.map|CormorantGaramond.map|countriesofeurope.map|CourierOneZeroPitch.map|crimson.map|CrimsonPro.map|cs-charter.map|csfonts.map|cuprum.map|cyklop.map|dad.map|dante.map|dejavu-type1.map|dgj.map|dictsym.map|dmj.map|Domitian.map|droidsans.map|droidsansmono.map|droidserif.map|DSSerif.map|dstroke.map|dutchcal.map|EBGaramond.map|EBGaramond-Maths.map|Eichenla.map|EileenBl.map|Eileen.map|Elzevier.map|epigrafica.map|epiolmec.map|erewhon.map|esrelation.map|ESSTIX.map|esvect.map|ETbb.map|fbb.map|fdsymbol.map|fetamont.map|fge.map|fira.map|foekfont.map|fonetika.map|fontawesome5.map|fontawesome.map|forum.map|fourier.map|fourier-utopia-expert.map|fpls.map|frcursive.map|GaramondLibre.map|garuda-c90.map|gbsnu.map|gentium-type1.map|gfsartemisia.map|gfsbaskerville.map|gfsbodoni.map|gfscomplutum.map|gfsdidot.map|gfsneohellenic.map|gfsporson.map|gfssolomos.map|gillius.map|gkaiu.map|go.map|GotIn.map|GoudyIn.map|gptimes.map|grotesqvn.map|Gudea.map|hacm.map|Heuristica.map|HindMadurai.map|ibarra.map|icelandic.map|imfellEnglish.map|InriaSans.map|InriaSerif.map|Inter.map|ipaex-type1.map|iwona.map|josefin.map|Junicode.map|kerkis.map|Kinigcap.map|knitfont.map|Konanur.map|kpfonts.map|Kramer.map|kurier.map|l7x-urwvn.map|lato.map|libertinegc.map|libertine.map|libertinus.map|libertinust1math.map|LibreBaskerville.map|LibreBodoni.map|LibreCaslon.map|LibreFranklin.map|linearA.map|LinguisticsPro.map|lm.map|LobsterTwo.map|Magra.map|marcellus.map|marvosym.map|mathabx.map|mc2j.map|mcj.map|mdbch.map|mdgreek.map|mdici.map|mdpgd.map|mdpus.map|mdput.map|mdsymbol.map|mdugm.map|merriweather.map|miama.map|mintspirit.map|mlm.map|MnSymbol.map|Montserrat.map|MorrisIn.map|mr2j.map|mrj.map|mxedruli.map|nanumfonts.map|nectec.map|newpx.map|newtx.map|newtxsf.map|newtxtt.map|nf.map|niceframe.map|nimbus15.map|norasi-c90.map|noto.map|NotoMath.map|Nouveaud.map|oasy.map|ocrb.map|oinuit.map|OldStandard.map|omega.map|opensans.map|OrnementsADF.map|overlock.map|paratype-type1.map|pazo.map|pbsi.map|phaistos.map|PlayfairDisplay.map|plex.map|plimsoll.map|PoiretOne.map|prodint.map|pxfonts.map|pxtx.map|qag.map|qbk.map|qcr.map|qcs.map|qhv.map|qpl.map|qtm.map|quattrocento.map|qzc.map|Raleway.map|recycle.map|roboto.map|rojud.map|Romantik.map|Rosario.map|Rothdn.map|RoyalIn.map|rsfso.map|Sanremo.map|sansmathaccent.map|sansmathfonts.map|scanpages.map|ScholaX.map|sipa.map|SkakNew.map|skt.map|SourceCodePro.map|SourceSansPro.map|SourceSerifPro.map|spectral.map|sqrcaps.map|Starburst.map|starfont.map|STEPGreekTest.map|STEP.map|SticksTooText.map|stix2.map|stix.map|superiors.map|svrsymbols.map|syriac.map|tabvar.map|tempora.map|tfrupee.map|TheanoDidot.map|TheanoModern.map|TheanoOldStyle.map|tinos.map|tlwg.map|txfonts.map|txttvn.map|TXUprCal.map|Typocaps.map|uag.map|uaq.map|ubk.map|ucr.map|ugq.map|uhv.map|umj.map|unc.map|universalis.map|upl.map|urwvn.map|usy.map|utm.map|utopia.map|uzc.map|uzd.map|vntopia.map|XCharter.map|ybd.map|ybv.map|yes.map|yfrak.map|yly.map|yrd.map|yv1.map|yv2.map|yv3.map|yvo.map|yvt.map|Zallman.map|Zeroswald.map|zi4.map'`; then
+                        %{_bindir}/updmap-sys --nomkmap --enable Map=$shortfile >/dev/null 2>&1 || :
+                fi
         fi
 done <<< "$list"
 %{_bindir}/updmap-sys --quiet --nomkmap >/dev/null || :
@@ -6162,48 +6446,93 @@ done <<< "$list"
 %dir %{_datadir}/texlive/texmf-dist/source
 %dir %{_datadir}/texlive/texmf-dist/source/fonts
 %dir %{_datadir}/texlive/texmf-dist/source/fonts/zhmetrics
-%dir %{_datadir}/texlive/texmf-dist/texconfig
+%dir %{_datadir}/texlive/texmf-dist/tex
+%dir %{_datadir}/texlive/texmf-dist/tex/generic
+%dir %{_datadir}/texlive/texmf-dist/tex/generic/bibtex
+%dir %{_datadir}/texlive/texmf-dist/tex/generic/config
+%dir %{_datadir}/texlive/texmf-dist/tex/latex
+%dir %{_datadir}/texlive/texmf-dist/tex/lualatex
+%dir %{_datadir}/texlive/texmf-dist/tex/luatex
+%dir %{_datadir}/texlive/texmf-dist/tex/xelatex
 %dir %{_datadir}/texlive/texmf-dist/web2c
-%dir %{_var}/lib/texmf
+%dir %{_texmf_var}
 %{_datadir}/texlive/texmf-var
 %{_datadir}/texlive/texmf-local/
 %{_datadir}/texmf
-%config(noreplace) /etc/ld.so.conf.d/*
 %ghost %{_datadir}/texmf.rpmmoved
 %exclude %{_datadir}/texlive/install-tl
 %exclude %{_datadir}/texlive/tlpkg/gpg/
+%exclude %{_datadir}/texlive/tlpkg/tltcl/
 %exclude %{_datadir}/texlive/tlpkg/tlpobj/
 %exclude %{_datadir}/texlive/texmf-dist/tlpkg/tlpobj/
-%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/tlmgr.pl
+
+%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/tlmgr.pl.orig
+%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/tl-errmess.vbs
 %exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/tlmgrgui.pl
 %exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/uninstall-win32.pl
+%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/uninstq.vbs
 %exclude %{_datadir}/texlive/texmf-dist/scripts/tlcockpit/tlcockpit.sh
 %exclude %{_datadir}/texlive/texmf-dist/scripts/tlshell/tlshell.tcl
-%exclude %{_datadir}/texlive/tlpkg/installer/config.guess
 %exclude %{_datadir}/texlive/tlpkg/installer/COPYING.MinGW-runtime.txt
 %exclude %{_datadir}/texlive/tlpkg/installer/ctan-mirrors.pl
 %exclude %{_datadir}/texlive/tlpkg/installer/install-menu-extl.pl
 %exclude %{_datadir}/texlive/tlpkg/installer/install-menu-perltk.pl
 %exclude %{_datadir}/texlive/tlpkg/installer/install-menu-text.pl
 %exclude %{_datadir}/texlive/tlpkg/installer/install-menu-wizard.pl
+%exclude %{_datadir}/texlive/tlpkg/installer/install-tl-gui.tcl
 %exclude %{_datadir}/texlive/tlpkg/installer/texlive.png
-%exclude %{_bindir}/tlcockpit
-%exclude %{_bindir}/tlmgr
-%exclude %{_bindir}/tlshell
+%exclude %{_bindir}//tlcockpit
+%exclude %{_bindir}//tlshell
 %exclude %{_datadir}/info/dir
 %exclude %{_datadir}/texlive/readme-txt.dir/README.*
+%exclude %{_datadir}/texlive/texmf-dist/doc/man/man*/*.pdf
+%exclude %{_datadir}/texlive/texmf-dist/doc/man/man*/*.pdf
+%exclude %{_datadir}/texlive/texmf-dist/doc/man/Makefile
+%exclude %{_datadir}/texlive/texmf-dist/doc/man/man*/Makefile
+%exclude %{_datadir}/texlive/texmf-dist/doc/info/dir
 %exclude %{_includedir}/ptexenc
-%exclude %{_datadir}/texlive/texmf-dist/source/fonts/zhmetrics/ttfonts.map
-%exclude %{_mandir}/man1/xindy.1*
-%exclude %{_mandir}/man1/texindy.1*
-%exclude %{_mandir}/man1/tex2xindy.1*
-%exclude %{_datadir}/texlive/texmf-dist/scripts/xindy
-%exclude %{_datadir}/texlive/texmf-dist/xindy
-%exclude %{_datadir}/texlive/texmf-dist/doc/xindy
+
 %exclude %{_bindir}/cjk-gs-integrate
 %exclude %{_datadir}/texlive/texmf-dist/scripts/cjk-gs-integrate
 %exclude %{_datadir}/texlive/texmf-dist/doc/fonts/cjk-gs-integrate
 %exclude %{_datadir}/texlive/texmf-dist/fonts/misc/cjk-gs-integrate
+
+%exclude %{_datadir}/texlive/texmf-dist/scripts/context/stubs/mswin/*
+%exclude %{_datadir}/texlive/texmf-dist/scripts/context/stubs/win64/*
+%exclude %{_datadir}/texlive/texmf-dist/scripts/context/stubs/source/*
+
+%exclude %{_datadir}/texlive/texmf-dist/source/fonts/zhmetrics/ttfonts.map
+# Don't know why it's here
+%exclude %{_datadir}/man/man1/*.man1.pdf.gz
+%exclude %{_datadir}/man/man5/*.man5.pdf.gz
+%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/extractres.pl
+%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/includeres.pl
+%exclude %{_datadir}/texlive/texmf-dist/scripts/texlive/psjoin.pl
+
+# Look, we disabled psutils.
+%exclude %{_bindir}/epsffit
+%exclude %{_bindir}/extractres
+%exclude %{_bindir}/includeres
+%exclude %{_bindir}/psbook
+%exclude %{_bindir}/psjoin
+%exclude %{_bindir}/psnup
+%exclude %{_bindir}/psresize
+%exclude %{_bindir}/psselect
+%exclude %{_bindir}/pstops
+%exclude %{_mandir}/man1/epsffit.1*
+%exclude %{_mandir}/man1/extractres.1*
+%exclude %{_mandir}/man1/includeres.1*
+%exclude %{_mandir}/man1/psbook.1*
+%exclude %{_mandir}/man1/psjoin.1*
+%exclude %{_mandir}/man1/psnup.1*
+%exclude %{_mandir}/man1/psresize.1*
+%exclude %{_mandir}/man1/psselect.1*
+%exclude %{_mandir}/man1/pstops.1*
+%exclude %{_mandir}/man1/psutils.1*
+%exclude %{_sysconfdir}/texlive/psutils
+%exclude %{_datadir}/texlive/texmf-dist/scripts/psutils
+%exclude %{_datadir}/texlive/texmf-dist/dvips/getafm/
+%exclude %{_datadir}/texlive/texmf-dist/psutils/paper.cfg
 
 %files -n texlive-a2ping
 %license gpl.txt
@@ -6236,10 +6565,18 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/fonts/lig/afm2pl/
 %{_datadir}/texlive/texmf-dist/tex/fontinst/afm2pl/
 
+%files -n texlive-albatross
+%license bsd.txt
+%{_bindir}/albatross
+%{_mandir}/man1/albatross.*
+%doc %{_datadir}/texlive/texmf-dist/doc/support/albatross
+%{_datadir}/texlive/texmf-dist/scripts/albatross
+
 %files -n texlive-aleph
 %license gpl.txt
 %{_bindir}/aleph
-%{_bindir}/lamed
+# symlink to aleph, not created in 2021
+# %%{_bindir}/lamed
 %{_mandir}/man1/aleph.1*
 %{_mandir}/man1/lamed.1*
 %{_datadir}/texlive/fmtutil.cnf.d/aleph
@@ -6257,8 +6594,17 @@ done <<< "$list"
 %files -n texlive-arara
 %license bsd.txt
 %{_bindir}/arara
+%{_mandir}/man1/arara.*
 %{_datadir}/texlive/texmf-dist/scripts/arara/
 %doc %{_datadir}/texlive/texmf-dist/doc/support/arara/
+
+%files -n texlive-attachfile2
+%license lppl1.3.txt
+%{_bindir}/pdfatfi
+%{_mandir}/man1/pdfatfi.1*
+%{_datadir}/texlive/texmf-dist/scripts/attachfile2/
+%{_datadir}/texlive/texmf-dist/tex/latex/attachfile2/
+%doc %{_datadir}/texlive/texmf-dist/doc/latex/attachfile2/
 
 %files -n texlive-authorindex
 %license lppl1.txt
@@ -6324,6 +6670,7 @@ done <<< "$list"
 %license lppl1.txt
 %{_bindir}/bibtexu
 %doc %{_datadir}/texlive/texmf-dist/doc/bibtexu/
+%{_mandir}/man1/bibtexu.1*
 
 %files -n texlive-bibtex8
 %license gpl.txt
@@ -6342,6 +6689,7 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/bibtex/csf/polish-csf/cp852pl.csf
 %{_datadir}/texlive/texmf-dist/bibtex/csf/polish-csf/iso8859-7.csf
 %doc %{_datadir}/texlive/texmf-dist/doc/bibtex8/
+%{_mandir}/man1/bibtex8.1*
 
 %files -n texlive-bundledoc
 %license lppl1.txt
@@ -6373,6 +6721,14 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/tex/latex/checklistings/
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/checklistings/
 
+%files -n texlive-chklref
+%license gpl3.txt
+%{_bindir}/chklref
+%{_mandir}/man1/chklref.1*
+%{_datadir}/texlive/texmf-dist/scripts/chklref/
+%{_datadir}/texlive/texmf-dist/tex/latex/chklref/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/chklref/
+
 %files -n texlive-chktex
 %license gpl.txt
 %{_bindir}/chktex
@@ -6384,6 +6740,15 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/chktex/
 %{_datadir}/texlive/texmf-dist/scripts/chktex/
 %doc %{_datadir}/texlive/texmf-dist/doc/chktex/
+
+%if 0
+%files -n texlive-cjk-gs-integrate
+%license gpl3.txt
+%{_bindir}/cjk-gs-integrate
+%{_datadir}/texlive/texmf-dist/scripts/cjk-gs-integrate/
+%{_datadir}/texlive/texmf-dist/fonts/misc/cjk-gs-integrate/
+%doc %{_datadir}/texlive/texmf-dist/doc/fonts/cjk-gs-integrate/
+%endif
 
 %files -n texlive-cjkutils
 %license lppl1.txt
@@ -6417,6 +6782,21 @@ done <<< "$list"
 %{_mandir}/man1/sjisconv.1*
 %{_datadir}/texlive/texmf-dist/hbf2gf/
 
+%files -n texlive-clojure-pamphlet
+%license gpl3.txt
+%{_bindir}/pamphletangler
+%{_datadir}/texlive/texmf-dist/scripts/clojure-pamphlet/
+%{_datadir}/texlive/texmf-dist/tex/latex/clojure-pamphlet/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/clojure-pamphlet/
+
+%files -n texlive-cluttex
+%license gpl3.txt
+%{_bindir}/cllualatex
+%{_bindir}/cluttex
+%{_bindir}/clxelatex
+%{_datadir}/texlive/texmf-dist/scripts/cluttex/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/cluttex/
+
 %files -n texlive-context
 %{_bindir}/context
 %{_bindir}/contextjit
@@ -6444,7 +6824,7 @@ done <<< "$list"
 %{_mandir}/man1/mtx-grep.1*
 %{_mandir}/man1/mtx-interface.1*
 %{_mandir}/man1/mtx-metapost.1*
-%{_mandir}/man1/mtx-metatex.1*
+# %%{_mandir}/man1/mtx-metatex.1*
 %{_mandir}/man1/mtx-modules.1*
 %{_mandir}/man1/mtx-package.1*
 %{_mandir}/man1/mtx-patterns.1*
@@ -6460,6 +6840,7 @@ done <<< "$list"
 %{_mandir}/man1/mtx-unicode.1*
 %{_mandir}/man1/mtx-unzip.1*
 %{_mandir}/man1/mtx-update.1*
+%{_mandir}/man1/mtx-vscode.1*
 %{_mandir}/man1/mtx-watch.1*
 %{_mandir}/man1/mtx-youless.1*
 %{_mandir}/man1/mtxrun.1*
@@ -6476,6 +6857,7 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/fonts/cid/fontforge/Adobe-Japan2-0.cidmap
 %{_datadir}/texlive/texmf-dist/fonts/cid/fontforge/Adobe-Korea1-2.cidmap
 %{_datadir}/texlive/texmf-dist/fonts/enc/dvips/context/
+# %%{_datadir}/texlive/texmf-dist/fonts/fea/context/
 %{_datadir}/texlive/texmf-dist/fonts/map/dvips/context/
 %{_datadir}/texlive/texmf-dist/fonts/map/luatex/context/
 %{_datadir}/texlive/texmf-dist/fonts/map/pdftex/context/
@@ -6483,15 +6865,16 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/fonts/tfm/hoekwater/context/
 %{_datadir}/texlive/texmf-dist/fonts/type1/hoekwater/context/
 %{_datadir}/texlive/texmf-dist/metapost/context/
+%exclude %{_datadir}/texlive/texmf-dist/scripts/context/perl/mptopdf.pl
 %{_datadir}/texlive/texmf-dist/scripts/context/
 %{_datadir}/texlive/texmf-dist/tex/context/
+%exclude %{_datadir}/texlive/texmf-dist/tex/generic/context/mptopdf
 %{_datadir}/texlive/texmf-dist/tex/generic/context/
 %{_datadir}/texlive/texmf-dist/tex/latex/context/
 %{_datadir}/texlive/fmtutil.cnf.d/context
+
+%files -n texlive-context-doc
 %doc %{_datadir}/texlive/texmf-dist/doc/context/
-%exclude %{_datadir}/texlive/texmf-dist/scripts/context/stubs/mswin
-%exclude %{_datadir}/texlive/texmf-dist/scripts/context/stubs/win64
-%exclude %{_datadir}/texlive/texmf-dist/scripts/context/stubs/source
 
 %files -n texlive-convbkmk
 %{_bindir}/convbkmk
@@ -6536,6 +6919,13 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/scripts/ctan-o-mat/
 %doc %{_datadir}/texlive/texmf-dist/doc/support/ctan-o-mat/
 
+%files -n texlive-ctanbib
+%license lppl1.3.txt
+%{_bindir}/ctanbib
+%{_mandir}/man1/ctanbib.1*
+%{_datadir}/texlive/texmf-dist/scripts/ctanbib/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/ctanbib/
+
 %files -n texlive-ctanify
 %license lppl1.3.txt
 %{_bindir}/ctanify
@@ -6557,8 +6947,14 @@ done <<< "$list"
 %files -n texlive-cweb
 %license knuth.txt
 %{_bindir}/ctangle
+%{_bindir}/ctwill
+%{_bindir}/ctwill-refsort
+%{_bindir}/ctwill-twinx
 %{_bindir}/cweave
 %{_mandir}/man1/ctangle.1*
+%{_mandir}/man1/ctwill.1*
+%{_mandir}/man1/ctwill-refsort.1*
+%{_mandir}/man1/ctwill-twinx.1*
 %{_mandir}/man1/cweave.1*
 %{_mandir}/man1/cweb.1*
 %{_datadir}/texlive/texmf-dist/tex/plain/cweb/
@@ -6571,8 +6967,8 @@ done <<< "$list"
 %{_mandir}/man1/rubibtex.1*
 %{_mandir}/man1/rumakeindex.1*
 %{_datadir}/texlive/texmf-dist/tex/latex/cyrillic/
-%{_datadir}/texlive/texmf-dist/scripts/texlive/rubibtex.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/rumakeindex.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive-extra/rubibtex.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive-extra/rumakeindex.sh
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/cyrillic/
 
 %files -n texlive-de-macro
@@ -6620,6 +7016,7 @@ done <<< "$list"
 %files -n texlive-dviasm
 %license gpl3.txt
 %{_bindir}/dviasm
+%{_mandir}/man1/dviasm.1*
 %{_datadir}/texlive/texmf-dist/scripts/dviasm/
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/dviasm/
 
@@ -6651,6 +7048,12 @@ done <<< "$list"
 %{_mandir}/man1/dvilj4.1*
 %{_mandir}/man1/dvilj4l.1*
 %{_mandir}/man1/dvilj6.1*
+
+%files -n texlive-dviout-util
+%{_bindir}/chkdvifont
+%{_bindir}/dvispc
+%{_mandir}/man1/chkdvifont.1*
+%{_mandir}/man1/dvispc.1*
 
 %files -n texlive-dvipdfmx
 %license gpl.txt
@@ -6726,7 +7129,7 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/dvips/config/qms.cfg
 %{_datadir}/texlive/texmf-dist/dvips/config/toshiba.cfg
 %{_datadir}/texlive/texmf-dist/fonts/enc/dvips/base/
-%{_datadir}/texlive/texmf-dist/fonts/map/dvips/
+%dir %{_datadir}/texlive/texmf-dist/fonts/map/dvips/
 %{_datadir}/texlive/texmf-dist/tex/generic/dvips/
 %doc %{_datadir}/texlive/texmf-dist/doc/dvips/
 
@@ -6790,7 +7193,7 @@ done <<< "$list"
 %license lppl1.txt
 %{_bindir}/fontinst
 %{_mandir}/man1/fontinst.1*
-%{_datadir}/texlive/texmf-dist/scripts/texlive/fontinst.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive-extra/fontinst.sh
 %{_datadir}/texlive/texmf-dist/tex/fontinst/
 %{_datadir}/texlive/texmf-dist/tex/latex/fontinst/
 %doc %{_datadir}/texlive/texmf-dist/doc/fonts/fontinst/
@@ -6831,6 +7234,12 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/tex/latex/getmap/
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/getmap/
 
+%files -n texlive-git-latexdiff
+%{_bindir}/git-latexdiff
+%{_mandir}/man1/git-latexdiff.*
+%doc %{_datadir}/texlive/texmf-dist/doc/support/git-latexdiff
+%{_datadir}/texlive/texmf-dist/scripts/git-latexdiff
+
 %files -n texlive-glossaries
 %license lppl1.3.txt
 %{_bindir}/makeglossaries
@@ -6860,6 +7269,14 @@ done <<< "$list"
 %{_mandir}/man1/gsftopk.1*
 %{_datadir}/texlive/texmf-dist/dvips/gsftopk/
 
+%files -n texlive-hyperxmp
+%license lppl1.3c.txt
+%{_bindir}/hyperxmp-add-bytecount
+%{_mandir}/man1/hyperxmp*
+%doc %{_datadir}/texlive/texmf-dist/doc/latex/hyperxmp
+%{_datadir}/texlive/texmf-dist/scripts/hyperxmp
+%{_datadir}/texlive/texmf-dist/tex/latex/hyperxmp
+
 %files -n texlive-installfont
 %license lppl1.txt
 %{_bindir}/installfont-tl
@@ -6880,6 +7297,13 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/scripts/jfmutil/
 %doc %{_datadir}/texlive/texmf-dist/doc/fonts/jfmutil/
 
+%files -n texlive-ketcindy
+%license gpl3.txt
+%{_bindir}/ketcindy
+%{_datadir}/texlive/texmf-dist/scripts/ketcindy/
+%{_datadir}/texlive/texmf-dist/tex/latex/ketcindy/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/ketcindy/
+
 %files -n texlive-kotex-utils
 %license lppl1.txt
 %{_bindir}/jamo-normalize
@@ -6898,10 +7322,6 @@ done <<< "$list"
 %{_bindir}/mkocp
 %{_bindir}/mkofm
 %{_bindir}/mktexfmt
-%{_bindir}/mktexlsr
-%{_bindir}/mktexmf
-%{_bindir}/mktexpk
-%{_bindir}/mktextfm
 %{_bindir}/texhash
 %{_sbindir}/generate-fmtutilcnf
 %{_mandir}/man1/kpseaccess.1*
@@ -6911,11 +7331,8 @@ done <<< "$list"
 %{_mandir}/man1/mkocp.1*
 %{_mandir}/man1/mkofm.1*
 %{_mandir}/man1/mktexfmt.1*
-%{_mandir}/man1/mktexlsr.1*
-%{_mandir}/man1/mktexmf.1*
-%{_mandir}/man1/mktexpk.1*
-%{_mandir}/man1/mktextfm.1*
 %{_mandir}/man1/texhash.1*
+%{_mandir}/man5/fmtutil.cnf.5*
 %{_infodir}/kpathsea.info*
 %{_infodir}/tds.info*
 %{_infodir}/web2c.info*
@@ -7068,20 +7485,26 @@ done <<< "$list"
 %{_libdir}/*.so.*
 %dir %{_datadir}/texlive/texmf-config
 %dir %{_datadir}/texlive/texmf-config/web2c
-%{_datadir}/texlive/texmf-config/web2c/updmap.cfg
 %attr(0644, root, root) %verify(not md5 size mtime) %ghost %{_datadir}/texlive/texmf-config/ls-R
+%attr(0644, root, root) %verify(not md5 size mtime) %ghost %{_datadir}/texlive/texmf-dist/ls-R
+%attr(0644, root, root) %verify(not md5 size mtime) %ghost %{_datadir}/texlive/texmf-local/ls-R
 
 %files -n texlive-lib-devel
 %dir %{_includedir}/kpathsea
 %{_includedir}/kpathsea/*
 %{_includedir}/synctex/
-%{_includedir}/texlua52/
 %{_includedir}/texlua53/
-%ifnarch aarch64
+%ifnarch aarch64 riscv64
 %{_includedir}/texluajit/
 %endif
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
+
+%files -n texlive-light-latex-make
+%{_bindir}/llmk
+%{_mandir}/man1/llmk*
+%doc %{_datadir}/texlive/texmf-dist/doc/support/light-latex-make
+%{_datadir}/texlive/texmf-dist/scripts/light-latex-make
 
 %files -n texlive-lilyglyphs
 %license lppl1.3.txt
@@ -7091,8 +7514,8 @@ done <<< "$list"
 %{_datadir}/fonts/lilyglyphs
 %{_datadir}/texlive/texmf-dist/fonts/opentype/public/lilyglyphs/
 %{_datadir}/texlive/texmf-dist/scripts/lilyglyphs/
-%{_datadir}/texlive/texmf-dist/tex/lualatex/lilyglyphs/
-%doc %{_datadir}/texlive/texmf-dist/doc/lualatex/lilyglyphs/
+%{_datadir}/texlive/texmf-dist/tex/latex/lilyglyphs/
+%doc %{_datadir}/texlive/texmf-dist/doc/latex/lilyglyphs/
 
 %files -n texlive-listbib
 %license gpl.txt
@@ -7128,12 +7551,6 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/scripts/ltximg/
 %doc %{_datadir}/texlive/texmf-dist/doc/support/ltximg/
 
-%files -n texlive-lua2dox
-%license lppl1.3.txt
-%{_bindir}/lua2dox_filter
-%{_datadir}/texlive/texmf-dist/scripts/lua2dox/
-%doc %{_datadir}/texlive/texmf-dist/doc/support/lua2dox/
-
 %files -n texlive-luaotfload
 %license gpl2.txt
 %{_bindir}/luaotfload-tool
@@ -7143,19 +7560,35 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/tex/luatex/luaotfload/
 %doc %{_datadir}/texlive/texmf-dist/doc/luatex/luaotfload/
 
-%files -n texlive-luatex
+%files -n texlive-luahbtex
 %license gpl2.txt
-%{_bindir}/dviluatex
-%ifnarch aarch64
+%{_bindir}/luahbtex
+%{_bindir}/lualatex-dev
+%{_mandir}/man1/luahbtex.1*
+%{_mandir}/man1/lualatex-dev.1*
+%{_datadir}/texlive/fmtutil.cnf.d/luahbtex
+
+%files -n texlive-luajittex
+%license gpl2.txt
+%ifnarch aarch64 riscv64
 %{_bindir}/luajittex
+%{_bindir}/luajithbtex
 %{_bindir}/texluajit
 %{_bindir}/texluajitc
 %endif
+%{_mandir}/man1/luajittex.1*
+%{_datadir}/texlive/fmtutil.cnf.d/luajittex
+
+%files -n texlive-luatex
+%license gpl2.txt
+%{_bindir}/dviluatex
+%{_bindir}/dvilualatex-dev
+%{_bindir}/luacsplain
 %{_bindir}/luatex
-%{_bindir}/luatex53
 %{_bindir}/texlua
-%{_bindir}/texlua53
 %{_bindir}/texluac
+%{_mandir}/man1/dvilualatex-dev.1*
+%{_mandir}/man1/dviluatex.1*
 %{_mandir}/man1/luatex.1*
 %{_mandir}/man1/texlua.1*
 %{_mandir}/man1/texluac.1*
@@ -7195,6 +7628,7 @@ done <<< "$list"
 %{_bindir}/mkindex
 %{_mandir}/man1/makeindex.1*
 %{_mandir}/man1/mkindex.1*
+%exclude %{_datadir}/texlive/texmf-dist/makeindex/latex/
 %{_datadir}/texlive/texmf-dist/makeindex/
 %{_datadir}/texlive/texmf-dist/tex/plain/makeindex/
 %doc %{_datadir}/texlive/texmf-dist/doc/support/makeindex/
@@ -7229,6 +7663,7 @@ done <<< "$list"
 %{_bindir}/dvitomp
 %{_bindir}/mfplain
 %{_bindir}/mpost
+%{_bindir}/r-mpost
 %{_mandir}/man1/dvitomp.1*
 %{_mandir}/man1/mpost.1*
 %{_datadir}/texlive/texmf-dist/fonts/afm/metapost/
@@ -7236,6 +7671,7 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/fonts/map/dvips/metapost/
 %{_datadir}/texlive/texmf-dist/fonts/tfm/metapost/
 %{_datadir}/texlive/texmf-dist/fonts/type1/metapost/
+%exclude %{_datadir}/texlive/texmf-dist/metapost/context/
 %{_datadir}/texlive/texmf-dist/metapost/
 %{_datadir}/texlive/texmf-dist/tex/generic/metapost/
 %doc %{_datadir}/texlive/texmf-dist/doc/metapost/
@@ -7253,7 +7689,7 @@ done <<< "$list"
 %license gpl2.txt
 %{_bindir}/mflua
 %{_bindir}/mflua-nowin
-%ifnarch aarch64
+%ifnarch aarch64 riscv64
 %{_bindir}/mfluajit
 %{_bindir}/mfluajit-nowin
 %endif
@@ -7358,12 +7794,12 @@ done <<< "$list"
 %{_mandir}/man1/prepmx.1*
 %{_datadir}/texlive/texmf-dist/scripts/m-tx/
 %{_datadir}/texlive/texmf-dist/tex/generic/m-tx/
+%{_datadir}/texlive/texmf-dist/tex/latex/m-tx/
 %doc %{_datadir}/texlive/texmf-dist/doc/generic/m-tx/
 
 %files -n texlive-oberdiek
 %license lppl1.txt
 %{_datadir}/texlive/texmf-dist/bibtex/bib/oberdiek/
-%{_datadir}/texlive/texmf-dist/scripts/oberdiek/
 %{_datadir}/texlive/texmf-dist/tex/generic/oberdiek/
 %{_datadir}/texlive/texmf-dist/tex/latex/oberdiek/
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/oberdiek/
@@ -7393,6 +7829,13 @@ done <<< "$list"
 %{_mandir}/man1/ovf2ovp.1*
 %{_mandir}/man1/ovp2ovf.1*
 
+%files -n texlive-optex
+%{_bindir}/optex
+%{_datadir}/texlive/fmtutil.cnf.d/optex
+%{_mandir}/man1/optex.1*
+%{_datadir}/texlive/texmf-dist/tex/optex/
+%doc %{_datadir}/texlive/texmf-dist/doc/optex/
+
 %files -n texlive-patgen
 %license knuth.txt
 %{_bindir}/patgen
@@ -7420,30 +7863,8 @@ done <<< "$list"
 
 %files -n texlive-pdfjam
 %license gpl2.txt
-%{_bindir}/pdf180
-%{_bindir}/pdf270
-%{_bindir}/pdf90
-%{_bindir}/pdfbook
-%{_bindir}/pdfflip
 %{_bindir}/pdfjam
-%{_bindir}/pdfjam-pocketmod
-%{_bindir}/pdfjam-slides3up
-%{_bindir}/pdfjam-slides6up
-%{_bindir}/pdfjoin
-%{_bindir}/pdfnup
-%{_bindir}/pdfpun
-%{_mandir}/man1/pdf180.1*
-%{_mandir}/man1/pdf270.1*
-%{_mandir}/man1/pdf90.1*
-%{_mandir}/man1/pdfbook.1*
-%{_mandir}/man1/pdfflip.1*
-%{_mandir}/man1/pdfjam-pocketmod.1*
-%{_mandir}/man1/pdfjam-slides3up.1*
-%{_mandir}/man1/pdfjam-slides6up.1*
 %{_mandir}/man1/pdfjam.1*
-%{_mandir}/man1/pdfjoin.1*
-%{_mandir}/man1/pdfnup.1*
-%{_mandir}/man1/pdfpun.1*
 %{_datadir}/texlive/texmf-dist/scripts/pdfjam/
 %doc %{_datadir}/texlive/texmf-dist/doc/support/pdfjam/
 
@@ -7456,10 +7877,14 @@ done <<< "$list"
 %files -n texlive-pdftex
 %license gpl.txt
 %{_bindir}/etex
+%{_bindir}/latex-dev
 %{_bindir}/pdfetex
+%{_bindir}/pdflatex-dev
 %{_bindir}/pdftex
 %{_bindir}/simpdftex
+%{_mandir}/man1/latex-dev.1*
 %{_mandir}/man1/pdfetex.1*
+%{_mandir}/man1/pdflatex-dev.1*
 %{_mandir}/man1/pdftex.1*
 %{_datadir}/texlive/texmf-dist/fonts/map/dvips/dummy-space/dummy-space.map
 %{_datadir}/texlive/texmf-dist/fonts/tfm/public/pdftex/
@@ -7467,26 +7892,26 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/scripts/simpdftex/simpdftex
 %{_datadir}/texlive/texmf-dist/tex/generic/config/pdftex-dvi.tex
 %{_datadir}/texlive/texmf-dist/tex/generic/pdftex/
+%{_datadir}/texlive/fmtutil.cnf.d/latex-bin-dev
 %{_datadir}/texlive/fmtutil.cnf.d/pdftex
 %doc %{_datadir}/texlive/texmf-dist/doc/pdftex/
 
-%files -n texlive-pdftools
-%license pd.txt
-%{_bindir}/e2pall
-%{_bindir}/pdfatfi
-%{_bindir}/pdfclose
-%{_bindir}/pdfopen
+%files -n texlive-pdftex-quiet
+%license gpl3.txt
+%{_bindir}/pdftex-quiet
+%{_datadir}/texlive/texmf-dist/scripts/pdftex-quiet/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/pdftex-quiet/
+
+%files -n texlive-pdftosrc
+%license gpl2.txt
 %{_bindir}/pdftosrc
-%{_mandir}/man1/e2pall.1*
-%{_mandir}/man1/pdfclose.1*
-%{_mandir}/man1/pdfopen.1*
 %{_mandir}/man1/pdftosrc.1*
-%{_datadir}/texlive/texmf-dist/scripts/texlive/e2pall.pl
 
 %files -n texlive-pdfxup
 %license lppl1.3.txt
 %{_bindir}/pdfxup
 %{_mandir}/man1/pdfxup.1*
+%{_datadir}/texlive/texmf-dist/tex/latex/pdfxup/
 %{_datadir}/texlive/texmf-dist/scripts/pdfxup/
 %doc %{_datadir}/texlive/texmf-dist/doc/support/pdfxup/
 
@@ -7540,7 +7965,6 @@ done <<< "$list"
 %{_mandir}/man1/pmxab.1*
 %{_mandir}/man1/scor2prt.1*
 %{_datadir}/texlive/texmf-dist/tex/generic/pmx/
-%{_datadir}/texlive/texmf-dist/scripts/pmx/
 %doc %{_datadir}/texlive/texmf-dist/doc/generic/pmx/
 
 %files -n texlive-pmxchords
@@ -7551,25 +7975,11 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/tex/generic/pmxchords/
 %doc %{_datadir}/texlive/texmf-dist/doc/pmxchords/
 
-%files -n texlive-pstools
-%license gpl.txt
-%{_bindir}/bbox
-%{_bindir}/ps2eps
-%{_bindir}/ps2frag
-%{_bindir}/pslatex
-%{_mandir}/man1/bbox.1*
-%{_mandir}/man1/ps2eps.1*
-%{_mandir}/man1/ps2frag.1*
-%{_mandir}/man1/pslatex.1*
-%{_datadir}/texlive/texmf-dist/scripts/texlive/ps2frag.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/pslatex.sh
-%{_datadir}/texlive/texmf-dist/scripts/ps2eps/
-
 %files -n texlive-pst2pdf
 %license gpl2.txt
 %{_bindir}/pst2pdf
 %{_datadir}/texlive/texmf-dist/scripts/pst2pdf/
-%doc %{_datadir}/texlive/texmf-dist/doc/latex/pst2pdf/
+%doc %{_datadir}/texlive/texmf-dist/doc/support/pst2pdf/
 
 %files -n texlive-pst-pdf
 %license lppl1.txt
@@ -7577,6 +7987,43 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/scripts/pst-pdf/
 %{_datadir}/texlive/texmf-dist/tex/latex/pst-pdf/
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/pst-pdf/
+
+# No psutils for you today!
+%if 0
+%files -n texlive-psutils
+%{_bindir}/epsffit
+%{_bindir}/extractres
+%{_bindir}/includeres
+%{_bindir}/psbook
+%{_bindir}/psjoin
+%{_bindir}/psnup
+%{_bindir}/psresize
+%{_bindir}/psselect
+%{_bindir}/pstops
+%{_mandir}/man1/epsffit.1*
+%{_mandir}/man1/extractres.1*
+%{_mandir}/man1/includeres.1*
+%{_mandir}/man1/psbook.1*
+%{_mandir}/man1/psjoin.1*
+%{_mandir}/man1/psnup.1*
+%{_mandir}/man1/psresize.1*
+%{_mandir}/man1/psselect.1*
+%{_mandir}/man1/pstops.1*
+%{_mandir}/man1/psutils.1*
+%{_datadir}/texlive/texmf-dist/dvips/getafm/
+%{_datadir}/texlive/texmf-dist/psutils/
+%dir %{_sysconfdir}/texlive/psutils
+%config(noreplace) %{_sysconfdir}/texlive/psutils/paper.cfg
+%{_datadir}/texlive/texmf-dist/scripts/psutils
+%endif
+
+%files -n texlive-ps2eps
+%license gpl.txt
+%{_bindir}/bbox
+%{_bindir}/ps2eps
+%{_mandir}/man1/bbox.1*
+%{_mandir}/man1/ps2eps.1*
+%{_datadir}/texlive/texmf-dist/scripts/ps2eps/
 
 %files -n texlive-ps2pk
 %license other-free.txt
@@ -7597,14 +8044,19 @@ done <<< "$list"
 %{_bindir}/pdvitomp
 %{_bindir}/pdvitype
 %{_bindir}/platex
+%{_bindir}/platex-dev
 %{_bindir}/pmpost
 %{_bindir}/ppltotf
 %{_bindir}/ptex
 %{_bindir}/ptftopl
+%{_bindir}/r-pmpost
 %{_mandir}/man1/eptex.1*
 %{_mandir}/man1/makejvf.1*
 %{_mandir}/man1/mendex.1*
+%{_mandir}/man1/platex-dev.1*
+%{_mandir}/man1/ppltotf.1*
 %{_mandir}/man1/ptex.1*
+%{_mandir}/man1/ptftopl.1*
 %{_datadir}/texlive/fmtutil.cnf.d/platex
 %{_datadir}/texlive/fmtutil.cnf.d/ptex
 
@@ -7619,6 +8071,7 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps
 %{_datadir}/texlive/texmf-dist/fonts/misc/ptex-fontmaps/
 %{_datadir}/texlive/texmf-dist/scripts/ptex-fontmaps
+%{_datadir}/texlive/tlpkg/tlpostcode/ptex-fontmaps-tlpost.pl
 %doc %{_datadir}/texlive/texmf-dist/doc/fonts/ptex-fontmaps
 
 %files -n texlive-ptex2pdf
@@ -7668,6 +8121,13 @@ done <<< "$list"
 %{_mandir}/man1/dviselect.1*
 %{_mandir}/man1/dvitodvi.1*
 
+%files -n texlive-spix
+%license gpl3.txt
+%{_bindir}/spix
+%{_mandir}/man1/spix*
+%doc %{_datadir}/texlive/texmf-dist/doc/support/spix
+%{_datadir}/texlive/texmf-dist/scripts/spix
+
 %files -n texlive-splitindex
 %license lppl1.txt
 %{_bindir}/splitindex
@@ -7705,66 +8165,6 @@ done <<< "$list"
 %{_mandir}/man1/synctex.1*
 %{_mandir}/man5/synctex.5*
 
-%files -n texlive-tetex
-%{_bindir}/allcm
-%{_bindir}/allec
-%{_bindir}/allneeded
-%{_bindir}/dvi2fax
-%{_bindir}/dvired
-%{_bindir}/fmtutil
-%{_bindir}/fmtutil-sys
-%{_bindir}/fmtutil-user
-%{_bindir}/kpsepath
-%{_bindir}/kpsetool
-%{_bindir}/kpsewhere
-%{_bindir}/kpsexpand
-%{_bindir}/texconfig-dialog
-%{_bindir}/texconfig-sys
-%{_bindir}/texlinks
-%{_bindir}/updmap
-%{_bindir}/updmap-sys
-%{_bindir}/updmap-user
-%{_mandir}/man1/allcm.1*
-%{_mandir}/man1/allec.1*
-%{_mandir}/man1/allneeded.1*
-%{_mandir}/man1/dvi2fax.1*
-%{_mandir}/man1/dvired.1*
-%{_mandir}/man1/fmtutil-sys.1*
-%{_mandir}/man1/fmtutil-user.1*
-%{_mandir}/man1/fmtutil.1*
-%{_mandir}/man1/kpsepath.1*
-%{_mandir}/man1/kpsetool.1*
-%{_mandir}/man1/kpsewhere.1*
-%{_mandir}/man1/kpsexpand.1*
-%{_mandir}/man1/texlinks.1*
-%{_mandir}/man1/updmap-sys.1*
-%{_mandir}/man1/updmap-user.1*
-%{_mandir}/man1/updmap.1*
-%{_datadir}/texlive/texmf-dist/scripts/texlive/allcm.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/allneeded.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/dvi2fax.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/dvired.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/fmtutil-sys.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/fmtutil-user.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/fmtutil.pl
-%{_datadir}/texlive/texmf-dist/scripts/texlive/kpsetool.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/kpsewhere.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/mktexlsr.pl
-%{_datadir}/texlive/texmf-dist/scripts/texlive/texconfig-dialog.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/texconfig-sys.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/texlinks.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/updmap-sys.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/updmap-user.sh
-%{_datadir}/texlive/texmf-dist/scripts/texlive/updmap.pl
-%config(noreplace) %{_sysconfdir}/texlive/web2c/updmap.cfg
-%{_datadir}/texlive/texmf-dist/web2c/updmap.cfg
-%{_mandir}/man5/fmtutil.cnf.5*
-%{_mandir}/man5/updmap.cfg.5*
-%{_datadir}/texlive/texmf-dist/dvips/tetex/
-%{_datadir}/texlive/texmf-dist/fonts/enc/dvips/tetex/
-%{_datadir}/texlive/texmf-dist/fonts/map/dvips/tetex/
-%doc %{_datadir}/texlive/texmf-dist/doc/tetex/
-
 %files -n texlive-tex
 %license knuth.txt
 %{_bindir}/initex
@@ -7798,14 +8198,6 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/tex/generic/tex4ht/
 %{_datadir}/texlive/texmf-dist/tex4ht/
 %doc %{_datadir}/texlive/texmf-dist/doc/generic/tex4ht/
-
-%files -n texlive-texconfig
-%license lppl1.txt
-%{_bindir}/texconfig
-%{_mandir}/man1/texconfig-sys.1*
-%{_mandir}/man1/texconfig.1*
-%{_datadir}/texlive/texmf-dist/scripts/texlive/texconfig.sh
-%{_datadir}/texlive/texmf-dist/texconfig/
 
 %files -n texlive-texcount
 %license lppl1.txt
@@ -7869,17 +8261,88 @@ done <<< "$list"
 
 %files -n texlive-texlive-scripts
 %license lppl1.txt
+%{_bindir}/fmtutil
+%{_bindir}/fmtutil-sys
+%{_bindir}/fmtutil-user
+%{_bindir}/mktexlsr
+%{_bindir}/mktexmf
+%{_bindir}/mktexpk
+%{_bindir}/mktextfm
+%{_bindir}/updmap
+%{_bindir}/updmap-sys
+%{_bindir}/updmap-user
 %{_bindir}/rungs
+%{_mandir}/man1/fmtutil.1*
+%{_mandir}/man1/fmtutil-sys.1*
+%{_mandir}/man1/fmtutil-user.1*
 %{_mandir}/man1/install-tl.1*
+%{_mandir}/man1/mktexlsr.1*
+%{_mandir}/man1/mktexmf.1*
+%{_mandir}/man1/mktexpk.1*
+%{_mandir}/man1/mktextfm.1*
+%{_mandir}/man1/updmap.1*
+%{_mandir}/man1/updmap-sys.1*
+%{_mandir}/man1/updmap-user.1*
+%{_mandir}/man5/updmap.cfg.5*
+%{_datadir}/texlive/texmf-config/web2c/updmap.cfg
+%config(noreplace) %{_sysconfdir}/texlive/web2c/updmap.cfg
+%{_datadir}/texlive/texmf-dist/dvips/tetex/
+%{_datadir}/texlive/texmf-dist/fonts/enc/dvips/tetex/
+%{_datadir}/texlive/texmf-dist/fonts/map/dvips/tetex/
+%{_datadir}/texlive/texmf-dist/scripts/texlive/fmtutil-sys.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive/fmtutil-user.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive/fmtutil.pl
+%{_datadir}/texlive/texmf-dist/scripts/texlive/mktexlsr*
+%{_datadir}/texlive/texmf-dist/scripts/texlive/mktexmf
+%{_datadir}/texlive/texmf-dist/scripts/texlive/mktexpk
+%{_datadir}/texlive/texmf-dist/scripts/texlive/mktextfm
 %{_datadir}/texlive/texmf-dist/scripts/texlive/rungs.tlu
-%{_datadir}/texlive/texmf-dist/scripts/texlive/test-tlpdb.tlu
-%{_datadir}/texlive/texmf-dist/scripts/texlive/texconf.tlu
-%{_datadir}/texlive/texmf-dist/scripts/texlive/lua/texlive/getopt.tlu
-%{_datadir}/texlive/texmf-dist/scripts/texlive/lua/texlive/tlpdb.tlu
-%{_datadir}/texlive/texmf-dist/scripts/texlive/lua/texlive/utils.tlu
+%{_datadir}/texlive/texmf-dist/scripts/texlive/updmap-sys.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive/updmap-user.sh
+%{_datadir}/texlive/texmf-dist/scripts/texlive/updmap.pl
+%{_datadir}/texlive/texmf-dist/web2c/updmap.cfg
+
+%files -n texlive-texlive-scripts-extra
+%license gpl.txt
+%license lppl1.txt
+%{_bindir}/allcm
+%{_bindir}/allec
+%{_bindir}/allneeded
+%{_bindir}/dvi2fax
+%{_bindir}/dvired
+%{_bindir}/e2pall
+%{_bindir}/kpsepath
+%{_bindir}/kpsetool
+%{_bindir}/kpsewhere
+%{_bindir}/kpsexpand
+%{_bindir}/ps2frag
+%{_bindir}/pslatex
+%{_bindir}/texconfig-dialog
+%{_bindir}/texconfig-sys
+%{_bindir}/texconfig
+%{_bindir}/texlinks
+%{_mandir}/man1/allcm.1*
+%{_mandir}/man1/allec.1*
+%{_mandir}/man1/allneeded.1*
+%{_mandir}/man1/dvi2fax.1*
+%{_mandir}/man1/dvired.1*
+%{_mandir}/man1/e2pall.1*
+%{_mandir}/man1/kpsepath.1*
+%{_mandir}/man1/kpsetool.1*
+%{_mandir}/man1/kpsewhere.1*
+%{_mandir}/man1/kpsexpand.1*
+%{_mandir}/man1/ps2frag.1*
+%{_mandir}/man1/pslatex.1*
+%{_mandir}/man1/texconfig-sys.1*
+%{_mandir}/man1/texconfig.1*
+%{_mandir}/man1/texlinks.1*
+%{_datadir}/texlive/texmf-dist/texconfig/
+%{_datadir}/texlive/texmf-dist/scripts/texlive-extra/
+
 
 %files -n texlive-texlive.infra
 %license lppl1.txt
+%{_bindir}/tlmgr
 %{_datadir}/texlive/texmf-dist/web2c/fmtutil-hdr.cnf
 %{_datadir}/texlive/texmf-dist/web2c/updmap-hdr.cfg
 %{_datadir}/texlive/LICENSE.CTAN
@@ -7897,9 +8360,13 @@ done <<< "$list"
 %{_datadir}/texlive/readme-html.dir/readme.pl.html
 %{_datadir}/texlive/readme-html.dir/readme.pt-br.html
 %{_datadir}/texlive/readme-html.dir/readme.ru.html
+%{_datadir}/texlive/readme-html.dir/readme.sk.html
 %{_datadir}/texlive/readme-html.dir/readme.sr.html
+%{_datadir}/texlive/readme-html.dir/readme.vi.html
 %{_datadir}/texlive/readme-html.dir/readme.zh-cn.html
 %{_datadir}/texlive/release-texlive.txt
+%{_datadir}/texlive/texmf-dist/scripts/texlive/tlmgr.pl
+%{_datadir}/texlive/tlpkg/installer/config.guess
 %{_datadir}/texlive/tlpkg/TeXLive/TLConfFile.pm
 %{_datadir}/texlive/tlpkg/TeXLive/TLConfig.pm
 %{_datadir}/texlive/tlpkg/TeXLive/TLCrypto.pm
@@ -7913,6 +8380,7 @@ done <<< "$list"
 %{_datadir}/texlive/tlpkg/TeXLive/TLWinGoo.pm
 %{_datadir}/texlive/tlpkg/TeXLive/TeXCatalogue.pm
 %{_datadir}/texlive/tlpkg/TeXLive/trans.pl
+%{_mandir}/man1/tlmgr.1*
 %doc %{_datadir}/texlive/texmf-dist/scripts/texlive/NEWS
 %doc %{_datadir}/texlive/tlpkg/README
 
@@ -7927,6 +8395,12 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/scripts/texosquery
 %{_datadir}/texlive/texmf-dist/tex/latex/texosquery
 %doc %{_datadir}/texlive/texmf-dist/doc/support/texosquery
+
+%files -n texlive-texplate
+%license bsd.txt
+%{_bindir}/texplate
+%{_datadir}/texlive/texmf-dist/scripts/texplate
+%doc %{_datadir}/texlive/texmf-dist/doc/support/texplate
 
 %files -n texlive-texsis
 %license lppl1.txt
@@ -7955,6 +8429,13 @@ done <<< "$list"
 %files -n texlive-tie
 %{_bindir}/tie
 %{_mandir}/man1/tie.1*
+
+%files -n texlive-tikztosvg
+%license gpl3.txt
+%{_bindir}/tikztosvg
+%{_mandir}/man1/tikztosvg*
+%doc %{_datadir}/texlive/texmf-dist/doc/support/tikztosvg
+%{_datadir}/texlive/texmf-dist/scripts/tikztosvg
 
 %files -n texlive-tpic2pdftex
 %license gpl.txt
@@ -7992,10 +8473,12 @@ done <<< "$list"
 
 %files -n texlive-uptex
 %{_bindir}/euptex
+%{_bindir}/r-upmpost
 %{_bindir}/upbibtex
 %{_bindir}/updvitomp
 %{_bindir}/updvitype
 %{_bindir}/uplatex
+%{_bindir}/uplatex-dev
 %{_bindir}/upmendex
 %{_bindir}/upmpost
 %{_bindir}/uppltotf
@@ -8004,7 +8487,11 @@ done <<< "$list"
 %{_bindir}/wovp2ovf
 %{_mandir}/man1/euptex.1*
 %{_mandir}/man1/uplatex.1*
+%{_mandir}/man1/uplatex-dev.1*
+%{_mandir}/man1/upmendex.1*
+%{_mandir}/man1/uppltotf.1*
 %{_mandir}/man1/uptex.1*
+%{_mandir}/man1/uptftopl.1*
 %{_datadir}/texlive/fmtutil.cnf.d/uplatex
 %{_datadir}/texlive/fmtutil.cnf.d/uptex
 %doc %{_datadir}/texlive/texmf-dist/doc/upmendex/
@@ -8052,6 +8539,14 @@ done <<< "$list"
 %{_mandir}/man1/tangle.1*
 %{_mandir}/man1/weave.1*
 
+%files -n texlive-webquiz
+%license gpl.txt
+%{_bindir}/webquiz
+%{_mandir}/man1/webquiz.1*
+%{_datadir}/texlive/texmf-dist/scripts/webquiz/
+%{_datadir}/texlive/texmf-dist/tex/latex/webquiz/
+%doc %{_datadir}/texlive/texmf-dist/doc/latex/webquiz/
+
 %files -n texlive-wordcount
 %license lppl1.txt
 %{_bindir}/wordcount
@@ -8070,20 +8565,28 @@ done <<< "$list"
 %license other-free.txt
 %{_bindir}/xdvipdfmx
 %{_bindir}/xelatex
+%{_bindir}/xelatex-dev
 %{_bindir}/xetex
 %{_mandir}/man1/xelatex.1*
+%{_mandir}/man1/xelatex-dev.1*
+%{_mandir}/man1/xetex.1*
 %{_datadir}/texlive/tlpkg/tlpostcode/xetex.pl
 %{_datadir}/texlive/texmf-dist/fonts/misc/xetex/
+%{_datadir}/texlive/fmtutil.cnf.d/xelatex-dev
 %{_datadir}/texlive/fmtutil.cnf.d/xetex
 %doc %{_datadir}/texlive/texmf-dist/doc/xetex/
+
+%files -n texlive-xindex
+%license lppl1.3.txt
+%{_bindir}/xindex
+%{_datadir}/texlive/texmf-dist/scripts/xindex/
+%{_datadir}/texlive/texmf-dist/tex/latex/xindex/
+%{_datadir}/texlive/texmf-dist/tex/lualatex/xindex/
+%doc %{_datadir}/texlive/texmf-dist/doc/lualatex/xindex/
 
 %ifarch empty
 %files -n texlive-xindy
 %license gpl.txt
-%{_bindir}/tex2xindy
-%{_bindir}/texindy
-%{_bindir}/xindy
-%{_bindir}/xindy.mem
 %{_mandir}/man1/xindy.1*
 %{_mandir}/man1/texindy.1*
 %{_mandir}/man1/tex2xindy.1*
@@ -8091,6 +8594,11 @@ done <<< "$list"
 %{_datadir}/texlive/texmf-dist/xindy/
 %doc %{_datadir}/texlive/texmf-dist/doc/xindy/
 %endif
+
+%files -n texlive-xml2pmx
+%license gpl3.txt
+%{_bindir}/xml2pmx
+%{_mandir}/man1/xml2pmx*
 
 %files -n texlive-xmltex
 %license lppl1.txt
@@ -8100,6 +8608,12 @@ done <<< "$list"
 %{_datadir}/texlive/fmtutil.cnf.d/xmltex
 %doc %{_datadir}/texlive/texmf-dist/doc/otherformats/xmltex/
 
+%files -n texlive-xpdfopen
+%{_bindir}/pdfclose
+%{_bindir}/pdfopen
+%{_mandir}/man1/pdfclose.1*
+%{_mandir}/man1/pdfopen.1*
+
 %files -n texlive-yplan
 %license lppl1.txt
 %{_bindir}/yplan
@@ -8108,6 +8622,10 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Wed Oct 26 2022 misaka00251 <liuxin@iscas.ac.cn> - 9:20210325-1
+- Upgrade texlive version to 2021
+- The following packages no longer exist: lua2dox, pdftools
+
 * Sat Jul 30 2022 caodongxia <caodongxia@h-partners.com> - 20180414-33
 - Remove rpath
 
