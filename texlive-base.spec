@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20210325
-Release:        1
+Release:        2
 Epoch:          9
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -2749,6 +2749,9 @@ Obsoletes:      texlive-latex-bin-bin < 7:20180414
 Provides:       tex-latex-doc = %{epoch}:20210325-%{release}
 Provides:       texlive-latex-doc = %{epoch}:20210325-%{release}
 Obsoletes:      texlive-latex-doc < 7:20180414
+# texlive-latex-base-dev is a development package of texlive-latex
+# for stability we don't use this.
+#!BuildIgnore:  texlive-latex-base-dev
 License:        LPPL 1.3
 Summary:        A TeX macro package that defines LaTeX
 Requires:       texlive-base
@@ -8622,6 +8625,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Wed Nov 02 2022 misaka00251 <liuxin@iscas.ac.cn> - 9:20210325-2
+- Solve conflict with texlive-latex-base-dev
+
 * Wed Oct 26 2022 misaka00251 <liuxin@iscas.ac.cn> - 9:20210325-1
 - Upgrade texlive version to 2021
 - The following packages no longer exist: lua2dox, pdftools
