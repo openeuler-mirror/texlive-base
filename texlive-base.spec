@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20210325
-Release:        2
+Release:        3
 Epoch:          9
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -6342,6 +6342,8 @@ find -type f -exec sed -i '1s|^#!/usr/bin/env python$|#!%{__python3}|' {} +
 sed -i '1s|^#!/usr/bin/python |#!%{__python3} |' ./%{_datadir}/texlive/texmf-dist/scripts/de-macro/de-macro
 cd -
 
+mv %{buildroot}%{_datadir}/texlive/texmf-dist/fonts/map/dvips/tetex/dvipdfm35.map %{buildroot}%{_datadir}/texlive/texmf-dist/fonts/map/dvips/tetex/dvipdfm35.oldmap
+
 %pretrans -p <lua>
 path = "/usr/share/texmf"
 st = posix.stat(path)
@@ -6392,7 +6394,9 @@ while read -r line; do
                 fi
         fi
 done <<< "$list"
-%{_bindir}/updmap-sys --quiet --nomkmap >/dev/null || :
+# No updmap-map now, so we need to make system maps here.
+yes | %{_bindir}/updmap-sys --quiet --syncwithtrees >/dev/null 2>&1 || :
+%{_bindir}/updmap-sys --quiet --force 2>&1 || :
 
 %transfiletriggerpostun -n texlive-kpathsea -- %{_datadir}/texlive/texmf-dist/fonts/map/dvips/
 list=`grep "\.map" | sort -n | uniq`
@@ -6405,7 +6409,9 @@ while read -r line; do
                 %{_bindir}/updmap-sys --nomkmap --disable Map=$shortfile >/dev/null 2>&1 || :
         fi
 done <<< "$list"
-%{_bindir}/updmap-sys --quiet --nomkmap >/dev/null || :
+# No updmap-map now, so we need to make system maps here.
+yes | %{_bindir}/updmap-sys --quiet --syncwithtrees >/dev/null 2>&1 || :
+%{_bindir}/updmap-sys --quiet --force 2>&1 || :
 
 %transfiletriggerin -n texlive-kpathsea -P 2000000 -- %{_datadir}/texlive/fmtutil.cnf.d/
 %{_sbindir}/generate-fmtutilcnf %{_datadir}/texlive
@@ -8625,6 +8631,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Sun Nov 13 2022 misaka00251 <liuxin@iscas.ac.cn> - 9:20210325-3
+- Let texlive-base provide system maps, since we drop updmap-map.
+
 * Wed Nov 02 2022 misaka00251 <liuxin@iscas.ac.cn> - 9:20210325-2
 - Solve conflict with texlive-latex-base-dev
 
