@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20210325
-Release:        3
+Release:        4
 Epoch:          9
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -6342,6 +6342,21 @@ find -type f -exec sed -i '1s|^#!/usr/bin/env python$|#!%{__python3}|' {} +
 sed -i '1s|^#!/usr/bin/python |#!%{__python3} |' ./%{_datadir}/texlive/texmf-dist/scripts/de-macro/de-macro
 cd -
 
+for i in afm2pl afm2tfm aleph bibtex bibtex8 bibtexu chkdvifont chktex ctie ctangle ctwill ctwill-refsort ctwill-twinx cweave detex disdvi dt2dv dv2dt dvi2tty dvibook dviconcat dvicopy dvilj dvilj2p dvilj4 dvilj4l dvipng \
+         dvipos dvips dviselect dvispc dvisvgm dvitodvi dvitype eptex euptex gftodvi gftopk gftype gregorio gsftopk hbf2gf kpsewhich luahbtex luatex mag makeindex makejvf mendex mf mflua mft mf-nowin mpost otftotfm msxlint \
+         odvicopy odvitype omfonts otangle otp2ocp outocp patgen pbibtex pdftex pdftosrc pktogf pdvitype pfb2pfa pk2bm pktype pltotf pmpost pooltype ppltotf ps2pk ptex ptftopl synctex t4ht tangle tex tex4ht tftopl tie \
+         ttf2afm ttf2pk ttf2tfm ttfdump upbibtex updvitype upmendex upmpost uppltotf uptex uptftopl vftovp vptovf weave wofm2opl wopl2ofm wovf2ovp wovp2ovf xdvi-xaw xdvipdfmx xetex; do
+chrpath --delete %{buildroot}%{_bindir}/$i
+done
+
+%ifnarch aarch64 riscv64
+for i in luajittex luajithbtex mfluajit;do
+chrpath --delete %{buildroot}%{_bindir}/$i
+done
+%endif
+
+chrpath --delete %{buildroot}%{_libdir}/libptexenc.so.*
+
 mv %{buildroot}%{_datadir}/texlive/texmf-dist/fonts/map/dvips/tetex/dvipdfm35.map %{buildroot}%{_datadir}/texlive/texmf-dist/fonts/map/dvips/tetex/dvipdfm35.oldmap
 
 %pretrans -p <lua>
@@ -8631,6 +8646,9 @@ yes | %{_bindir}/updmap-sys --quiet --syncwithtrees >/dev/null 2>&1 || :
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Sat Feb 18 2023 xu_ping <xu_ping33@h-partners.com> - 9:20210325-4
+- Remove rpath
+
 * Sun Nov 13 2022 misaka00251 <liuxin@iscas.ac.cn> - 9:20210325-3
 - Let texlive-base provide system maps, since we drop updmap-map.
 
