@@ -4,10 +4,10 @@
 
 Name:           texlive-base
 Version:        20180414
-Release:        30
+Release:        31
 Epoch:          7
 Summary:        TeX formatting system
-License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL and GPL+ and GPLv2 and GPLv3 and Knuth and LGPLv2+ and LGPLv3+ and LPPL and OFL and Public Domain
+License:        ASL 2.0 and Artistic 2.0 and BSD and GFDL-1.1-or-later and GPL+ and GPLv2 and GPLv3 and Knuth-CTAN and LGPLv2+ and LGPLv3+ and LPPL-1.2 and LPPL-1.3 and LPPL-1.3c and OFL-1.1 and Public Domain
 URL:            http://tug.org/texlive/
 Source0:        http://ctan.math.illinois.edu/systems/texlive/Source/texlive-20180414-source.tar.xz
 Source1:        macros.texlive
@@ -8094,6 +8094,9 @@ done <<< "$list"
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Tue Mar 21 2023 yaoxin <yaoxin30@h-partners.com> - 7:20180414-31
+- Fix the license error
+
 * Mon Mar 20 2023 yaoxin <yaoxin30@h-partners.com> - 7:20180414-30
 - Remove useless BuildRequires poppler for fix build failure
 
