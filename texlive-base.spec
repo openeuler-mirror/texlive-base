@@ -4,7 +4,7 @@
 
 Name:           texlive-base
 Version:        20210325
-Release:        4
+Release:        5
 Epoch:          9
 Summary:        TeX formatting system
 License:        ASL 2.0 and LGPL-2.1-only and Zlib and OFL-1.1 and Public Domain and LGPL-2.0-only and GPLv2+ and MPL-1.1 and Libpng and LGPL-3.0-only and BSL-1.0 and GPLv2 and GPLv3 and CPL-1.0 and IJG and MIT and LPPL-1.3c and ICU and psutils
@@ -417,7 +417,9 @@ Patch0002:      tl-format.patch
 Patch0005:      texlive-2016-kpathsea-texlive-path.patch
 
 Patch0008:      texlive-20210325-texinfo-path-fix.patch
+%if "%toolchain" != "clang"
 Patch0017:      texlive-20180414-annocheck.patch
+%endif
 
 Patch0020:      texlive-20190410-dvisvgm-fix-libgs-detection.patch
 Patch0021:      texlive-20190410-tlmgr-ignore-warning.patch
@@ -8646,6 +8648,9 @@ yes | %{_bindir}/updmap-sys --quiet --syncwithtrees >/dev/null 2>&1 || :
 %doc %{_datadir}/texlive/texmf-dist/doc/latex/yplan/
 
 %changelog
+* Tue May 23 2023 yoo <sunyuechi@iscas.ac.cn> - 20210325-5
+- fix clang build error
+
 * Sat Feb 18 2023 xu_ping <xu_ping33@h-partners.com> - 9:20210325-4
 - Remove rpath
 
